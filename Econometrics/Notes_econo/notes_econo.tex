@@ -1,0 +1,85 @@
+\documentclass[15pt, french]{article}
+\usepackage{times}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,textcomp}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[french]{babel}
+\usepackage[a4paper,left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{subfig}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{calc}
+\usepackage{pdfpages}
+\usepackage{bbold}
+\usepackage{ulem}
+
+
+\usepackage{setspace}
+\onehalfspacing
+
+\definecolor{light-gray}{gray}{0.95}
+\newcommand{\source}[1]{\caption*{Source: {#1}} }
+\renewcommand{\baselinestretch}{1.4}
+
+%math 
+\newcommand{\indep}{\perp \!\!\! \perp}
+
+%===INFO PDF===
+\hypersetup{							% Information sur le document
+pdfauthor = {Rouillard Pierre},			% Auteurs
+pdftitle = {econo2},		            % Sujet
+pdfstartview={FitH}}					% ajuste la page à la largeur de l'écran
+%==============
+
+
+
+%===START===
+\begin{document}
+
+% Page de garde
+\input{./Core/frontpage.tex}
+\newpage
+
+% toc
+\pagestyle{fancy}
+\fancyhead[L]{}
+\fancyhead[R]{}
+\tableofcontents
+\break
+
+%page style
+\pagestyle{fancy}
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{}
+
+% 0
+\section{Point sur les modèles et rappels}
+%\input{Core/Partie_0/Partie_0}
+% 0.1
+\subsection{Quelles interprétations ?}
+%\input{Core/Partie_0/0.i}
+% 0.2
+\subsection{Rappels d'économétrie 1}
+%\input{Core/Partie_0/0.ii}
+
+% I
+\section{MCO, IV et GMM}
+%\input{Core/Partie_1/Partie_1}
+% I.1
+\subsection{Rappels MCO}
+%\input{Core/Partie_1/1.i}
+
+
+
+
+
+
+\end{document}

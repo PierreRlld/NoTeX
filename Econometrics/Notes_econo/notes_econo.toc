@@ -1,0 +1,6 @@
+\babel@toc {french}{}\relax 
+\contentsline {section}{\numberline {1}Point sur les modèles et rappels}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Quelles interprétations ?}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Rappels d'économétrie 1}{2}{subsection.1.2}%
+\contentsline {section}{\numberline {2}MCO, IV et GMM}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Rappels MCO}{2}{subsection.2.1}%
