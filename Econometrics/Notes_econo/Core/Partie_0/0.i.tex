@@ -1,0 +1,28 @@
+Selon le modèle considéré il est possible ou non d'avoir une interprétation quantitative directe et/ou qualitative du paramètre causal à estimer $\beta_{0}$.\par
+Définition de l'effet marginal de $X_{k}$ sur $Y$ : $\frac{\partial E[Y|X=x]}{\partial x_{k}}$
+\bigbreak
+
+\noindent $\hookrightarrow$ \underline{\textbf{Modèle linéaire :}}\\
+Comme toujours par la suite on considère l'analyse \textit{toutes choses égales par ailleurs, sur la population considérée...}\par
+\underline{\textcolor{ForestGreen}{Interprétation} :} la variable d'intérêt est $Y$ et en l'absence de puissance ou d'interactions on peut interpréter quantitativement $\beta_{0}$ sur la variable d'intérêt. Le paramètre d'intérêt est l'effet marginal de $X_{k}$ sur $Y$ qui vaut bien $\beta_{0k}$ lorsque $X_{k}$ apparaît simplement dans le modèle. C'est justement pour cela qu'on peut bien interpréter directement quantitativement les coefficients de $\beta_{0}$ !
+\bigbreak
+
+\noindent $\hookrightarrow$ \underline{\textbf{Modèle binaire :}} $E[Y|X]=P(Y=1|X)=F(X'\beta_{0})$ \\
+$E[Y|X]=F(X'\beta_{0}) \; \Longleftrightarrow \; \; \; Y=\mathbb{1}(Y^{*} \geq s) \; : \; \; Y^{*}=X'\beta_{0} + \varepsilon \; \; \; \varepsilon \indep X $ \par
+\underline{Interprétation \textcolor{BrickRed}{quantitative directe} :} la variable d'intérêt est $Y$ et $Y^{*}$ n'est qu'une variable latente qui n'a pas forcément de sens quantitatif précis. Le paramètre d'intérêt est l'effet marginal de $X_{k}$ sur la variable d'intérêt, ici $Y$. Les coefficients de $\beta_{0}$ concernant $Y^{*}$ on ne peut donc pas directement interpréter quantitativement ces derniers sur la variable d'intérêt $Y$. De plus, l'effet marginal de $X_{k}$ sur $Y$ est différent de $\beta_{0k}$ : c'est pour cela qu'on ne peut avoir d'interprétation quantitative des coefficients de $\beta_{0}$ ! \par
+\underline{Interprétation \textcolor{ForestGreen}{qualitative} :} en revanche le signe de l'effet marginal de $X_{k}$ sur $Y$, i.e. effet positif ou négatif sur $P(Y=1|X)$, est donné par le signe de $\beta_{0k}$. \par
+On peut en revanche comparer quantitativement le ratio des effets marginaux des variables i et j qui vaut $\widehat{\beta_{i}}/\widehat{\beta_{j}}$. \textit{L'effet sur la proba d'être ... de la variable i est <quantitativement> ... que l'effet de la variable j $\Longleftrightarrow$ regarder le rapport $\widehat{\beta_{i}}/\widehat{\beta_{j}}$ }.
+
+\bigbreak
+\noindent $\hookrightarrow$ \underline{\textbf{Modèle de censure / Tobit1 :}} \\
+\textcolor{blue}{1 seul mécanisme détermine la valeur de $Y$ et si on observe la variable d'intérêt ou non. } Deux cas sont à distinguer :\par
+\bigbreak
+$\Rightarrow$ \textbf{\textcolor{ForestGreen}{Données censurées}} : la variable d'intérêt est $Y^{*}$ qui peut ne pas être observée au dessous d'un seuil causant un problème de censure. Le paramètre d'intérêt est l'effet marginal de $X_{k}$ sur la variable d'intérêt $Y^{*}$, qui vaut bien $\beta_{0k}$ lorsque $X_{k}$ apparaît simplement dans le modèle linéaire de $Y^{*}$. Ainsi, la variable $Y^{*}$ ayant un sens quantitatif et malgré la censure liée aux problèmes d'observation on peut bien interpréter quantitativement $\beta_{0}$ sur la variable d'intérêt.
+\bigbreak
+$\Rightarrow$ \textbf{\textcolor{BrickRed}{Solution en coin}} : la variable d'intérêt est bien $Y$ alors que la variable $Y^{*}$ est une variable latente potentiellement dépourvue de sens quantitatif. Typiquement un pb d'optimisation du consommateur où $Y^{*}$ mesure l'utilité optimale (en nombre de biens) de consommation d'un bien donné : donc potentiellement négatif. Et Y représente le nombre d'unités effectivement consommées. Les coefficients de $\beta_{0}$ concernant $Y^{*}$ qui n'as pas de sens quantitatif précis : on ne peut pas interpréter quantitativement les coefficients de $\beta_{0}$ sur la variable d'intérêt $Y$. Les paramètres d'intérêt sont les effets marginaux : le total $\frac{\partial E[Y|X=x]}{\partial x_{k}}$ (marge extensive et intensive) et $\frac{\partial E[Y|Y>0,X=x]}{\partial x_{k}}$ (marge intensive seulement). Ces paramètres sont tous les deux différents de $\beta_{0k}$ ce qui explique le manque d'interprétation quantitative des coefficients de $\beta_{0}$.
+\bigbreak
+\noindent $\hookrightarrow$ \underline{\textbf{Modèle de sélection / Tobit2 :}} \\
+\textcolor{blue}{Ici on a bien deux processus différents : un qui détermine $Y^{*}$ \textbf{et un autre} qui détermine si on observe cette valeur ou non i.e. modèle sur D.}\par 
+\underline{Interprétation \textcolor{ForestGreen}{quantitative directe} :} il y a un problème d'observation des données, on observe $Y=D.Y^{*}$ mais la variable d'intérêt est bien $Y^{*}$ (variable potentielle qui existe pour tous les \textit{individus}). Par conséquent $Y^{*}$ suivant un modèle linéaire, les paramètres d'intérêts sont les effets marginaux des variables explicatives sur la variable d'intérêt $Y^{*}$ et les coefficients de $\beta_{0}$ sont toujours interprétables quantitativement.
+
+\newpage
