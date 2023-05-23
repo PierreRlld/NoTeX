@@ -14,12 +14,13 @@
 \usepackage{caption}
 \usepackage{float}
 \usepackage{enumitem}
-\usepackage{amsmath}
+\usepackage{amsmath, amssymb}
 \usepackage{amsfonts}
 \usepackage{calc}
 \usepackage{pdfpages}
 \usepackage{bbold}
 \usepackage{ulem}
+\usepackage[many]{tcolorbox}
 
 
 \usepackage{setspace}
@@ -32,10 +33,34 @@
 %math 
 \newcommand{\indep}{\perp \!\!\! \perp}
 
+%BOXES
+\tcbset{
+    sharp corners,
+    colback = white,
+    before skip = 0.2cm,    % add extra space before the box
+    after skip = 0.5cm      % add extra space after the box
+}    
+\definecolor{main}{HTML}{e7e7e7}    
+\definecolor{sub}{HTML}{F4F4F4}
+\definecolor{sub2}{HTML}{f3f3f3}     
+\newtcolorbox{boxH}{
+    colback = sub, 
+    colframe = main, 
+    boxrule = 0pt, 
+    leftrule = 6pt % left rule weight
+}
+
+%CUSTOM
+\newcommand{\redline}[1]{\color{red}\uline{\textcolor{black}{#1}}\color{black}\:}
+\newcommand{\ghl}[1]{\colorbox{sub2}{#1}\:}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\red}[1]{\textcolor{BrickRed}{#1}}
+\newcommand{\green}[1]{\textcolor{ForestGreen}{#1}}
+
 %===INFO PDF===
 \hypersetup{							% Information sur le document
 pdfauthor = {Rouillard Pierre},			% Auteurs
-pdftitle = {econo2},		            % Sujet
+pdftitle = {notes_econo},		            % Sujet
 pdfstartview={FitH}}					% ajuste la page à la largeur de l'écran
 %==============
 
@@ -60,22 +85,25 @@ pdfstartview={FitH}}					% ajuste la page à la largeur de l'écran
 \fancyhead[L]{\leftmark}
 \fancyhead[R]{}
 
-% 0
-\section{Point sur les modèles et rappels}
-% 0.1
-\subsection{Quelles interprétations ?}
-\input{./Core/Partie_0/0.i.tex}
-% 0.2
-\subsection{Rappels d'économétrie 1}
+% 1
+\section{Points à savoir}
+% 1.1
+\subsection{Interprétation du paramètre causal à estimer}
+\input{./Core/Partie_1/1.i.tex}
+% 1.2
+\subsection{Représentations linéaires \& OLS}
+\input{./Core/Partie_1/1.ii.tex}
+\subsection{Résumé modèles}
 %\input{Core/Partie_0/0.ii}
 
-% I
-\section{MCO, IV et GMM}
+\newpage
+
+% 2
+\section{OLS - MCO}
 %\input{Core/Partie_1/Partie_1}
-% I.1
+% 2.1
 \subsection{Rappels MCO}
 %\input{Core/Partie_1/1.i}
-
 
 
 

@@ -1,6 +1,7 @@
 \babel@toc {french}{}\relax 
-\contentsline {section}{\numberline {1}Point sur les modèles et rappels}{2}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Quelles interprétations ?}{2}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Rappels d'économétrie 1}{4}{subsection.1.2}%
-\contentsline {section}{\numberline {2}MCO, IV et GMM}{4}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Rappels MCO}{4}{subsection.2.1}%
+\contentsline {section}{\numberline {1}Points à savoir}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Interprétation du paramètre causal à estimer}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Représentations linéaires \& OLS}{4}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Résumé modèles}{5}{subsection.1.3}%
+\contentsline {section}{\numberline {2}OLS - MCO}{6}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Rappels MCO}{6}{subsection.2.1}%
