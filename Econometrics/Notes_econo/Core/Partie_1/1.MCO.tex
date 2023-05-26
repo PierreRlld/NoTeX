@@ -1,0 +1,77 @@
+% Projection linéaire
+\noindent \textbf{}
+\noindent On note $Y \in \mathbf{R}$ la variable d'intérêt/dépendante et $X \in \mathbf{R}^{\textbf{K}}$ le vecteur des variables explicatives.
+\bigbreak
+\noindent $\hookrightarrow$ \underline{\textbf{Représentation non causale - Projection linéaire :}}\par
+Sous conditions de moments \footnote{$E[Y^{2}]<+\infty$, $E[\lVert X \rVert^{2}]<+\infty$ et $E[XX']$ inversible = de rang plein. En particulier: \textbf{any level of correlation between covariates except perfect colinearity} : composantes de X linéairement indépendantes mais \textit{n'exclut pas} qu'elles soients corrélées. Si le modèle a une constante et une variable catégorielle il faut exclure une des modalités.}, on a toujours par construction/définition de la représentation linéaire théorique (=projection linéaire orthogonale) orthogonalité des \textit{résidus} de cette représentation non causale avec les régresseurs = pas une hypothèse mais une conséquence.\par
+\begin{boxH}
+    $Y = X'.\widetilde{\beta} + \widetilde{\varepsilon}$ , $E[X\widetilde{\varepsilon}]=0$ toujours définissable sous conditions de moments.\par
+    \begin{itemize}
+        \item[\textbf{-}] $\widehat{\beta}_{OLS}$ \redline{estime toujours} $\widetilde{\beta}$ : $\widehat{\beta}_{OLS} \underset{n \to +\infty}{\longrightarrow} \widetilde{\beta}$\par
+        \item[\textbf{-}] $X'.\widetilde{\beta}$ meilleure prédiction linéaire de Y par X : $\widetilde{\beta}$ solution MSE.
+    \end{itemize}
+\end{boxH}
+
+\begin{equation*} 
+    \widehat{\beta}_{OLS} \in \underset{\beta}{\mathrm{argmin}} \sum_{i = 1}^{n}{(Y_{i} - X_{i}'.\beta)^{2}} \quad \longleftrightarrow \quad \widetilde{\beta} \in \underset{\beta}{\mathrm{argmin}} \; E[(Y-X'.\beta)^{2}]
+\end{equation*}
+
+\bigbreak
+% Représentation causale
+\noindent $\hookrightarrow$ \underline{\textbf{Représentation causale :}}\par
+La représentation causale fait intervenir \ghl{le paramètre causal $\beta_{0}$ qu'on cherche à estimer} : dans cette représentation le \textit{terme d'erreur} n'est pas automatiquement orthogonal au régresseur.\par
+\begin{boxH}
+    $Y = X'.\beta_{0} + \varepsilon$ , $E[X\varepsilon]\overset{\textbf{\red{?}}}{=}0$\par
+    \begin{itemize}
+        \item[\textbf{-}] $\beta_{0}$ paramètre causal à estimer.\par
+        \item[\textbf{-}] $\varepsilon$ résidu : agrège les facteurs inobservés qui affectent $Y$.
+    \end{itemize}
+\end{boxH}
+Le \ghl{terme d'erreur $\varepsilon$ capte l'hétérogénéité inobservée}, i.e capte les déterminants inobservés qui affectent la variable d'intérêt $Y$ : deux individus avec les mêmes variables explicatives auront néanmoins la plupart du temps des variables expliquées différentes.\par
+\blue{Avoir orthogonalité ($\rightarrow$ indépendance) entre régresseurs et terme d'erreur est une hypothèse !} C'est \textbf{l'hypothèse d'exogénéité}.
+
+\bigbreak
+%Lien
+\noindent $\hookrightarrow$ \underline{\textbf{Lien :}}\par
+\blue{Sans l'hypothèse d'exogénéité pour la représentation causale, les deux représentations diffèrent} et l'estimateur OLS ne permet pas d'identifier le paramètre causal d'intérêt.\par
+En revanche \ghl{avec hypothèse d'exogénéité les deux représentations coïncident} et $\widetilde{\beta} = \beta_{0}$ : $\widehat{\beta}_{OLS}$ qui estime toujours $\widetilde{\beta}$ est donc un estimateur consistant de $\beta_{0}$.\par
+En dehors des expériences contrôlées les variables explicatives peuvent parfois être corrélées aux facteurs inobersables et pb d'endogénéité $E[X\varepsilon]\neq 0$.
+\bigbreak
+
+%Mémo OLS
+\noindent $\hookrightarrow$ \underline{\textbf{Mémo OLS :}}\par
+$\circlearrowleft$ \href[page=5]{file:///Users/prld/Desktop/git_proj/NoTeX/NoTeX/Econometrics/2A/Cours/chapitre1.pdf}{\textit{link-ols}}\\
+Représentation causale
+\begin{boxH}
+    \textbf{Estimateur OLS - MCO}\\
+    $ Y = X'.\beta_{0} + \varepsilon $ , avec $E[\varepsilon] = 0$ 
+    \begin{itemize}
+        \item[\textbf{-}] Conditions de moments
+        \item[\textbf{-}] $ E[X\varepsilon] = 0 $ hypothèse d'exogénéité
+    \end{itemize}
+$\Rightarrow \beta_{0} $ est identifiable $ \beta_{0} = E[XX']^{-1}E[XY]$ \par
+$\Rightarrow $ L'estimateur $\widehat{\beta}_{OLS}$ est consistant, sans biais \& asymptotiquement normal
+\end{boxH} 
+
+On a:
+\begin{equation*}
+    \widehat{\beta}_{OLS} =  \left( \frac{1}{n}\sum_{i = 1}^{n}X_{i}X_{i}' \right)^{-1}\left( \frac{1}{n}\sum_{i = 1}^{n}X_{i}Y_{i} \right)
+\end{equation*}
+\begin{equation*}
+    \sqrt{n}(\widehat{\beta}_{OLS} - \beta_{0}) \underset{n \to +\infty}{\longrightarrow} \mathcal{N}(O,\redline{E[XX']^{-1}E[\varepsilon^{2}XX']E[XX']^{-1}})
+\end{equation*}
+\vspace*{-0.75cm}
+
+%Homoscédasticité
+\noindent \textbf{Homoscédasticité}: hypothèse sur la variance des résidus. L'erreur standard des MCO diffèrent en fonction de l'hypothèse!
+\begin{itemize}
+    \item[\textbf{-}] Faible $E[\varepsilon^{2}XX'] = E[\varepsilon^{2}]E[XX']$
+    \item[\textbf{-}] Forte $E[\varepsilon^{2}\vert X] = \sigma^{2} \leftrightarrow V[\varepsilon\vert X] = \sigma^{2}$ 
+\end{itemize}
+\noindent L'hypothèse d'homoscédasticité forte requiert que la variance des termes d'erreur soit la même pour chaque observation.
+\blue{L'estimateur $\widehat{V}$ de la variance asymptotique de $\widehat{\beta}_{OLS}$ est robuste à l'hétéroscédasticité. L'estimateur standard $\widetilde{V}$ n'est convergent que sous l'hypothèse d'homoscédasticité.}
+\begin{align*}
+    \underline{Robust} \quad \widehat{V} &= \left(\frac{1}{n-k}\sum_{i = 1}^{n}X_{i}X_{i}'\right)^{-1} \left(\frac{1}{n-k}\sum_{i = 1}^{n}\hat{\varepsilon}^2_{i}X_{i}X_{i}'\right) \left(\frac{1}{n-k}\sum_{i = 1}^{n}X_{i}X_{i}'\right)^{-1} \\    
+    \underline{Standard} \quad \widetilde{V} &= \left(\frac{1}{n-k}\sum_{i = 1}^{n}\hat{\varepsilon}^2_{i}\right)\left(\frac{1}{n-k}\sum_{i = 1}^{n}X_{i}X_{i}'\right)^{-1} \; \; \textrm{\ghl{sous hypothèse d'homoscédasticité}}
+\end{align*}    
+

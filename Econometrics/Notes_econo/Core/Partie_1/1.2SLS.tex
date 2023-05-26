@@ -1,0 +1,46 @@
+$\circlearrowleft$ \href[page=9]{file:///Users/prld/Desktop/git_proj/NoTeX/NoTeX/Econometrics/2A/Cours/chapitre1.pdf}{\textit{link-2sls}}\\
+% Variables instrumentales
+\noindent On suppose $Y = X'.\beta_{0} + \varepsilon$ avec \red{problème d'\textbf{endogénéité} $E[X\varepsilon]\neq 0$} \quad 
+\begin{boxH}
+    \textbf{Variables instrumentales:} $X\in \mathbf{R^{K}}$, $Z\in \mathbf{R^{L}}$, avec $L\geqslant K$
+    \begin{enumerate}
+        \item Exogénéité: $E[Z\varepsilon]=0$
+        \item Condition de rang $E[ZX']$ de rang $K$ $\leftrightarrow$ Pertinence $Cov(Z, X^{(i)})\neq 0 \quad \forall i$
+    \end{enumerate}        
+\end{boxH}
+
+\noindent Condition de rang donne qu'il exite $\Gamma$ tq $\Gamma.E[ZX']$ inversible. \textit{Condition de rang} testable avec first step (\ghl{significativité d'un des coeff. des vrais instruments}) et \textit{exogénéité} pas testable.\\ 
+Si $L=K$ alors $\beta_{0}$ est \textit{juste identifié}, si $L>K$ alors $\beta_{0}$ est \textit{suridentifié}.\\
+\blue{Z inclut toutes les variables exogènes.} En pratique on ne régresse et remplace par le projection linéaire sur Z estimée que les variables endogènes.
+
+%Estimateur 2SLS
+\begin{boxH}
+    \textbf{Estimateur 2MC - 2SLS}
+    \begin{enumerate}
+        \item Projection linéaire de X sur Z $\mapsto X^{*} = \Gamma Z \\ \textrm{où} \; \Gamma = E[XZ']E[ZZ']^{-1} = (\beta ^{\!^{\;OLS'}}_{(1)/Z},...,\beta ^{\!^{\;OLS'}}_{(K-1)/Z})^{T} = "\beta ^{\!^{\;OLS}}_{X/Z}" $
+        \item Reg lin de Y sur $X^{*}$ $\mapsto \textrm{OLS estimé est } \widehat{\beta}_{2SLS}$
+    \end{enumerate}
+\end{boxH}
+
+\begin{enumerate}
+    \item[.] $Y = X'.\beta_{0} + \varepsilon$
+    \item[.] $\beta_{0} = E[\Gamma ZX']^{-1}E[\Gamma ZY] = E[X^{*}X']^{-1}E[X^{*}Y] $
+    \item[or] $\innerproduct{z}{x-p_{\mathbf{Z}}(x)}=0 \quad \forall z\in \mathbf{Z} \quad \Rightarrow \quad z=X^{*}\in Vect(Z) \quad E[X^{*}X^{T}]=E[X^{*}X^{*T}]$
+    \item[.] \blue{$\beta_{0} = E[X^{*}X^{*'}]^{-1}E[X^{*}Y]$}
+\end{enumerate}
+
+\begin{boxH}
+    Estimateur doubles moindres carrés: $\hat{\beta}_{2SLS} \cv \beta_{0}$
+    \vspace*{-0.5cm}
+    \begin{equation*}
+        \hat{\beta}_{2SLS} = \left( \frac{1}{n}\sum_{i = 1}^{n}\hat{X}_{i}\hat{X}_{i}' \right)^{-1}\left( \frac{1}{n}\sum_{i = 1}^{n}\hat{X}_{i}Y_{i} \right) \quad \textrm{où} \;\; \hat{X}_{i} = \red{\hat{\Gamma}}Z_{i} \quad \red{\hat{\Gamma} = (\hat{\beta}^{\!^{\;OLS'}}_{(1)/Z},...,\hat{\beta}^{\!^{\;OLS'}}_{(K-1)/Z})^{T}}
+        \vspace*{-0.25cm}
+    \end{equation*}
+    
+    $\Rightarrow $ L'estimateur $\hat{\beta}_{2SLS}$ est convergent \& asymptotiquement normal \textbf{mais} pas necéssairement sans biais.
+\end{boxH}
+\vspace*{-1cm}
+\begin{equation*}
+    \sqrt{n}(\widehat{\beta}_{2SLS} - \beta_{0}) \cv \mathcal{N}(O,\textrm{VA($\widehat{\beta}_{2SLS}$)}=\redline{E[X^{*}X^{*'}]^{-1}E[\varepsilon^{2}X^{*}X^{*'}]E[X^{*}X^{*'}]^{-1}})
+\end{equation*}
+$\hookrightarrow \varepsilon$ estimé par $\widehat{\varepsilon}_{i} = Y_{i} - \boldsymbol{X'_{i}}.\widehat{\beta}_{2SLS} \;$ et \blue{$\widehat{\textrm{VA}}$($\widehat{\beta}_{2SLS}$) estimateur convergent robuste (car ne repose pas sur des hypothèses d'homoscédasticité) de la variance asymptotique}. Ce n'est pas l'estimateur qu'on obtient si l'on fait une régression de $Y$ sur $\widehat{X}$ \ghl{car $\widehat{\varepsilon}_{i} \neq Y_{i} - \widehat{X}_{i}'.\widehat{\beta}_{2SLS}$}

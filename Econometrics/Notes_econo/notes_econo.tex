@@ -32,6 +32,8 @@
 
 %math 
 \newcommand{\indep}{\perp \!\!\! \perp}
+\newcommand{\innerproduct}[2]{\langle #1, #2 \rangle}
+\newcommand{\cv}{\underset{n \to +\infty}{\longrightarrow}}
 
 %BOXES
 \tcbset{
@@ -78,24 +80,24 @@
 \fancyhead[L]{\leftmark}
 \fancyhead[R]{}
 
-% 1
-\section{Points à savoir}
-% 1.1
+
+\section{Econo2}
+
 \subsection{Interprétation du paramètre causal à estimer}
-\input{./Core/Partie_1/1.i.tex}
-% 1.2
+\input{./Core/Partie_1/1.interp.tex}
 \subsection{Représentations linéaires \& OLS}
-\input{./Core/Partie_1/1.ii.tex}
-\subsection{Résumé modèles}
-%\input{Core/Partie_0/0.ii}
+\input{./Core/Partie_1/1.MCO.tex}
+\newpage
+\subsection{Modèle I.V - estimateur 2SLS/2MC}
+\input{./Core/Partie_1/1.2SLS.tex}
+\subsection{Méthode des moments généralisés}
+\input{./Core/Partie_1/1.GMM.tex}
 
 \newpage
 
-% 2
-\section{OLS - MCO}
+\section{XXX}
 %\input{Core/Partie_1/Partie_1}
-% 2.1
-\subsection{Rappels MCO}
+\subsection{xxx}
 %\input{Core/Partie_1/1.i}
 
 
