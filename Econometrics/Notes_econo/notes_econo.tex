@@ -31,7 +31,43 @@
 \renewcommand{\baselinestretch}{1.4}
 
 %math 
-\newcommand{\indep}{\perp \!\!\! \perp}
+%indep et non indep
+\makeatletter
+\newcommand*{\indep}{%
+  \mathbin{%
+    \mathpalette{\@indep}{}%
+  }%
+}
+\newcommand*{\nindep}{%
+  \mathbin{%                   % The final symbol is a binary math operator
+    \mathpalette{\@indep}{\not}% \mathpalette helps for the adaptation
+                               % of the symbol to the different math styles.
+  }%
+}
+\newcommand*{\@indep}[2]{%
+  % #1: math style
+  % #2: empty or \not
+  \sbox0{$#1\perp\m@th$}%        box 0 contains \perp symbol
+  \sbox2{$#1=$}%                 box 2 for the height of =
+  \sbox4{$#1\vcenter{}$}%        box 4 for the height of the math axis
+  \rlap{\copy0}%                 first \perp
+  \dimen@=\dimexpr\ht2-\ht4-.2pt\relax
+      % The equals symbol is centered around the math axis.
+      % The following equations are used to calculate the
+      % right shift of the second \perp:
+      % [1] ht(equals) - ht(math_axis) = line_width + 0.5 gap
+      % [2] right_shift(second_perp) = line_width + gap
+      % The line width is approximated by the default line width of 0.4pt
+  \kern\dimen@
+  {#2}%
+      % {\not} in case of \nindep;
+      % the braces convert the relational symbol \not to an ordinary
+      % math object without additional horizontal spacing.
+  \kern\dimen@
+  \copy0 %                       second \perp
+} 
+\makeatother
+
 \newcommand{\innerproduct}[2]{\langle #1, #2 \rangle}
 \newcommand{\cv}{\underset{n \to +\infty}{\longrightarrow}}
 
@@ -92,6 +128,15 @@
 \input{./Core/Partie_1/1.2SLS.tex}
 \subsection{Méthode des moments généralisés}
 \input{./Core/Partie_1/1.GMM.tex}
+\newpage
+\subsection{Données de panel}
+\input{./Core/Partie_1/1.Panel.tex}
+\newpage
+\subsection{Modèles binaires}
+\input{./Core/Partie_1/1.Binaire.tex}
+\newpage
+\subsection{Modèles de censure et sélection}
+\input{./Core/Partie_1/1.CensureSélection.tex}
 
 \newpage
 
