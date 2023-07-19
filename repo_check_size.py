@@ -45,8 +45,9 @@ def pretty_print_size(size):
     s = round(size_bytes / p, 2)
     return "%s %s" % (s, size_name[i])
 
-
+"""
 if sys.argv[1]:
     print('\n')
     print("Size of "+sys.argv[1]+" is = "+pretty_print_size(check_repo_size(sys.argv[1])))
     print('\n')
+"""
