@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1687704142 "/Users/prld/Desktop/git_proj/NoTeX/NoTeX/Econometrics/Notes_econo/notes_econo.tex" "notes_econo.pdf" "notes_econo" 1687704143 0
-  "/Users/prld/Desktop/git_proj/NoTeX/NoTeX/Econometrics/Notes_econo/notes_econo.tex" 1685300325 3999 603939a375d28d45b7d8fa8d8e973ed5 ""
+["pdflatex"] 1689769173 "/Users/prld/git/NoTeX/Econometrics/Notes_econo/notes_econo.tex" "notes_econo.pdf" "notes_econo" 1689769174 0
+  "/Users/prld/git/NoTeX/Econometrics/Notes_econo/notes_econo.tex" 1689769011 3999 603939a375d28d45b7d8fa8d8e973ed5 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -267,15 +267,15 @@
   "Core/Partie_1/1.Binaire.tex" 1685300342 137 3b604cdc45908718bb114ac1d4748c51 ""
   "Core/Partie_1/1.CensureSélection.tex" 1685301105 5587 6699487ae42bbd5f887474f5a84da516 ""
   "Core/Partie_1/1.GMM.tex" 1685139121 1904 984b7f4d709c987ef4662b510d7e03f9 ""
-  "Core/Partie_1/1.MCO.tex" 1686863133 6079 c927453706efe0b4ba2f403b1af139d9 ""
-  "Core/Partie_1/1.Panel.tex" 1687704142 2595 43bba15a155d383e707b9768b4e9f006 ""
+  "Core/Partie_1/1.MCO.tex" 1689769173 6103 c5b6e10abb51e015c27e4f94a7fc9528 ""
+  "Core/Partie_1/1.Panel.tex" 1687704207 2595 43bba15a155d383e707b9768b4e9f006 ""
   "Core/Partie_1/1.interp.tex" 1685194625 5144 7ba4416b8b30ed918979e14faaa94042 ""
   "Core/frontpage.tex" 1684881958 819 17f5f243ce6ec671f735c2194d8f06dd ""
   "Core/logo.png" 1684795455 31772 06ff86c9e56a8bf28d009e8b49752c87 ""
-  "notes_econo.aux" 1687704143 1995 1683fb8c5f7585a08a8550adc2201388 "pdflatex"
-  "notes_econo.out" 1687704143 1719 c675277ddd0d30c57e9d03fa215f06bc "pdflatex"
-  "notes_econo.tex" 1685300325 3999 603939a375d28d45b7d8fa8d8e973ed5 ""
-  "notes_econo.toc" 1687704143 900 d4e8d40510d4453ecaa134d4c4e9e46e "pdflatex"
+  "notes_econo.aux" 1689769174 1995 1683fb8c5f7585a08a8550adc2201388 "pdflatex"
+  "notes_econo.out" 1689769174 1719 c675277ddd0d30c57e9d03fa215f06bc "pdflatex"
+  "notes_econo.tex" 1689769011 3999 603939a375d28d45b7d8fa8d8e973ed5 ""
+  "notes_econo.toc" 1689769174 900 d4e8d40510d4453ecaa134d4c4e9e46e "pdflatex"
   (generated)
   "notes_econo.aux"
   "notes_econo.log"

@@ -69,7 +69,7 @@ On a:
     \item[\textbf{-}] Faible $E[\varepsilon^{2}XX'] = E[\varepsilon^{2}]E[XX']$
     \item[\textbf{-}] Forte $E[\varepsilon^{2}\vert X] = \sigma^{2} \leftrightarrow V[\varepsilon\vert X] = \sigma^{2}$ 
 \end{itemize}
-\noindent L'hypothèse d'homoscédasticité forte requiert que la variance des termes d'erreur soit la même pour chaque observation.
+\noindent L'hypothèse d'homoscédasticité forte requiert que la variance des termes d'erreur soit la même pour chaque observation et indépendante de $X$.
 \blue{L'estimateur $\widehat{V}$ de la variance asymptotique de $\widehat{\beta}_{OLS}$ est robuste à l'hétéroscédasticité. L'estimateur standard $\widetilde{V}$ n'est convergent que sous l'hypothèse d'homoscédasticité.}
 \begin{align*}
     \underline{Robust} \quad \widehat{V} &= \left(\frac{1}{n-k}\sum_{i = 1}^{n}X_{i}X_{i}'\right)^{-1} \left(\frac{1}{n-k}\sum_{i = 1}^{n}\hat{\varepsilon}^2_{i}X_{i}X_{i}'\right) \left(\frac{1}{n-k}\sum_{i = 1}^{n}X_{i}X_{i}'\right)^{-1} \\    
