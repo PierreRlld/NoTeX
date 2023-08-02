@@ -8,6 +8,7 @@ from repo_check_size import *
 from os.path import basename
 import zipfile
 from shutil import copytree, rmtree
+from tqdm import tqdm
 
 base_dropbox = "/Users/prld/Dropbox"
 base_git = "/Users/prld/git/NoTeX"
@@ -33,7 +34,7 @@ class CustomTheme(Default):
         self.Checkbox.selected_color = term.green
         self.Checkbox.unselected_icon = "*"
 
-def main(dropbox,git):
+def main(dropbox):
     dx_folders = [ f.name for f in os.scandir(dropbox) if f.is_dir() ]
     q1 = [
     inquirer.List(name='dropbox_folder',
@@ -51,24 +52,32 @@ def main(dropbox,git):
     else:
         q2 = [
             inquirer.Checkbox(name='selected_subfolder',
-                        message="Quel dossier à maj",
+                        message="Choisir dossiers à maaj",
                         choices=subfolders,
                     )
         ]
         answers2 = inquirer.prompt(q2, theme=CustomTheme(), raise_keyboard_interrupt=True)["selected_subfolder"]
-        return(answers2)
+        return(answers1,answers2)
 
-def pool_paste(dropbox, git, folders):
-    pass
+def pool_paste(dropbox, git, base_folder, selected_folders):
+
+    with tqdm(total=len(selected_folders)) as pbar:
+        for folder_name in selected_folders:
+            copytree(dropbox+"/"+base_folder+"/"+folder_name,
+                    git+"/"+base_folder+"/"+folder_name,
+                    dirs_exist_ok=True)
+            pbar.update(1)
 
 if __name__ == "__main__":
     print('-------------------------------------------------')
     size = check_repo_size("https://github.com/PierreRlld/NoTeX")
     print(">>> Repo. Git plein à",str(round(100*(size/1000/1000),1))+"%")
     main_res = main(dropbox="/Users/prld/Desktop/TEST")
+    print(main_res)
     if main_res == "quit":
         quit()
     else:
         pool_paste(dropbox="/Users/prld/Desktop/TEST",
-                   git="/Users/prld/git/NoTeX/",
-                   folders=main_res)
+                   git="/Users/prld/Desktop/TEST_git",
+                   base_folder = main_res[0],
+                   selected_folders = main_res[1])
