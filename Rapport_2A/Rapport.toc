@@ -1,16 +1,18 @@
 \babel@toc {english}{}\relax 
-\contentsline {section}{Remerciements}{2}{section*.1}%
-\contentsline {section}{Introduction}{3}{section*.2}%
-\contentsline {section}{\numberline {1}Trade}{4}{section.1}%
-\contentsline {subsection}{\numberline {1.1}xxx}{4}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}xxx}{4}{subsection.1.2}%
-\contentsline {section}{\numberline {2}Labour market}{5}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Literature review}{5}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Data and Methodology}{5}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}Data}{5}{subsubsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2}Methodology and Model selection}{5}{subsubsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.3}Results}{5}{subsection.2.3}%
-\contentsline {section}{\numberline {3}Yield spread}{6}{section.3}%
-\contentsline {subsection}{\numberline {3.1}xxx}{6}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}xxx}{6}{subsection.3.2}%
-\contentsline {section}{\numberline {4}Conclusion}{7}{section.4}%
+\contentsline {section}{Remerciements}{1}{section*.1}%
+\contentsline {section}{Introduction}{2}{section*.2}%
+\contentsline {section}{\numberline {1}\textit {Accrued savings since the Covid-19 pandemic}}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Methodology and Variable choices}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Total stock of excess savings estimation}{4}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Excess savings' allocation towards asset classes}{7}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Summary of key findings}{8}{subsection.1.4}%
+\contentsline {section}{\numberline {2}\textit {Wage growth drivers across European markets}}{9}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Literature review}{9}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Data and Methodology}{10}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Data}{10}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Methodology and Model selection}{12}{subsubsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.3}Wage growth models results}{17}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Changes in labour productivity}{22}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Summary of key findings}{24}{subsection.2.5}%
+\contentsline {section}{Conclusion}{25}{subsection.2.5}%
+\contentsline {section}{Annexe}{26}{section*.18}%

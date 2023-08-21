@@ -1,4 +1,4 @@
-\documentclass[12pt, english]{article}
+\documentclass[15pt, english]{article}
 \usepackage{times}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -21,14 +21,16 @@
 \usepackage{bbold}
 \usepackage{ulem}
 \usepackage[many]{tcolorbox}
+\usepackage{siunitx,booktabs}
 
 
-\usepackage{setspace}
-\onehalfspacing
+%\usepackage{setspace}
+%\onehalfspacing
+\usepackage[skip=10pt, indent=15pt]{parskip}
 
 \definecolor{light-gray}{gray}{0.95}
 \newcommand{\source}[1]{\caption*{Source: {#1}} }
-\renewcommand{\baselinestretch}{1.4}
+\renewcommand{\baselinestretch}{1.5}
 
 %math 
 %indep et non indep
@@ -88,7 +90,7 @@
     leftrule = 6pt % left rule weight
 }
 
-%CUSTOM
+%CUSTOM COLORS =====================================================================
 \newcommand{\redline}[1]{\color{red}\uline{\textcolor{black}{#1}}\color{black}\:}
 \newcommand{\ghl}[1]{\colorbox{sub2}{#1}\:}
 \newcommand{\blue}[1]{\textcolor{blue}{#1}}
@@ -96,6 +98,10 @@
 \newcommand{\green}[1]{\textcolor{ForestGreen}{#1}}
 
 
+
+%==================================================================================
+%==================================================================================
+%==================================================================================
 
 \hypersetup{pdfauthor = {Rouillard Pierre}, pdftitle = {2A-rapport}, pdfstartview={FitH}}	
 
@@ -110,11 +116,13 @@
 \pagestyle{fancy}
 \fancyhead[L]{}
 \fancyhead[R]{}
+\thispagestyle{empty}
 \tableofcontents
 \break
-
+\setcounter{page}{1}
 \addcontentsline{toc}{section}{Remerciements}
 \section*{Remerciements}
+\input{./Core/Remerciements.tex}
 \newpage
 \addcontentsline{toc}{section}{Introduction}
 \section*{Introduction}
@@ -126,18 +134,24 @@
 \fancyhead[L]{\leftmark}
 \fancyhead[R]{}
 
-\section{Trade}
-\input{./Core/1.Trade/trade_text.tex}
+\section{\textit{Accrued savings since the Covid-19 pandemic}}
+\input{./Core/1.Savings/savings_text.tex}
 \newpage
 
-\section{Labour market}
+\section{\textit{Wage growth drivers across European markets}}
 \input{./Core/2.Labour/labour_text.tex}
 \newpage
 
-\section{Yield spread}
-\input{./Core/3.Yield/yield_text.tex}
+\addcontentsline{toc}{section}{Conclusion}
+\section*{Conclusion}
+\input{./Core/conclusion.tex}
 \newpage
 
-\section{Conclusion}
+\pagestyle{fancy}
+\fancyhead[L]{}
+\fancyhead[R]{}
+\addcontentsline{toc}{section}{Annexe}
+\section*{Annexe}
+\input{./Core/annexe.tex}
 
 \end{document}

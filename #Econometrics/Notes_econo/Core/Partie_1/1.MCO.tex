@@ -1,4 +1,6 @@
-% Projection linéaire
+
+
+% >>> Projection linéaire =========================================================================
 \noindent \textbf{}
 \noindent On note $Y \in \mathbf{R}$ la variable d'intérêt/dépendante et $X \in \mathbf{R}^{\textbf{K}}$ le vecteur des variables explicatives.
 \bigbreak
@@ -15,9 +17,10 @@ Sous conditions de moments \footnote{$E[Y^{2}]<+\infty$, $E[\lVert X \rVert^{2}]
 \begin{equation*} 
     \widehat{\beta}_{OLS} \in \underset{\beta}{\mathrm{argmin}} \sum_{i = 1}^{n}{(Y_{i} - X_{i}'.\beta)^{2}} \quad \longleftrightarrow \quad \widetilde{\beta} \in \underset{\beta}{\mathrm{argmin}} \; E[(Y-X'.\beta)^{2}]
 \end{equation*}
-
 \bigbreak
-% Représentation causale
+
+
+% >>> Représentation causale =========================================================================
 \noindent $\hookrightarrow$ \underline{\textbf{Représentation causale :}}\par
 La représentation causale fait intervenir \ghl{le paramètre causal $\beta_{0}$ qu'on cherche à estimer} : dans cette représentation le \textit{terme d'erreur} n'est pas automatiquement orthogonal au régresseur.\par
 \begin{boxH}
@@ -29,16 +32,18 @@ La représentation causale fait intervenir \ghl{le paramètre causal $\beta_{0}$
 \end{boxH}
 Le \ghl{terme d'erreur $\varepsilon$ capte l'hétérogénéité inobservée}, i.e capte les déterminants inobservés qui affectent la variable d'intérêt $Y$ : deux individus avec les mêmes variables explicatives auront néanmoins la plupart du temps des variables expliquées différentes.\par
 \blue{Avoir orthogonalité ($\rightarrow$ indépendance) entre régresseurs et terme d'erreur est une hypothèse !} C'est \textbf{l'hypothèse d'exogénéité}.
-
 \bigbreak
-%Lien
+
+
+% >>> Lien =========================================================================================
 \noindent $\hookrightarrow$ \underline{\textbf{Lien :}}\par
 \blue{Sans l'hypothèse d'exogénéité pour la représentation causale, les deux représentations diffèrent} et l'estimateur OLS ne permet pas d'identifier le paramètre causal d'intérêt.\par
 En revanche \ghl{avec hypothèse d'exogénéité les deux représentations coïncident} et $\widetilde{\beta} = \beta_{0}$ : $\widehat{\beta}_{OLS}$ qui estime toujours $\widetilde{\beta}$ est donc un estimateur consistant de $\beta_{0}$.\par
 En dehors des expériences contrôlées les variables explicatives peuvent parfois être corrélées aux facteurs inobersables et pb d'endogénéité $E[X\varepsilon]\neq 0$.
 \bigbreak
 
-%Mémo OLS
+
+% >>> Mémo OLS =====================================================================================
 \noindent $\hookrightarrow$ \underline{\textbf{Mémo OLS :}}\par
 $\circlearrowleft$ \href[page=5]{file:///Users/prld/Desktop/git_proj/NoTeX/NoTeX/Econometrics/2A/Cours/chapitre1.pdf}{\textit{link-ols}}\\
 Représentation causale
@@ -63,7 +68,7 @@ On a:
 \end{equation*}
 \vspace*{-0.75cm}
 
-%Homoscédasticité
+% Homoscédasticité 
 \noindent \textbf{Homoscédasticité}: hypothèse sur la variance des résidus. L'erreur standard des MCO diffèrent en fonction de l'hypothèse!
 \begin{itemize}
     \item[\textbf{-}] Faible $E[\varepsilon^{2}XX'] = E[\varepsilon^{2}]E[XX']$
