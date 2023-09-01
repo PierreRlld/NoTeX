@@ -1,5 +1,5 @@
 \babel@toc {english}{}\relax 
-\contentsline {section}{Remerciements}{1}{section*.1}%
+\contentsline {section}{Acknowledgement}{1}{section*.1}%
 \contentsline {section}{Introduction}{2}{section*.2}%
 \contentsline {section}{\numberline {1}\textit {Accrued savings since the Covid-19 pandemic}}{3}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Methodology and Variable choices}{3}{subsection.1.1}%
@@ -15,4 +15,5 @@
 \contentsline {subsection}{\numberline {2.4}Changes in labour productivity}{22}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}Summary of key findings}{24}{subsection.2.5}%
 \contentsline {section}{Conclusion}{25}{subsection.2.5}%
-\contentsline {section}{Annexe}{26}{section*.18}%
+\contentsline {section}{References}{26}{section*.18}%
+\contentsline {section}{Annexe}{26}{section*.20}%

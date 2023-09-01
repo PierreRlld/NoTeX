@@ -10,34 +10,34 @@ Through a large range of model specifications, they assessed the extent to which
 From the estimated Phillips curve the drivers of recent wage growth strength are derived, highlighting a strong effect of a tight labor market and high inflation expectations mix.
 Coefficients estimates also allow the authors to evaluate what it would take to bring down wage inflation to levels usually considered compatible with the BoE inflation target.
 
-Phillips curve models have longed been studied from the original 1958 paper \textit{"The Relation between Unemployment and the Rate of Change of Money Wage Rates in the United Kingdom, 1861-1957"} to most recent studies on its possible weakening explainability power due to flattening during the pandemic (Hartwig, Nickel \& Bobeica (2021)). 
-In their 2018 IMF Working paper on drivers of wage growth Hong \& al. consider the Phillips curve framework proposed by Gali in 2011 and illustrate the expected weights of inflation expectations and productivity growth on wage growth. 
+Phillips curve models have longed been studied from the original 1958 paper \textit{"The Relation between Unemployment and the Rate of Change of Money Wage Rates in the United Kingdom, 1861-1957"}\cite{labour0} to most recent studies on its possible weakening explainability power due to flattening during the pandemic (Hartwig, Nickel \& Bobeica (2021)\cite{labour1}). 
+In their 2017 chapter of the IMF World Outlook on drivers of wage growth Nabar \& al.\cite{labour2} consider the Phillips curve framework proposed by Gali in 2011\cite{labour3} and illustrate the expected weights of inflation expectations and productivity growth on wage growth. 
 While in the original paper from Williams Phillips the link is drawn between nominal wage growth and unemployment in Great Britain, it appears from their results that despite slack being a known key driver of wage development, the unemployment rate alone may not adequately capture all constraints in the labor market leading to wage inflation, and thus other measures of slack should be considered.
 
 This is consistent with a broader literature as measures regarding slack have largely been discussed. 
-Recently, Furman \& Powell III (2022) from the Peterson Institute for International Economics provided an in-depth analysis of a wide range of alternative measures of slack in the US, particularly measures that include a demand dimension, to assess labor market tightness. 
-They also highlighted the post-pandemic changes in these measures that used to move together but have started behaving differently. 
+Recently, Domash \& H. Summers (2022)\cite{labour4} from the Centre for Economic Policy Research (CEPR) provided an in-depth analysis of a wide range of alternative measures of slack in the US, particularly measures that include a demand dimension, to assess labor market tightness. 
+They also highlighted the changes, amid the pandemic, in these measures that used to move together but started behaving differently. 
 This induces a growing interest to consider them separately and not as interchangeable measures. 
 Moreover, they point out the instability of estimated relationships between wage developments and the slack measures -whether it is due to stationary properties of some variables or structural changes- and raise caution when one attempts to predict future wage growth. 
-Both Saez \& Michaillat (2022) and Furman \& Powell (2021) also illustrated the better fit of job vacancy rate and quit rate as demand-side slack measures in the US.
+Both Saez \& Michaillat (2022)\cite{labour5} and Furman \& Powell (2021)\cite{labour6} also illustrated the better fit of job vacancy rate and quit rate as demand-side slack measures in the US.
 
-In the ECB Economic Bulletin n.8 of December 2022, Bodnár \& al. shed light on measures’ differences but this time regarding wage growth as the latter also started showing some divergence during the pandemic. 
+In the ECB Economic Bulletin of January 2023, Bodnár \& al.\cite{labour7} shed light on measures’ differences but this time regarding wage growth as the latter also started showing some divergence during the pandemic. 
 Namely, the annual growth of compensation per employee (consisting of total wages and salaries paid by employers but also of imputed social contributions, expressed per employee) decreased while the compensation per hour and the Labor cost index from Eurostat both rose during the same period. 
 Despite moderating over time some differences still remain. 
 As the goal of our analysis is not to highlight these differences we chose not to focus on this issue but it is still worth mentioning. 
 We give more precision regarding the selection of our variables in the dedicated data section.
 
-More recently, and in line with our study, Domash \& H. Summers (2023) from the Centre for Economic Policy Research (CEPR) assessed the recent wage development in the US and argue that the traditional Phillips Curve framework still performs relatively well when predicting wage inflation. 
+More recently, and in line with our study, Domash \& H. Summers (2023)\cite{labour8} assessed the recent wage development in the US and argue that the traditional Phillips Curve framework still performs relatively well when predicting wage inflation. 
 Moreover, they underline the factors that would bring down wage growth to levels compatible with the Federal Reserve’s 2\% inflation target.
 
 We build on this literature and make the following main contributions: investigating broader slack measures for European countries and estimating Phillips curves with a rich dynamic structure following our own methodology. 
 Our model sheds light, both quantitatively and qualitatively, on the relative importance of the key wage drivers, all the more highlighted over time by the contribution breakdown charts, while performing fairly well. 
-We are thus able to strengthen the EZ Labour market outlook for Allianz Trade’s quarterly outlook. 
+We are thus able to strengthen the Eurozone Labour market outlook for Allianz Trade’s quarterly outlook. 
 In hindsight even though we were satisfied with the results we also point out limits and overall reflections we have on the methodology throughout the report.
 \subsection{Data and Methodology}
 \subsubsection{Data}
 
-\quad \textbf{Wage.} As our study did not focus on the different possible measures of wage and the inherent differences mentioned in particular by Bodnár \& al. (2022) we decided to construct a simple measure that would be comparable across countries. 
+\quad \textbf{Wage.} As our study did not focus on the different possible measures of wage and the inherent differences mentioned in particular by Bodnár \& al.\cite{labour7} we decided to construct a simple measure that would be comparable across countries. 
 Our wage variable $Wage$ is more of a labour cost variable than a, strictly speaking, wage measure. We take the logarithm of the Hourly earn in 2015 basis (2015=100). 
 
 \textbf{Inflation.} The standard Phillips curve relies on an inflation expectation variable. 
@@ -64,13 +64,19 @@ Find below a result table summarising the key results from the different tests.
     \label{figure:Labour_ur}
 \end{figure}
 \vspace{-1cm}
-We use the \red{ADF and PP tests} to asses the different series showing signs of a unit root in level.
-After computing the first difference counterpart for each series we interpret the comparison of either the Drift \& Trend or Drift statistics to its corresponding critical value depending on the differentiated series looks. 
+We use the standard Augmented Dickey-Fuller (ADF) and Perron-Phillips (PP) tests to asses the different series showing signs of a unit root in level. 
+As a reminder the null hypothesis for both the ADF and PP test is the presence of a unitary root and thus non-stationary. 
+We run the ADF test with Drift (\ref{adf1}) \& Trend and with Drift only (\ref{adf2}). Likewise for the other tests. To check that the stationary hypothsis is not incorrect for the first difference series we use the KPSS test, where the null hypothesis is stationarity.
+\begin{align}
+    \Delta y_{t} = \gamma y_{t-1} + a_{0} + a_{1}t + \sum_{i=2}^{p}\beta_{i} \Delta y_{t-i+1} + \epsilon_{t} \quad \longmapsto \; \textrm{H(0): } \gamma = 0 \label{adf1} \\
+    \Delta y_{t} = \gamma y_{t-1} + a_{0} + \sum_{i=2}^{p}\beta_{i} \Delta y_{t-i+1} + \epsilon_{t} \quad \longmapsto \; \textrm{H(0): } \gamma = 0 \label{adf2}
+\end{align}
+\quad After computing the first difference counterpart for each series we interpret the comparison of either the Drift \& Trend or Drift statistics to its corresponding critical value depending on the differentiated series looks. 
 Overall all series are not level-stationary as the  t-statistics for the ADF and PP are below the critical values, we thus can’t reject the presence of a unit root. 
 Running the same test on the differentiated series establishes the series as first-difference-stationary. Using the KPSS test the hypothesis of stationarity cannot be rejected at the 5\% level, thus reinforcing our conclusion of the variables being integrated of order one I(1).
 
 \subsubsection{Methodology and Model selection}
-As we highlighted in the previous section, our variables are I(1) and we thus consider a model ran in first difference. Namely, we run country-specific ARDL models of the following form:
+\quad As we highlighted in the previous section, our variables are I(1) and we thus consider a model ran in first difference. Namely, we run country-specific ARDL models of the following form:
 \begin{equation*}
     \Delta wage_{t} = \sum_{k=1}^{W}\alpha_k \Delta wage_{t-k} + \sum_{k=0}^{Q}\beta_k^{(CPI)} \Delta CPI_{t-k} + \sum_{k=0}^{S}\beta_k^{(slack)} \Delta slack_{t-k} + \sum_{k=0}^{P}\beta_k^{(prod)} \Delta prod._{t-k} + \theta_{1}\mathbb{1}_{covid} + \theta_{2}\mathbb{1}_{GFC}
 \end{equation*}
@@ -99,13 +105,16 @@ This first step combines the classical tools which are information criterion and
 
 However statistically good the models described above might be, the selection of one as the best still lacks some economic fundamentals. 
 More than just including lags of explanatory variables, the ARDL framework provides a feature that we tried to leverage to a certain extent to control our pool of possible models and make sense of their statistical features in an economic sense. 
-Using the regression equation we can compute the dynamic marginal effect of each variable lag included, known as short-run effects. 
-The accumulation of such short-run effects leads to \red{XXX}. 
-If we consider a permanent unitary shock in $X_{t}$ so that $E(X_{t})$ changes, the effect in $E(Y_{t})$ is \red{XXX}, known as the long-run multiplier (LRM). The latter then appears as the accumulation of short-run effects. 
+Using the regression equation we can compute the dynamic marginal effect of each variable lag included, known as short-run effects $\frac{\mathrm{d}y_{t}}{\mathrm{d}x_{t_{i}}}$. 
+If we consider a permanent unitary shock in $X_{t}$ so that $E(X_{t})$ changes, the effect in $E(Y_{t})$ is (\ref{eq1}), known as the long-run multiplier (LRM). The latter is also the accumulation of short-run effects. 
+With stationary series and white noise we have, using $\theta (L) = 1 - \theta_{1}L - \theta_{2}L^{2} - \dots - \theta_{p}L^{p}$ and $\phi (L) = \phi_{0} + \phi_{1}L + \phi_{2}L^{2} + \dots + \phi_{q}L^{q}$:
 \vspace{-0.3cm}
-\begin{equation*}
-    \red{EQUATION calculs (XXX)}
-\end{equation*}
+\begin{align}
+    \theta (L)y_{t} &= \delta + \phi (L)x_{t} + \epsilon_{t} \nonumber \\
+    y_{t} &= \theta^{-1} (L)\delta + \theta^{-1} (L)\phi (L)x_{t} + \theta^{-1} (L)\epsilon_{t} \nonumber \\
+    \frac{\mathrm{d}E(y_{t})}{\mathrm{d}E(x_{t})} &= \theta^{-1} (L)\phi (L).1 = \theta^{-1} (1)\phi (1) \nonumber\\
+    \frac{\mathrm{d}E(y_{t})}{\mathrm{d}E(x_{t})} &= \frac{\phi_{0} + \phi_{1} + \phi_{2} + \dots + \phi_{q}}{1 - \theta_{1} - \theta_{2} - \dots - \theta_{p}} \label{eq1}
+\end{align}
 
 We utilise this long-run multiplier as a constraint in our model selection process.
 We argue that a one per cent permanent increase in $\Delta CPI$ and $\Delta prod.$ variables, namely a one per cent permanent increase in QoQ inflation and productivity growth should be associated with a positive long-run multiplier for wage growth. 
@@ -114,13 +123,13 @@ On the other hand for the different slack measures, we do not impose any constra
 Through the Okun law, which links changes in unemployment and GDP growth, we argue that it is best to let LRM associated with the chosen slack measure unconstrained, despite the expectation we could have on its sign.
 \vspace{-0.0005cm}
 \begin{align*}
-    \frac{\Delta Y}{Y} = k - c\Delta U \underset{\textrm{unitary shock on U}}{\longrightarrow} \hspace*{0.7cm} \frac{\Delta Y}{Y} = k - c(\Delta U + 1)\\
-    \frac{\Delta Y}{Y} \geqslant 0 \Leftrightarrow k - c\Delta U \geqslant c\\
-    \frac{\Delta Y}{Y} \geqslant 0 \Leftrightarrow \frac{k}{c} \geqslant \Delta U +1\\
+    \frac{\Delta Y}{Y} = k - c\Delta U \underset{\textrm{unitary shock on U}}{\longrightarrow} \hspace*{0.7cm} \frac{\Delta Y}{Y} &= k - c(\Delta U + 1)\\
+    \frac{\Delta Y}{Y} &\geqslant 0 \Leftrightarrow k - c\Delta U \geqslant c\\
+    \frac{\Delta Y}{Y} &\geqslant 0 \Leftrightarrow \frac{k}{c} \geqslant \Delta U +1\\
 \end{align*}
-Thus, the last line shows that the effect of a unitary shock to $\Delta U$ on GDP growth is not straightforwardly clear. 
+\quad Thus, the last line shows that the effect of a unitary shock to $\Delta U$ on GDP growth is not straightforwardly clear, as it depends on the state of $\Delta U$ beforehand. 
 If we are in a situation where the effect of a shock on the unemployment rate would be positive on GDP growth we would thus expect a rise in wage growth (assuming all the increase in GDP does not only go to profits…). 
-However, most of the time shocks in the unemployment rate do tend to be followed by downward pressures on wages \red{SOURCE}. 
+However, most of the time shocks in the unemployment rate do tend to be followed by downward pressures on wages(\cite{labour2},\cite{labour9}). 
 For the ratio of vacancies to unemployment, an increase can either be due to an increase in vacancies (increase in labour demand - for the same number of unemployed there are more positions) or a decrease in the number of unemployed, both tightening the labour market and we would then expect increasing pressures on wage growth. 
 For the job-worker gap (labour demand – supply), an increase signals higher demand for labour, thus again we would expect pressures on wages. 
 Therefore, our model selection does not impose any constraint on the sign of the long-run multiplier for any of the slack measure variables but we would still expect the following signs from the different slack measures: (LRM.$U<0$), (LRM.$V/U>0$), (LRM.$JW\textrm{-}LF>0$), and (LRM.$LF\textrm{-}part>0$) -depending on the degree of labour market tightness (or looseness) they point to. 
@@ -133,13 +142,13 @@ First, it does not allow for different maximum lag order per variable, which we 
 There are also fewer coefficients to estimate with our method, reducing the estimation complexity, resulting in an estimated 26 coefficients ARDL with full 6 lags for each variable compared to a 96 coefficients VAR(6). 
 Another notable difference is that our ARDL framework allows for contemporaneous effects or explanatory variables, something not possible with VAR models. 
 We also tried running some VAR models but due to time constraints, we could not work fully dive into this approach where we could leverage the estimated wage equation and -as we did here- come up with a rule of thumb to select a good model. 
-In hindsight, I think such model would be interesting as a baseline -despite the differences mentioned above- as the framework has been deeply acknowledged in economic research with numerous performing models \red{(see SVAR models used in ECB research papers)} and I felt like we lacked a point of comparison during our research phase and especially when we started estimating models.
+In hindsight, I think such model would be interesting as a baseline -despite the differences mentioned above- as the framework has been deeply acknowledged in economic research with numerous performing models (\textit{Key drivers of labour market developments: an SVAR analysis}, C. Foroni and M. Mohr) and I felt like we lacked a point of comparison during our research phase and especially when we started estimating models.
 
 Ultimately, this process allows us to assess the broader slack measures as explanatory variables and to what extent they can bring marginal gain in explaining wage developments. 
 Again, the country-specific nature of our study may prove useful as some measures may not be the best fitted for some countries due to market features, regulations, structural differences in the employment pool etc... 
 With this in mind, find below a table (Figure \ref{figure:lrm_table}) summarising the results of the selected models. 
 We compare the different slack measures, try to interpret the long-run effect estimates and assess possible discrepancies among countries. 
-For the sake of concision, we decided to only highlight the coefficients of the labour underutilisation variables. (Actual plots can be found in the annex Figure \ref{figure:fr_output} to Figure \ref{figure:it_output}).
+For the sake of concision, we decided to only highlight the coefficients of the labour underutilisation variables. (Actual plots can be found in the annexe Figure \ref{figure:fr_output} to Figure \ref{figure:it_output}).
 
 \begin{figure}[H]
     \centering
@@ -149,28 +158,27 @@ For the sake of concision, we decided to only highlight the coefficients of the 
 \end{figure}
 \vspace{-1.5cm}
 \noindent \textit{\textbf{NB:} Note that the lack of complete job vacancies series for Italy and Spain forced us to disregard the $V/U$ and $JW\textrm{-}LF$ slack measures for these countries.}
-\newpage
 
-The first thing to note is that no model is completely left-ou performance-wise, as almost all show adjusted R2 above 60\%. 
+\quad The first thing to note is that no model is completely left-ou performance-wise, as almost all show adjusted $\textrm{R}^{2}$ above 60\%. 
 Considering the unemployment rate estimate as the baseline the results show that for Germany the job-worker gap and labour force participation measure up to it. 
-We estimate that the vacancy-to-unemployment ratio even has a slight edge over other slack measures, with its adjusted R2 reaching 65\%. 
+We estimate that the vacancy-to-unemployment ratio even has a slight edge over other slack measures, with its adjusted $\textrm{R}^{2}$ reaching 65\%. 
 Moreover, there does not seem to be a discrepancy in the estimated long-run effect of either CPI or labour productivity. 
 We estimate that a permanent increase of 10bps in the QoQ difference of the unemployment rate would lead to a decrease of around 3.7bps in QoQ wage growth. 
 The estimated long-run multiplier is close to zero and slightly negative for growth in labour force participation. 
 Looking at the data the latter has kept increasing steadily over the past 30 years, almost following a linear trend, from 76\% to as high as 91\%. 
 This unstoppable-like upward trend, combined with rising labour force participation even during crises, could explain the estimation of no long-term effect on wage growth. 
 Moreover, the threefold combination of effects from changes in unemployment, employment and population might blur the link with wage growth changes. 
-See for example \red{XXX} for the different drivers in the recent changes in the labour force participation rate, compared to Q4 2019, among our 4-country dataset. 
+See for example Figure \ref{figure:lfpart} for the different drivers in the recent changes in the labour force participation rate, compared to Q4 2019, among our 4-country dataset. 
 Finally, both the vacancies to unemployment ratio and the job worker gap show expected positive signs for the LRM estimate. 
 
 \begin{figure}[H]
     \centering
     \caption{Labour force participation breakdown, 2022Q4 against 2019Q4}
-    \includegraphics[width=.8\textwidth]{Core/2.Labour/img/lfpart breakdown.png}
-    \label{figure:lfpart }
+    \includegraphics[width=.7\textwidth]{Core/2.Labour/img/lfpart breakdown.png}
+    \label{figure:lfpart}
 \end{figure}
 
-Regarding France, the models with unemployment, $V/U$ and labour force participation are the best performing with adjusted R2 between 62\% and 67\%, though no additional slack measure seems to outperform the model using the first. 
+Regarding France, the models with unemployment, $V/U$ and labour force participation are the best performing with adjusted $\textrm{R}^{2}$ between 62\% and 67\%, though no additional slack measure seems to outperform the model using the first. 
 The strong negative estimate for the long-run multiplier of productivity is surprising. 
 Compared to an estimation with a sample lasting until Q3 2019, it seems the pool of estimated models deeply embedded the trend rupture in productivity since the break that happened during the Covid crisis and the recent decoupling between wage developments and productivity changes. 
 Other slack measures also point to a really low long-run effect (positive but close to zero). 
@@ -178,7 +186,7 @@ Similarly to its German counterpart, a decrease of around 5.3bps in QoQ wage gro
 Again, the JW-LF and the V/U ratio both show expected positive signs and estimates are within the same range as for Germany. 
 The job-worker gap seems to impact more the French economy than its German counterpart while it is the other way around for the $V/U$ ratio, which probably reflects structural differences between the two countries’ labour market. 
 
-Regarding Spain and Italy, both show improvements when using labour force participation in terms of adjusted R2. 
+Regarding Spain and Italy, both show improvements when using labour force participation in terms of adjusted $\textrm{R}^{2}$. 
 However, compared to France and Germany, the amplitude of estimated long-run effects is on a totally different scale, especially for Italy where it is surprisingly negative. 
 For Spain, the estimate is large and positive. 
 We guess that for the Italian labour force participation, as it has remained in the same range across the sample, the model overshoots its recurrent slow negative trends during crises and the break during Covid only amplified that. 
@@ -195,27 +203,25 @@ We note that there is again a discrepancy between the peripheral and core countr
 Both Germany and France show a weak to even negative long-term trend in labour productivity effect on wage growth while for Spain and Italy, the estimates are larger and positive. 
 Compared to France it seems the recent dip in Spanish labour productivity has not (yet) changed the positive relationship between productivity and wage growth, despite the two countries showing similar breaks and no recovery, probably because for France the decrease in productivity was stronger despite strongly rising labour cost.
 
-Then, to select the ‘best’ model for our analysis, we not only rely on the adjusted r2 value but also on the availability of forecasts for the different series. 
+Then, to select the ‘best’ model for our analysis, we not only rely on the adjusted $\textrm{R}^{2}$ value but also on the availability of forecasts for the different series. 
 As we do not have forecasts of vacancies, despite the marginal gains in explaining wage developments, we had to drop the $V/U$ and $JW\textrm{-}LF$ models if we were to use them to compute forecasts. 
 With the unemployment rate being a key variable in the team’s labour market outlook, each economist has to produce quarterly forecasts which are then debated and confirmed for the scenario. 
 The general interest in a forecasting model using this specific variable, the confidence in the forecasted series and the overall results’ performance motivated the selection of the estimated models using the unemployment rate.
 
-\newpage
 \subsection{Wage growth models results}
 
-The table below displays the full estimates for each country. 
-Charts plotting the selected model estimate and the top 25\% of R2-models against actual values can be found in the annex (Figure \ref{figure:fr25} to \ref{figure:it25}).
+\quad The table below displays the full estimates for each country. 
+Charts plotting the selected model estimate and the top 25\% of $\textrm{R}^{2}$-models against actual values can be found in the annexe (Figure \ref{figure:fr25} to \ref{figure:it25}).
 
 \begin{figure}[H]
     \centering
     \caption{Best model selected for each slack variable}
-    \includegraphics[width=1\textwidth]{Core/2.Labour/img/labour_results.png}
+    \includegraphics[width=.87\textwidth]{Core/2.Labour/img/labour_results.png}
     \label{figure:labour_results}
 \end{figure}
 \vspace{-1cm}
-As we have mostly gone over the parameters’ interpretation before, we focus on decomposing wage growth using these models (Beta-variation figures X to X) and assess both recent drivers and expectations for 2023 and the first semester of 2024. 
+As we have mostly gone over the parameters’ interpretation before, we focus on decomposing wage growth using these models (Beta-variation figures \ref{figure:frbreakdown} to \ref{figure:itbreakdown}) and assess both recent drivers and expectations for 2023 and the first semester of 2024. 
 Note that as we worked on this project around March/April 2023, for a publication and the Q2 scenario around the same date, the first two quarters of the year are included in the forecast timeframe. 
-The forecast pathways for inflation, the unemployment rate and labour productivity changes can be found in annexe \red{XXX}. 
 We first look at the results for the core countries.
 
 \begin{figure}[H]
@@ -235,7 +241,7 @@ We believe the strong negative coefficient for the lag 0 comes from the opposite
 Over the past three years, changes in labour productivity have accounted for, on average, around 33\% of wage growth. 
 We expect this contribution to decrease to 22\% in 2023-24, returning close to its pre-pandemic average (17\%). 
 The falling labour productivity trend suggests downward pressures on wage growth, visible with negative contributions from Q2 2023 onwards. 
-\newpage
+
 In the same vein, weaker growth economic prospects point to a relative increase in the unemployment rate (remaining close to its lower historical bound) limiting once again prospects of increases in wages. 
 The pandemic being a pretty peculiar period, our main focus for inflation is recent developments, especially since late 2021. 
 The figure shows that rising inflationary pressures on wages started as early as Q4 2021 before quickly rising in Q3 and Q4 2022, following the Russian invasion of Ukraine in March 2022 and the economic turmoil it engendered. 
@@ -283,7 +289,7 @@ Looking at the coefficient estimates for the different lags of the inflation var
 
 What it tells us is that the previous year's (QoQ) inflation rate will mainly determine the inflation component of the current wage growth, and thus the with current level of inflation we can have a first intuition regarding wage growth for the year ahead. 
 As we have already mentioned, this probably reflects lengthy and gradual wage negotiations that happen over time but it also indicates that the quarterly increases in inflation we have seen between Q2 and Q4 2022 (namely 2\%, 3\% and 1\%) have not yet fully passed through to wages. 
-If headline inflation is to moderate on the back of lower energy prices, the Spanish Central Bank could potentially face the challenge of rapid wage adjustment kicking in as soon as Q2 2023 -with the model suggesting a peak in QoQ wage growth at 2\%- which, in addition to the \red{8\% increase in the minimum wage}, could feed into higher core inflation. 
+If headline inflation is to moderate on the back of lower energy prices, the Spanish Central Bank could potentially face the challenge of rapid wage adjustment kicking in as soon as Q2 2023 -with the model suggesting a peak in QoQ wage growth at 2\%- which, in addition to the 8\% increase in the minimum wage (government and unions agreed on a deal in early February), could feed into higher core inflation. 
 Overall, inflation contribution amounts to 55\% in 2022 and we expect it to remain around 50\% in the upcoming two years due to high past inflation. 
 Without drastic changes in employment or GDP, we also expect the contribution of labour productivity to continue decreasing and to revert to pre-pandemic levels in 2023. 
 Our model-based wage growth forecast for 2023 and 2024 project year-on-year increases of 4.7\% and 4.2\%.
@@ -314,10 +320,16 @@ The model-based forecast project wage growth at 6.7\% for 2023 and 3.5\% for 202
 
 \subsection{Changes in labour productivity}
 
-Labour productivity (which we defined as GDP over Employment) is a key topic when assessing the state of an economy and its outlook, as it is a driver of economic growth and it affects all players in the economy (businesses, workers and the government) through different channels whether it is output (same output with less -human resources- hours worked/workers), likely higher wages or higher tax revenues. 
-To understand its contribution to the wage growth breakdowns above we also worked on a breakdown on its own for productivity using the number of hours worked per employee and the output produced per hour. 
-The GDP per hour is also decomposed to assess the possible effect of Employment. We compare Q4 2022 labour productivity to pre-Covid level (Q4 2019). 
-The two charts below and the country-specific and quarterly breakdown allow us to highlight the following points. \red{FORMULA}
+\quad Labour productivity (which we defined as GDP over Employment) is a key topic when assessing the state of an economy and its outlook, as it is a driver of economic growth and it affects all players in the economy (businesses, workers and the government) through different channels whether it is output (same output with less -human resources- hours worked/workers), likely higher wages or higher tax revenues. 
+To understand its contribution to the wage growth breakdowns above we also worked on a breakdown on its own for productivity using the number of hours worked per employee and the output produced per hour (\ref{prod1}). 
+The GDP per hour is also decomposed to assess the possible effect of Employment (\ref{prod2}). We compare Q4 2022 labour productivity to pre-Covid level (Q4 2019). 
+The two charts below and the country-specific and quarterly breakdown allow us to highlight the following points.
+
+\begin{align}
+    \frac{GDP}{E} &= \frac{GDP}{Hours}.\frac{Hours}{E} \longmapsto \textrm{\textit{Productivity}}\% \sim \frac{GDP}{Hours}\% - \frac{Hours}{E}\% \label{prod1}\\
+    \nonumber \\
+    \frac{GDP}{Hours} &= \frac{GDP}{\frac{Hours}{E}.E} \longmapsto \textrm{\textit{GDP/Hour}}\% \sim GDP\% - ( \frac{Hours}{E}\% + E\%) \label{prod2}
+\end{align}
 
 \begin{figure}[H]
     \centering

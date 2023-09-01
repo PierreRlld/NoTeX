@@ -1,0 +1,274 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{savingsfed}{article}{}
+      \name{author}{1}{}{%
+        {{hash=7a5b0f0cc33b1eebe695cbc00bd7e7bb}{%
+           family={Pinto},
+           familyi={P\bibinitperiod},
+           given={Aditya\bibnamedelimb Aladangady\bibnamedelimb \& David\bibnamedelimb Cho\bibnamedelimb \& Laura\bibnamedelimb Feiveson\bibnamedelimb \&\bibnamedelima Eugenio},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim \\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim \\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim \\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{7a5b0f0cc33b1eebe695cbc00bd7e7bb}
+      \strng{fullhash}{7a5b0f0cc33b1eebe695cbc00bd7e7bb}
+      \strng{bibnamehash}{7a5b0f0cc33b1eebe695cbc00bd7e7bb}
+      \strng{authorbibnamehash}{7a5b0f0cc33b1eebe695cbc00bd7e7bb}
+      \strng{authornamehash}{7a5b0f0cc33b1eebe695cbc00bd7e7bb}
+      \strng{authorfullhash}{7a5b0f0cc33b1eebe695cbc00bd7e7bb}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{FEDS Notes}
+      \field{title}{{Excess Savings during the COVID-19 Pandemic.}}
+      \field{year}{October 2022}
+    \endentry
+    \entry{labour0}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ee30a7d8e2353254a43f472b9737caf6}{%
+           family={Phillips},
+           familyi={P\bibinitperiod},
+           given={A.\bibnamedelimi W.\bibnamedelimi H.},
+           giveni={A\bibinitperiod\bibinitdelim W\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{ee30a7d8e2353254a43f472b9737caf6}
+      \strng{fullhash}{ee30a7d8e2353254a43f472b9737caf6}
+      \strng{bibnamehash}{ee30a7d8e2353254a43f472b9737caf6}
+      \strng{authorbibnamehash}{ee30a7d8e2353254a43f472b9737caf6}
+      \strng{authornamehash}{ee30a7d8e2353254a43f472b9737caf6}
+      \strng{authorfullhash}{ee30a7d8e2353254a43f472b9737caf6}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Economica}
+      \field{number}{n.s., 25, no. 2}
+      \field{title}{{The Relation Between Unemployment and the Rate of Change of Money Wage Rates in the United Kingdom, 1861–1957.}}
+      \field{year}{1958}
+      \field{pages}{283\bibrangedash 299}
+      \range{pages}{17}
+    \endentry
+    \entry{labour1}{article}{}
+      \name{author}{1}{}{%
+        {{hash=b6967898c93858d764ff4018b08a8de9}{%
+           family={Bobeica},
+           familyi={B\bibinitperiod},
+           given={Benny\bibnamedelimb Hartwig\bibnamedelimb \& Christiane\bibnamedelimb Nickel\bibnamedelimb \&\bibnamedelima Elena},
+           giveni={B\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim \\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim \\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6967898c93858d764ff4018b08a8de9}
+      \strng{fullhash}{b6967898c93858d764ff4018b08a8de9}
+      \strng{bibnamehash}{b6967898c93858d764ff4018b08a8de9}
+      \strng{authorbibnamehash}{b6967898c93858d764ff4018b08a8de9}
+      \strng{authornamehash}{b6967898c93858d764ff4018b08a8de9}
+      \strng{authorfullhash}{b6967898c93858d764ff4018b08a8de9}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Centre for Economic Policy Research - VOXEU column}
+      \field{title}{{The euro area Phillips curve: Damaged but not dead.}}
+      \field{year}{August 2021}
+    \endentry
+    \entry{labour2}{article}{}
+      \name{author}{1}{}{%
+        {{hash=db4bbfa8bf9e24bd8643143f3f37e0c2}{%
+           family={Lian},
+           familyi={L\bibinitperiod},
+           given={Malhar\bibnamedelimb Nabar\bibnamedelimb \& Gee\bibnamedelimb Hee\bibnamedelimb Hong\bibnamedelimb \& Zsóka\bibnamedelimb Kóczán\bibnamedelimb \&\bibnamedelima Weicheng},
+           giveni={M\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim \\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim \\bibinitperiod\bibinitdelim Z\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim \\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{db4bbfa8bf9e24bd8643143f3f37e0c2}
+      \strng{fullhash}{db4bbfa8bf9e24bd8643143f3f37e0c2}
+      \strng{bibnamehash}{db4bbfa8bf9e24bd8643143f3f37e0c2}
+      \strng{authorbibnamehash}{db4bbfa8bf9e24bd8643143f3f37e0c2}
+      \strng{authornamehash}{db4bbfa8bf9e24bd8643143f3f37e0c2}
+      \strng{authorfullhash}{db4bbfa8bf9e24bd8643143f3f37e0c2}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{World Economic Outlook: seeking sustainable growth - short-term recovery, long-term challenges}
+      \field{title}{{Recent wage dynamics in advanced economies: drivers and implications.}}
+      \field{year}{October 2017}
+      \field{pages}{73\bibrangedash 115}
+      \range{pages}{43}
+    \endentry
+    \entry{labour3}{article}{}
+      \name{author}{1}{}{%
+        {{hash=9f86081942834923a86a56e2f4d2a7cd}{%
+           family={Galí},
+           familyi={G\bibinitperiod},
+           given={Jordi},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{9f86081942834923a86a56e2f4d2a7cd}
+      \strng{fullhash}{9f86081942834923a86a56e2f4d2a7cd}
+      \strng{bibnamehash}{9f86081942834923a86a56e2f4d2a7cd}
+      \strng{authorbibnamehash}{9f86081942834923a86a56e2f4d2a7cd}
+      \strng{authornamehash}{9f86081942834923a86a56e2f4d2a7cd}
+      \strng{authorfullhash}{9f86081942834923a86a56e2f4d2a7cd}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{National Bureau of Economic Research}
+      \field{number}{NBER Working Paper No. 15758}
+      \field{title}{{The Return of the Wage Phillips Curve.}}
+      \field{year}{February 2010}
+    \endentry
+    \entry{labour4}{article}{}
+      \name{author}{1}{}{%
+        {{hash=37cc898e8b6fafa839527aeab1d97172}{%
+           family={Domash},
+           familyi={D\bibinitperiod},
+           given={Lawrence\bibnamedelimb H.\bibnamedelimi Summers\bibnamedelimb \&\bibnamedelima Alex},
+           giveni={L\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim \\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{37cc898e8b6fafa839527aeab1d97172}
+      \strng{fullhash}{37cc898e8b6fafa839527aeab1d97172}
+      \strng{bibnamehash}{37cc898e8b6fafa839527aeab1d97172}
+      \strng{authorbibnamehash}{37cc898e8b6fafa839527aeab1d97172}
+      \strng{authornamehash}{37cc898e8b6fafa839527aeab1d97172}
+      \strng{authorfullhash}{37cc898e8b6fafa839527aeab1d97172}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Centre for Economic Policy Research - VOXEU column}
+      \field{title}{{How tight are US labour markets?}}
+      \field{year}{March 2022}
+    \endentry
+    \entry{labour5}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a361ef13a7bc74b4ff82df4f7fdd0ca0}{%
+           family={Michaillat},
+           familyi={M\bibinitperiod},
+           given={Emmanuel\bibnamedelimb Saez\bibnamedelimb \&\bibnamedelima Pascal},
+           giveni={E\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim \\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{a361ef13a7bc74b4ff82df4f7fdd0ca0}
+      \strng{fullhash}{a361ef13a7bc74b4ff82df4f7fdd0ca0}
+      \strng{bibnamehash}{a361ef13a7bc74b4ff82df4f7fdd0ca0}
+      \strng{authorbibnamehash}{a361ef13a7bc74b4ff82df4f7fdd0ca0}
+      \strng{authornamehash}{a361ef13a7bc74b4ff82df4f7fdd0ca0}
+      \strng{authorfullhash}{a361ef13a7bc74b4ff82df4f7fdd0ca0}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Centre for Economic Policy Research - VOXEU column}
+      \field{title}{{Figuring out efficient unemployment.}}
+      \field{year}{April 2022}
+    \endentry
+    \entry{labour6}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d79797d84fde7b683f9223135466be37}{%
+           family={III},
+           familyi={I\bibinitperiod},
+           given={Jason\bibnamedelimb Furman\bibnamedelimb \& Wilson\bibnamedelima Powell},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim \\bibinitperiod\bibinitdelim W\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{d79797d84fde7b683f9223135466be37}
+      \strng{fullhash}{d79797d84fde7b683f9223135466be37}
+      \strng{bibnamehash}{d79797d84fde7b683f9223135466be37}
+      \strng{authorbibnamehash}{d79797d84fde7b683f9223135466be37}
+      \strng{authornamehash}{d79797d84fde7b683f9223135466be37}
+      \strng{authorfullhash}{d79797d84fde7b683f9223135466be37}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Peterson Institure for International Economics}
+      \field{title}{{What is the best measure of labor market tightness?}}
+      \field{year}{November 2021}
+    \endentry
+    \entry{labour7}{article}{}
+      \name{author}{1}{}{%
+        {{hash=3ce5b6cd2abc2564d8bf46a37d25c918}{%
+           family={Koester},
+           familyi={K\bibinitperiod},
+           given={Katalin\bibnamedelimb Bodnár\bibnamedelimb \& Eduardo\bibnamedelimb Gonçalves\bibnamedelimb \& Lucyna\bibnamedelimb Górnicka\bibnamedelimb \&\bibnamedelima Gerrit},
+           giveni={K\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim \\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim \\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim \\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{3ce5b6cd2abc2564d8bf46a37d25c918}
+      \strng{fullhash}{3ce5b6cd2abc2564d8bf46a37d25c918}
+      \strng{bibnamehash}{3ce5b6cd2abc2564d8bf46a37d25c918}
+      \strng{authorbibnamehash}{3ce5b6cd2abc2564d8bf46a37d25c918}
+      \strng{authornamehash}{3ce5b6cd2abc2564d8bf46a37d25c918}
+      \strng{authorfullhash}{3ce5b6cd2abc2564d8bf46a37d25c918}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ECB Economic Bulletin}
+      \field{number}{Issue 8/2022}
+      \field{title}{{Wage developments and their determinants since the start of the pandemic.}}
+      \field{year}{January 2023}
+    \endentry
+    \entry{labour8}{article}{}
+      \name{author}{1}{}{%
+        {{hash=7815e2a38854a99b0eb0f6a8fa57b720}{%
+           family={Summers},
+           familyi={S\bibinitperiod},
+           given={Alex\bibnamedelimb Domash\bibnamedelimb \& Lawrence\bibnamedelima H.},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim \\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{7815e2a38854a99b0eb0f6a8fa57b720}
+      \strng{fullhash}{7815e2a38854a99b0eb0f6a8fa57b720}
+      \strng{bibnamehash}{7815e2a38854a99b0eb0f6a8fa57b720}
+      \strng{authorbibnamehash}{7815e2a38854a99b0eb0f6a8fa57b720}
+      \strng{authornamehash}{7815e2a38854a99b0eb0f6a8fa57b720}
+      \strng{authorfullhash}{7815e2a38854a99b0eb0f6a8fa57b720}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Centre for Economic Policy Research - VOXEU column}
+      \field{title}{{Can the Phillips curve explain recent wage growth?}}
+      \field{year}{February 2023}
+    \endentry
+    \entry{labour9}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4d1c47bbbf57baf2480b1b6f97b62875}{%
+           family={Rivera-Reyes},
+           familyi={R\bibinithyphendelim R\bibinitperiod},
+           given={Òscar\bibnamedelimb Jordà\bibnamedelimb \& Celeste\bibnamedelimb Liu\bibnamedelimb \& Fernanda\bibnamedelimb Nechio\bibnamedelimb \&\bibnamedelima Fabián},
+           giveni={Ò\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim \\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim \\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim \\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \strng{namehash}{4d1c47bbbf57baf2480b1b6f97b62875}
+      \strng{fullhash}{4d1c47bbbf57baf2480b1b6f97b62875}
+      \strng{bibnamehash}{4d1c47bbbf57baf2480b1b6f97b62875}
+      \strng{authorbibnamehash}{4d1c47bbbf57baf2480b1b6f97b62875}
+      \strng{authornamehash}{4d1c47bbbf57baf2480b1b6f97b62875}
+      \strng{authorfullhash}{4d1c47bbbf57baf2480b1b6f97b62875}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Federal Reserve Bank of San Fransisco}
+      \field{title}{{Wage Growth When Inflation Is High.}}
+      \field{year}{September 2022}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
