@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber Rapport"] 0 "Rapport.bcf" "Rapport.bbl" "Rapport" 1693409557 -1
-  "./biblio.bib" 1693409132 3070 5aa0ea8c0c7cb81507be161f818fbf62 ""
-  "Rapport.bcf" 1693409556 107706 c76d385a01a8541de55c73d14258ca82 "pdflatex"
+["biber Rapport"] 0 "Rapport.bcf" "Rapport.bbl" "Rapport" 1693650075 -1
+  "./biblio.bib" 1693570956 4311 2e0ab722e74983e621cad115183dc7bb ""
+  "Rapport.bcf" 1693650074 107967 0a0ea0186c3045f856732cfb69700e69 "pdflatex"
   (generated)
   "Rapport.bbl"
   "Rapport.blg"
   (rewritten before read)
-["pdflatex"] 1693409553 "/Users/prld/git/NoTeX/Rapport_2A/Rapport.tex" "Rapport.pdf" "Rapport" 1693409557 0
-  "/Users/prld/git/NoTeX/Rapport_2A/Rapport.tex" 1693409550 2765 933dcd279d3adefaf3c4321230b40648 ""
+["pdflatex"] 1693650071 "/Users/prld/git/NoTeX/Rapport_2A/Rapport.tex" "Rapport.pdf" "Rapport" 1693650075 0
+  "/Users/prld/git/NoTeX/Rapport_2A/Rapport.tex" 1693649998 2949 dfb6a27c29e3296ae3a00bfa32732808 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -204,18 +204,21 @@
   "Core/2.Labour/img/spainb1.png" 1693383347 49480 22bdd48401ba23dc227434f510c20142 ""
   "Core/2.Labour/img/spainb2.png" 1692469050 83896 21d27c1f796bf3e32a7cedf050aab74d ""
   "Core/2.Labour/img/unit_root.png" 1692455379 185323 b486573f6f174d873a584605482d9d37 ""
-  "Core/2.Labour/labour_text.tex" 1693409247 46249 a83dc496567344812503c856c9d2acbe ""
-  "Core/Intro.tex" 1692281871 937 e4f65d0b6754707c4d1a260c8d077271 ""
+  "Core/2.Labour/labour_text.tex" 1693573012 46249 a83dc496567344812503c856c9d2acbe ""
+  "Core/Intro.tex" 1693570956 4039 fa7925ee69705b7b6eb983af1970d905 ""
   "Core/Remerciements.tex" 1693409550 484 1a58bee67f93b21511100c0188621f4b ""
   "Core/annexe.tex" 1692467605 2316 41277f964730d223e89f9576b13292e0 ""
-  "Core/conclusion.tex" 1693389997 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "Core/frontpage.tex" 1692455802 782 a9e30dea4bcef7af383a3ee59b6d2e9e ""
-  "Rapport.aux" 1693409556 13037 1dfbd6a9dc7d20a7c21a09393fab2f42 "pdflatex"
-  "Rapport.bbl" 1693409233 14305 7b3e0501832efa294498b8b612583b43 "biber Rapport"
-  "Rapport.out" 1693409556 3256 7818f9bc77bd3bdc1a202158149c4182 "pdflatex"
-  "Rapport.run.xml" 1693409556 2322 22f94c03928cc87a028ae5e131edf2ae "pdflatex"
-  "Rapport.tex" 1693409550 2765 933dcd279d3adefaf3c4321230b40648 ""
-  "Rapport.toc" 1693409556 1566 d9995dc233266ab836ae72eca66c7c8d "pdflatex"
+  "Core/conclusion.tex" 1693575192 478 e928f8323aad167c74a74aa0eb243e5a ""
+  "Core/frontpage.tex" 1693650071 790 f95bf9a1b14809ff047979cf6fbd897f ""
+  "Core/resumegapyearpage.tex" 1693576929 722 2447fa56b55f995ff1eb85e55dd356f3 ""
+  "Core/synthesecesure.tex" 1693649886 8211 3bdb0e866fdaace5892313440da89ef8 ""
+  "Core/synthesepage.tex" 1693575666 745 32edb0148548cb60eb897a67450d473b ""
+  "Rapport.aux" 1693650074 13552 48587beeaa6d34656c82031ae098b20b "pdflatex"
+  "Rapport.bbl" 1693570964 19911 5cab826542a1ab7f83398856567e22cf "biber Rapport"
+  "Rapport.out" 1693650074 3256 7818f9bc77bd3bdc1a202158149c4182 "pdflatex"
+  "Rapport.run.xml" 1693650074 2322 22f94c03928cc87a028ae5e131edf2ae "pdflatex"
+  "Rapport.tex" 1693649998 2949 dfb6a27c29e3296ae3a00bfa32732808 ""
+  "Rapport.toc" 1693650074 1566 d9995dc233266ab836ae72eca66c7c8d "pdflatex"
   (generated)
   "Rapport.aux"
   "Rapport.bcf"

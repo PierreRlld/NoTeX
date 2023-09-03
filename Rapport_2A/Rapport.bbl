@@ -19,6 +19,56 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
+    \entry{az_savings}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d32ecf0ae9e778eb516a46fb00b1e709}{%
+           family={Rouillard},
+           familyi={R\bibinitperiod},
+           given={Ludovic\bibnamedelimb Subran\bibnamedelimb \& Maxime\bibnamedelimb Darmet\bibnamedelimb \&\bibnamedelima Pierre},
+           giveni={L\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim \\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim \\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{d32ecf0ae9e778eb516a46fb00b1e709}
+      \strng{fullhash}{d32ecf0ae9e778eb516a46fb00b1e709}
+      \strng{bibnamehash}{d32ecf0ae9e778eb516a46fb00b1e709}
+      \strng{authorbibnamehash}{d32ecf0ae9e778eb516a46fb00b1e709}
+      \strng{authornamehash}{d32ecf0ae9e778eb516a46fb00b1e709}
+      \strng{authorfullhash}{d32ecf0ae9e778eb516a46fb00b1e709}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Allianz Research}
+      \field{title}{{Falling off a savings cliff?}}
+      \field{year}{February 2023}
+      \field{pages}{6\bibrangedash 10}
+      \range{pages}{5}
+    \endentry
+    \entry{az_labour}{article}{}
+      \name{author}{1}{}{%
+        {{hash=f757b10a16f747d7b12b2224b5b56925}{%
+           family={Rouillard},
+           familyi={R\bibinitperiod},
+           given={Maxime\bibnamedelimb Darmet\bibnamedelimb \& Roberta\bibnamedelimb Fortes\bibnamedelimb \& Andreas\bibnamedelimb Jobst\bibnamedelimb \& Maddalena\bibnamedelimb Martini\bibnamedelimb \& Patricia\bibnamedelimb Pelayo\bibnamedelimb Romero\bibnamedelimb \&\bibnamedelima Pierre},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim \\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim \\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim \\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim \\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim \\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{f757b10a16f747d7b12b2224b5b56925}
+      \strng{fullhash}{f757b10a16f747d7b12b2224b5b56925}
+      \strng{bibnamehash}{f757b10a16f747d7b12b2224b5b56925}
+      \strng{authorbibnamehash}{f757b10a16f747d7b12b2224b5b56925}
+      \strng{authornamehash}{f757b10a16f747d7b12b2224b5b56925}
+      \strng{authorfullhash}{f757b10a16f747d7b12b2224b5b56925}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Allianz Research}
+      \field{title}{{No quick wins: more 14 Wage dynamics: The drivers of growth 08 Productivity: wide divergence across countries and regions since the pandemic 04 Post Covid-19 labor market: any scarring? 20 What does this mean for policymakers? in the Eurozone}}
+      \field{year}{May 2023}
+      \field{pages}{14\bibrangedash 16}
+      \range{pages}{3}
+    \endentry
     \entry{savingsfed}{article}{}
       \name{author}{1}{}{%
         {{hash=7a5b0f0cc33b1eebe695cbc00bd7e7bb}{%
@@ -33,8 +83,8 @@
       \strng{authorbibnamehash}{7a5b0f0cc33b1eebe695cbc00bd7e7bb}
       \strng{authornamehash}{7a5b0f0cc33b1eebe695cbc00bd7e7bb}
       \strng{authorfullhash}{7a5b0f0cc33b1eebe695cbc00bd7e7bb}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{FEDS Notes}
@@ -55,8 +105,8 @@
       \strng{authorbibnamehash}{ee30a7d8e2353254a43f472b9737caf6}
       \strng{authornamehash}{ee30a7d8e2353254a43f472b9737caf6}
       \strng{authorfullhash}{ee30a7d8e2353254a43f472b9737caf6}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Economica}
@@ -80,8 +130,8 @@
       \strng{authorbibnamehash}{b6967898c93858d764ff4018b08a8de9}
       \strng{authornamehash}{b6967898c93858d764ff4018b08a8de9}
       \strng{authorfullhash}{b6967898c93858d764ff4018b08a8de9}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Centre for Economic Policy Research - VOXEU column}
@@ -102,8 +152,8 @@
       \strng{authorbibnamehash}{db4bbfa8bf9e24bd8643143f3f37e0c2}
       \strng{authornamehash}{db4bbfa8bf9e24bd8643143f3f37e0c2}
       \strng{authorfullhash}{db4bbfa8bf9e24bd8643143f3f37e0c2}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{World Economic Outlook: seeking sustainable growth - short-term recovery, long-term challenges}
@@ -126,8 +176,8 @@
       \strng{authorbibnamehash}{9f86081942834923a86a56e2f4d2a7cd}
       \strng{authornamehash}{9f86081942834923a86a56e2f4d2a7cd}
       \strng{authorfullhash}{9f86081942834923a86a56e2f4d2a7cd}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{National Bureau of Economic Research}
@@ -149,8 +199,8 @@
       \strng{authorbibnamehash}{37cc898e8b6fafa839527aeab1d97172}
       \strng{authornamehash}{37cc898e8b6fafa839527aeab1d97172}
       \strng{authorfullhash}{37cc898e8b6fafa839527aeab1d97172}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Centre for Economic Policy Research - VOXEU column}
@@ -171,8 +221,8 @@
       \strng{authorbibnamehash}{a361ef13a7bc74b4ff82df4f7fdd0ca0}
       \strng{authornamehash}{a361ef13a7bc74b4ff82df4f7fdd0ca0}
       \strng{authorfullhash}{a361ef13a7bc74b4ff82df4f7fdd0ca0}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Centre for Economic Policy Research - VOXEU column}
@@ -193,8 +243,8 @@
       \strng{authorbibnamehash}{d79797d84fde7b683f9223135466be37}
       \strng{authornamehash}{d79797d84fde7b683f9223135466be37}
       \strng{authorfullhash}{d79797d84fde7b683f9223135466be37}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Peterson Institure for International Economics}
@@ -215,8 +265,8 @@
       \strng{authorbibnamehash}{3ce5b6cd2abc2564d8bf46a37d25c918}
       \strng{authornamehash}{3ce5b6cd2abc2564d8bf46a37d25c918}
       \strng{authorfullhash}{3ce5b6cd2abc2564d8bf46a37d25c918}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{ECB Economic Bulletin}
@@ -267,6 +317,54 @@
       \field{journaltitle}{Federal Reserve Bank of San Fransisco}
       \field{title}{{Wage Growth When Inflation Is High.}}
       \field{year}{September 2022}
+    \endentry
+    \entry{az_trade}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4594b2128d6aa60aef1ca4bf9273f50f}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Ludovic\bibnamedelimb Subran\bibnamedelimb \&\bibnamedelima Françoise},
+           giveni={L\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim \\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \strng{namehash}{4594b2128d6aa60aef1ca4bf9273f50f}
+      \strng{fullhash}{4594b2128d6aa60aef1ca4bf9273f50f}
+      \strng{bibnamehash}{4594b2128d6aa60aef1ca4bf9273f50f}
+      \strng{authorbibnamehash}{4594b2128d6aa60aef1ca4bf9273f50f}
+      \strng{authornamehash}{4594b2128d6aa60aef1ca4bf9273f50f}
+      \strng{authorfullhash}{4594b2128d6aa60aef1ca4bf9273f50f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Allianz Research}
+      \field{title}{{The silver lining amid muted global trade: normalizing supply chains}}
+      \field{year}{February 2023}
+      \field{pages}{7\bibrangedash 12}
+      \range{pages}{6}
+    \endentry
+    \entry{az_margins}{article}{}
+      \name{author}{1}{}{%
+        {{hash=20f601c3399069ab85176966eb6add3d}{%
+           family={Boata},
+           familyi={B\bibinitperiod},
+           given={Ludovic\bibnamedelimb Subran\bibnamedelimb \&\bibnamedelima Ana},
+           giveni={L\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim \\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{20f601c3399069ab85176966eb6add3d}
+      \strng{fullhash}{20f601c3399069ab85176966eb6add3d}
+      \strng{bibnamehash}{20f601c3399069ab85176966eb6add3d}
+      \strng{authorbibnamehash}{20f601c3399069ab85176966eb6add3d}
+      \strng{authornamehash}{20f601c3399069ab85176966eb6add3d}
+      \strng{authorfullhash}{20f601c3399069ab85176966eb6add3d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Allianz Research}
+      \field{title}{{Past the peak? Corporate profit margins might be on the way down again soon }}
+      \field{year}{June 2023}
+      \field{pages}{9\bibrangedash 13}
+      \range{pages}{5}
     \endentry
   \enddatalist
 \endrefsection
