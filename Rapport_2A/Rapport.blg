@@ -1,0 +1,30 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'Rapport.blg'
+[40] biber-darwin:340> INFO - === Mon Sep  4, 2023, 11:42:41
+[50] Biber.pm:419> INFO - Reading 'Rapport.bcf'
+[96] Biber.pm:979> INFO - Found 16 citekeys in bib section 0
+[105] Biber.pm:4419> INFO - Processing section 0
+[111] Biber.pm:4610> INFO - Looking for bibtex file 'biblio.bib' for section 0
+[112] bibtex.pm:1713> INFO - LaTeX decoding ...
+[118] bibtex.pm:1519> INFO - Found BibTeX data source 'biblio.bib'
+[162] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[162] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[162] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[162] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[170] bbl.pm:660> INFO - Writing 'Rapport.bbl' with encoding 'UTF-8'
+[173] bbl.pm:763> INFO - Output to Rapport.bbl
+[173] Biber.pm:131> WARN - legacy year field 'February 2023' in entry 'az_savings' is not an integer - this will probably not sort properly.
+[173] Biber.pm:131> WARN - legacy year field 'May 2023' in entry 'az_labour' is not an integer - this will probably not sort properly.
+[173] Biber.pm:131> WARN - legacy year field 'October 2022' in entry 'savingsfed' is not an integer - this will probably not sort properly.
+[173] Biber.pm:131> WARN - legacy year field 'August 2021' in entry 'labour1' is not an integer - this will probably not sort properly.
+[173] Biber.pm:131> WARN - legacy year field 'October 2017' in entry 'labour2' is not an integer - this will probably not sort properly.
+[173] Biber.pm:131> WARN - legacy year field 'February 2010' in entry 'labour3' is not an integer - this will probably not sort properly.
+[173] Biber.pm:131> WARN - legacy year field 'March 2022' in entry 'labour4' is not an integer - this will probably not sort properly.
+[173] Biber.pm:131> WARN - legacy year field 'April 2022' in entry 'labour5' is not an integer - this will probably not sort properly.
+[173] Biber.pm:131> WARN - legacy year field 'November 2021' in entry 'labour6' is not an integer - this will probably not sort properly.
+[174] Biber.pm:131> WARN - legacy year field 'January 2023' in entry 'labour7' is not an integer - this will probably not sort properly.
+[174] Biber.pm:131> WARN - legacy year field 'February 2023' in entry 'labour8' is not an integer - this will probably not sort properly.
+[174] Biber.pm:131> WARN - legacy year field 'September 2022' in entry 'labour9' is not an integer - this will probably not sort properly.
+[174] Biber.pm:131> WARN - legacy year field 'February 2023' in entry 'az_trade' is not an integer - this will probably not sort properly.
+[174] Biber.pm:131> WARN - legacy year field 'June 2023' in entry 'az_margins' is not an integer - this will probably not sort properly.
+[174] Biber.pm:133> INFO - WARNINGS: 14

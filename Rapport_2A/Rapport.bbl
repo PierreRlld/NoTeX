@@ -342,6 +342,27 @@
       \field{pages}{7\bibrangedash 12}
       \range{pages}{6}
     \endentry
+    \entry{az_debt}{online}{}
+      \list{organization}{1}{%
+        {Aylin Somersan Coqui Allianz Trade CEO at Les Rencontres Economiques Aix-En-Provence}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{title}{Un endettement sans fin est-il raisonnable ?}
+      \field{urlday}{8}
+      \field{urlmonth}{7}
+      \field{urlyear}{2023}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.lesrencontreseconomiques.fr/evenements/session-20-un-endettement-sans-fin-est-il-raisonnable/#resume
+      \endverb
+      \verb{url}
+      \verb https://www.lesrencontreseconomiques.fr/evenements/session-20-un-endettement-sans-fin-est-il-raisonnable/#resume
+      \endverb
+    \endentry
     \entry{az_margins}{article}{}
       \name{author}{1}{}{%
         {{hash=20f601c3399069ab85176966eb6add3d}{%

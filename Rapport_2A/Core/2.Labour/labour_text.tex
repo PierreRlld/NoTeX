@@ -76,7 +76,7 @@ Overall all series are not level-stationary as the  t-statistics for the ADF and
 Running the same test on the differentiated series establishes the series as first-difference-stationary. Using the KPSS test the hypothesis of stationarity cannot be rejected at the 5\% level, thus reinforcing our conclusion of the variables being integrated of order one I(1).
 
 \subsubsection{Methodology and Model selection}
-\quad As we highlighted in the previous section, our variables are I(1) and we thus consider a model ran in first difference. Namely, we run country-specific ARDL models of the following form:
+\quad As we highlighted in the previous section, our variables are I(1) and we thus consider a model ran in first difference. Namely, we run country-specific Autoregressive Distributed Lag (ARDL) models of the following form:
 \begin{equation*}
     \Delta wage_{t} = \sum_{k=1}^{W}\alpha_k \Delta wage_{t-k} + \sum_{k=0}^{Q}\beta_k^{(CPI)} \Delta CPI_{t-k} + \sum_{k=0}^{S}\beta_k^{(slack)} \Delta slack_{t-k} + \sum_{k=0}^{P}\beta_k^{(prod)} \Delta prod._{t-k} + \theta_{1}\mathbb{1}_{covid} + \theta_{2}\mathbb{1}_{GFC}
 \end{equation*}
@@ -107,7 +107,7 @@ However statistically good the models described above might be, the selection of
 More than just including lags of explanatory variables, the ARDL framework provides a feature that we tried to leverage to a certain extent to control our pool of possible models and make sense of their statistical features in an economic sense. 
 Using the regression equation we can compute the dynamic marginal effect of each variable lag included, known as short-run effects $\frac{\mathrm{d}y_{t}}{\mathrm{d}x_{t_{i}}}$. 
 If we consider a permanent unitary shock in $X_{t}$ so that $E(X_{t})$ changes, the effect in $E(Y_{t})$ is (\ref{eq1}), known as the long-run multiplier (LRM). The latter is also the accumulation of short-run effects. 
-With stationary series and white noise we have, using $\theta (L) = 1 - \theta_{1}L - \theta_{2}L^{2} - \dots - \theta_{p}L^{p}$ and $\phi (L) = \phi_{0} + \phi_{1}L + \phi_{2}L^{2} + \dots + \phi_{q}L^{q}$:
+With stationary series and white noise $\epsilon_{t}$ we have, using $\theta (L) = 1 - \theta_{1}L - \theta_{2}L^{2} - \dots - \theta_{p}L^{p}$ and $\phi (L) = \phi_{0} + \phi_{1}L + \phi_{2}L^{2} + \dots + \phi_{q}L^{q}$:
 \vspace{-0.3cm}
 \begin{align}
     \theta (L)y_{t} &= \delta + \phi (L)x_{t} + \epsilon_{t} \nonumber \\
@@ -127,7 +127,7 @@ Through the Okun law, which links changes in unemployment and GDP growth, we arg
     \frac{\Delta Y}{Y} &\geqslant 0 \Leftrightarrow k - c\Delta U \geqslant c\\
     \frac{\Delta Y}{Y} &\geqslant 0 \Leftrightarrow \frac{k}{c} \geqslant \Delta U +1\\
 \end{align*}
-\quad Thus, the last line shows that the effect of a unitary shock to $\Delta U$ on GDP growth is not straightforwardly clear, as it depends on the state of $\Delta U$ beforehand. 
+\quad Thus, the last line shows that the effect of a unitary shock to $\Delta U$ on GDP growth is not straightforwardly clear, as it depends on the state of $\Delta U$ compared to the constant $\frac{k}{c} - 1$. 
 If we are in a situation where the effect of a shock on the unemployment rate would be positive on GDP growth we would thus expect a rise in wage growth (assuming all the increase in GDP does not only go to profits…). 
 However, most of the time shocks in the unemployment rate do tend to be followed by downward pressures on wages(\cite{labour2},\cite{labour9}). 
 For the ratio of vacancies to unemployment, an increase can either be due to an increase in vacancies (increase in labour demand - for the same number of unemployed there are more positions) or a decrease in the number of unemployed, both tightening the labour market and we would then expect increasing pressures on wage growth. 
@@ -159,7 +159,7 @@ For the sake of concision, we decided to only highlight the coefficients of the 
 \vspace{-1.5cm}
 \noindent \textit{\textbf{NB:} Note that the lack of complete job vacancies series for Italy and Spain forced us to disregard the $V/U$ and $JW\textrm{-}LF$ slack measures for these countries.}
 
-\quad The first thing to note is that no model is completely left-ou performance-wise, as almost all show adjusted $\textrm{R}^{2}$ above 60\%. 
+\quad The first thing to note is that no model is completely left-out performance-wise, as almost all show adjusted $\textrm{R}^{2}$ above 60\%. 
 Considering the unemployment rate estimate as the baseline the results show that for Germany the job-worker gap and labour force participation measure up to it. 
 We estimate that the vacancy-to-unemployment ratio even has a slight edge over other slack measures, with its adjusted $\textrm{R}^{2}$ reaching 65\%. 
 Moreover, there does not seem to be a discrepancy in the estimated long-run effect of either CPI or labour productivity. 
@@ -378,5 +378,5 @@ From Q4 2021 onwards, both positively contributed to changes in GDP/Hour which l
 \begin{itemize}
     \item We find that other measures of slack can perform as best as (and sometimes better) the unemployment rate to explain wage growth. The different measures also all point towards discrepancies in inflationary pressures on wages in the peripheral countries than in the core countries.
     \item Wage growth has been strengthening over the past year, supported by robust labour markets and some catch-up in wages to compensate workers for high inflation. While this is likely to decelerate as inflation eases and the economy slows further in core countries, peripheral countries could potentially be challenged with delayed rapid wage increases which could put further pressure on core inflation.
-    \item There has been ivergent dynamics within the Eurozone regarding productivity changes due to structural factors.
+    \item There has been divergent dynamics within the Eurozone regarding productivity changes due to structural factors, underscoring the need for a nuanced approach in addressing productivity disparities among member states.
 \end{itemize}
