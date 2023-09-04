@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.23)  4 SEP 2023 13:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.23)  4 SEP 2023 16:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -393,111 +393,79 @@ LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count301
 \calc@Cskip=\skip71
-) (/usr/local/texlive/2023/texmf-dist/tex/latex/pdfpages/pdfpages.sty
-Package: pdfpages 2022/12/19 v0.5x Insert pages of external PDF documents (AM)
- (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
-) (/usr/local/texlive/2023/texmf-dist/tex/latex/eso-pic/eso-pic.sty
-Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
-\ESO@tempdima=\dimen177
-\ESO@tempdimb=\dimen178
-)
-\AM@pagewidth=\dimen179
-\AM@pageheight=\dimen180
-\AM@fboxrule=\dimen181
- (/usr/local/texlive/2023/texmf-dist/tex/latex/pdfpages/pppdftex.def
-File: pppdftex.def 2022/12/19 v0.5x Pdfpages driver for pdfTeX (AM)
-)
-\pdfpages@includegraphics@status=\count302
-\AM@pagebox=\box56
-\AM@global@opts=\toks28
-\AM@pagecnt=\count303
-\AM@toc@title=\toks29
-\AM@lof@heading=\toks30
-\c@AM@survey=\count304
-\AM@templatesizebox=\box57
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/bbold/bbold.sty
 Package: bbold 1994/04/06 Bbold symbol package
 LaTeX Font Info:    Redeclaring math alphabet \mathbb on input line 42.
-) (/usr/local/texlive/2023/texmf-dist/tex/generic/ulem/ulem.sty
-\UL@box=\box58
-\UL@hyphenbox=\box59
-\UL@skip=\skip72
-\UL@hook=\toks31
-\UL@height=\dimen182
-\UL@pe=\count305
-\UL@pixel=\dimen183
-\ULC@box=\box60
-Package: ulem 2019/11/18
-\ULdepth=\dimen184
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
  (/usr/local/texlive/2023/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count306
+\etb@tempcnta=\count302
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count307
+\lrq@indent=\count303
  (/usr/local/texlive/2023/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
-))
-\c@tabx@nest=\count308
-\c@listtotal=\count309
-\c@listcount=\count310
-\c@liststart=\count311
-\c@liststop=\count312
-\c@citecount=\count313
-\c@citetotal=\count314
-\c@multicitecount=\count315
-\c@multicitetotal=\count316
-\c@instcount=\count317
-\c@maxnames=\count318
-\c@minnames=\count319
-\c@maxitems=\count320
-\c@minitems=\count321
-\c@citecounter=\count322
-\c@maxcitecounter=\count323
-\c@savedcitecounter=\count324
-\c@uniquelist=\count325
-\c@uniquename=\count326
-\c@refsection=\count327
-\c@refsegment=\count328
-\c@maxextratitle=\count329
-\c@maxextratitleyear=\count330
-\c@maxextraname=\count331
-\c@maxextradate=\count332
-\c@maxextraalpha=\count333
-\c@abbrvpenalty=\count334
-\c@highnamepenalty=\count335
-\c@lownamepenalty=\count336
-\c@maxparens=\count337
-\c@parenlevel=\count338
-\blx@tempcnta=\count339
-\blx@tempcntb=\count340
-\blx@tempcntc=\count341
-\c@blx@maxsection=\count342
-\blx@maxsegment@0=\count343
-\blx@notetype=\count344
-\blx@parenlevel@text=\count345
-\blx@parenlevel@foot=\count346
-\blx@sectionciteorder@0=\count347
-\blx@sectionciteorderinternal@0=\count348
-\blx@entrysetcounter=\count349
-\blx@biblioinstance=\count350
-\labelnumberwidth=\skip73
-\labelalphawidth=\skip74
-\biblabelsep=\skip75
-\bibitemsep=\skip76
-\bibnamesep=\skip77
-\bibinitsep=\skip78
-\bibparsep=\skip79
-\bibhang=\skip80
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+\c@tabx@nest=\count304
+\c@listtotal=\count305
+\c@listcount=\count306
+\c@liststart=\count307
+\c@liststop=\count308
+\c@citecount=\count309
+\c@citetotal=\count310
+\c@multicitecount=\count311
+\c@multicitetotal=\count312
+\c@instcount=\count313
+\c@maxnames=\count314
+\c@minnames=\count315
+\c@maxitems=\count316
+\c@minitems=\count317
+\c@citecounter=\count318
+\c@maxcitecounter=\count319
+\c@savedcitecounter=\count320
+\c@uniquelist=\count321
+\c@uniquename=\count322
+\c@refsection=\count323
+\c@refsegment=\count324
+\c@maxextratitle=\count325
+\c@maxextratitleyear=\count326
+\c@maxextraname=\count327
+\c@maxextradate=\count328
+\c@maxextraalpha=\count329
+\c@abbrvpenalty=\count330
+\c@highnamepenalty=\count331
+\c@lownamepenalty=\count332
+\c@maxparens=\count333
+\c@parenlevel=\count334
+\blx@tempcnta=\count335
+\blx@tempcntb=\count336
+\blx@tempcntc=\count337
+\c@blx@maxsection=\count338
+\blx@maxsegment@0=\count339
+\blx@notetype=\count340
+\blx@parenlevel@text=\count341
+\blx@parenlevel@foot=\count342
+\blx@sectionciteorder@0=\count343
+\blx@sectionciteorderinternal@0=\count344
+\blx@entrysetcounter=\count345
+\blx@biblioinstance=\count346
+\labelnumberwidth=\skip72
+\labelalphawidth=\skip73
+\biblabelsep=\skip74
+\bibitemsep=\skip75
+\bibnamesep=\skip76
+\bibinitsep=\skip77
+\bibparsep=\skip78
+\bibhang=\skip79
 \blx@bcfin=\read3
 \blx@bcfout=\write3
 \blx@langwohyphens=\language88
-\c@mincomprange=\count351
-\c@maxcomprange=\count352
-\c@mincompwidth=\count353
+\c@mincomprange=\count347
+\c@maxcomprange=\count348
+\c@mincompwidth=\count349
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-dm.def
@@ -505,88 +473,88 @@ File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count354
-\c@savedafterword=\count355
-\c@annotator=\count356
-\c@savedannotator=\count357
-\c@author=\count358
-\c@savedauthor=\count359
-\c@bookauthor=\count360
-\c@savedbookauthor=\count361
-\c@commentator=\count362
-\c@savedcommentator=\count363
-\c@editor=\count364
-\c@savededitor=\count365
-\c@editora=\count366
-\c@savededitora=\count367
-\c@editorb=\count368
-\c@savededitorb=\count369
-\c@editorc=\count370
-\c@savededitorc=\count371
-\c@foreword=\count372
-\c@savedforeword=\count373
-\c@holder=\count374
-\c@savedholder=\count375
-\c@introduction=\count376
-\c@savedintroduction=\count377
-\c@namea=\count378
-\c@savednamea=\count379
-\c@nameb=\count380
-\c@savednameb=\count381
-\c@namec=\count382
-\c@savednamec=\count383
-\c@translator=\count384
-\c@savedtranslator=\count385
-\c@shortauthor=\count386
-\c@savedshortauthor=\count387
-\c@shorteditor=\count388
-\c@savedshorteditor=\count389
-\c@labelname=\count390
-\c@savedlabelname=\count391
-\c@institution=\count392
-\c@savedinstitution=\count393
-\c@lista=\count394
-\c@savedlista=\count395
-\c@listb=\count396
-\c@savedlistb=\count397
-\c@listc=\count398
-\c@savedlistc=\count399
-\c@listd=\count400
-\c@savedlistd=\count401
-\c@liste=\count402
-\c@savedliste=\count403
-\c@listf=\count404
-\c@savedlistf=\count405
-\c@location=\count406
-\c@savedlocation=\count407
-\c@organization=\count408
-\c@savedorganization=\count409
-\c@origlocation=\count410
-\c@savedoriglocation=\count411
-\c@origpublisher=\count412
-\c@savedorigpublisher=\count413
-\c@publisher=\count414
-\c@savedpublisher=\count415
-\c@language=\count416
-\c@savedlanguage=\count417
-\c@origlanguage=\count418
-\c@savedoriglanguage=\count419
-\c@pageref=\count420
-\c@savedpageref=\count421
-\shorthandwidth=\skip81
-\shortjournalwidth=\skip82
-\shortserieswidth=\skip83
-\shorttitlewidth=\skip84
-\shortauthorwidth=\skip85
-\shorteditorwidth=\skip86
-\locallabelnumberwidth=\skip87
-\locallabelalphawidth=\skip88
-\localshorthandwidth=\skip89
-\localshortjournalwidth=\skip90
-\localshortserieswidth=\skip91
-\localshorttitlewidth=\skip92
-\localshortauthorwidth=\skip93
-\localshorteditorwidth=\skip94
+\c@afterword=\count350
+\c@savedafterword=\count351
+\c@annotator=\count352
+\c@savedannotator=\count353
+\c@author=\count354
+\c@savedauthor=\count355
+\c@bookauthor=\count356
+\c@savedbookauthor=\count357
+\c@commentator=\count358
+\c@savedcommentator=\count359
+\c@editor=\count360
+\c@savededitor=\count361
+\c@editora=\count362
+\c@savededitora=\count363
+\c@editorb=\count364
+\c@savededitorb=\count365
+\c@editorc=\count366
+\c@savededitorc=\count367
+\c@foreword=\count368
+\c@savedforeword=\count369
+\c@holder=\count370
+\c@savedholder=\count371
+\c@introduction=\count372
+\c@savedintroduction=\count373
+\c@namea=\count374
+\c@savednamea=\count375
+\c@nameb=\count376
+\c@savednameb=\count377
+\c@namec=\count378
+\c@savednamec=\count379
+\c@translator=\count380
+\c@savedtranslator=\count381
+\c@shortauthor=\count382
+\c@savedshortauthor=\count383
+\c@shorteditor=\count384
+\c@savedshorteditor=\count385
+\c@labelname=\count386
+\c@savedlabelname=\count387
+\c@institution=\count388
+\c@savedinstitution=\count389
+\c@lista=\count390
+\c@savedlista=\count391
+\c@listb=\count392
+\c@savedlistb=\count393
+\c@listc=\count394
+\c@savedlistc=\count395
+\c@listd=\count396
+\c@savedlistd=\count397
+\c@liste=\count398
+\c@savedliste=\count399
+\c@listf=\count400
+\c@savedlistf=\count401
+\c@location=\count402
+\c@savedlocation=\count403
+\c@organization=\count404
+\c@savedorganization=\count405
+\c@origlocation=\count406
+\c@savedoriglocation=\count407
+\c@origpublisher=\count408
+\c@savedorigpublisher=\count409
+\c@publisher=\count410
+\c@savedpublisher=\count411
+\c@language=\count412
+\c@savedlanguage=\count413
+\c@origlanguage=\count414
+\c@savedoriglanguage=\count415
+\c@pageref=\count416
+\c@savedpageref=\count417
+\shorthandwidth=\skip80
+\shortjournalwidth=\skip81
+\shortserieswidth=\skip82
+\shorttitlewidth=\skip83
+\shortauthorwidth=\skip84
+\shorteditorwidth=\skip85
+\locallabelnumberwidth=\skip86
+\locallabelalphawidth=\skip87
+\localshorthandwidth=\skip88
+\localshortjournalwidth=\skip89
+\localshortserieswidth=\skip90
+\localshorttitlewidth=\skip91
+\localshortauthorwidth=\skip92
+\localshorteditorwidth=\skip93
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-compat.def
@@ -596,19 +564,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
-\c@textcitecount=\count422
-\c@textcitetotal=\count423
-\c@textcitemaxnames=\count424
-\c@biburlbigbreakpenalty=\count425
-\c@biburlbreakpenalty=\count426
-\c@biburlnumpenalty=\count427
-\c@biburlucpenalty=\count428
-\c@biburllcpenalty=\count429
+\c@textcitecount=\count418
+\c@textcitetotal=\count419
+\c@textcitemaxnames=\count420
+\c@biburlbigbreakpenalty=\count421
+\c@biburlbreakpenalty=\count422
+\c@biburlnumpenalty=\count423
+\c@biburlucpenalty=\count424
+\c@biburllcpenalty=\count425
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count430
+\c@smartand=\count426
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -618,8 +586,8 @@ Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count431
-\c@bbx:relatedtotal=\count432
+\c@bbx:relatedcount=\count427
+\c@bbx:relatedtotal=\count428
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -648,8 +616,8 @@ Package biblatex Info: Document encoding is UTF8 ....
 Package: expl3 2023-02-22 L3 programming layer (loader) 
  (/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count433
-\l__pdf_internal_box=\box61
+\l__color_backend_stack_int=\count429
+\l__pdf_internal_box=\box56
 ))
 Package biblatex Info: ... and expl3
 (biblatex)             2023-02-22 L3 programming layer (loader) 
@@ -666,8 +634,8 @@ Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count434
-\@quotereset=\count435
+\@quotelevel=\count430
+\@quotereset=\count431
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 54.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -744,30 +712,22 @@ Package hyperref Info: Link coloring OFF on input line 54.
 
  (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count436
-\scratchdimen=\dimen185
-\scratchbox=\box62
-\nofMPsegments=\count437
-\nofMParguments=\count438
-\everyMPshowfont=\toks32
-\MPscratchCnt=\count439
-\MPscratchDim=\dimen186
-\MPnumerator=\count440
-\makeMPintoPDFobject=\count441
-\everyMPtoPDFconversion=\toks33
+\scratchcounter=\count432
+\scratchdimen=\dimen177
+\scratchbox=\box57
+\nofMPsegments=\count433
+\nofMParguments=\count434
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count435
+\MPscratchDim=\dimen178
+\MPnumerator=\count436
+\makeMPintoPDFobject=\count437
+\everyMPtoPDFconversion=\toks29
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-)) (/usr/local/texlive/2023/texmf-dist/tex/latex/pdflscape/pdflscape.sty
-Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
- (/usr/local/texlive/2023/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
-Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF (HO)
- (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/lscape.sty
-Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
-)
-Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
@@ -875,23 +835,23 @@ File: Core/1.Savings/img/xUS2.png Graphic file (type png)
 Package pdftex.def Info: Core/1.Savings/img/xUS2.png  used on input line 35.
 (pdftex.def)             Requested size: 445.00023pt x 152.067pt.
  [4 <./Core/1.Savings/img/xFrance.png> <./Core/1.Savings/img/xGermany.png> <./Core/1.Savings/img/xSpain.png> <./Core/1.Savings/img/xItaly.png>] [5 <./Core/1.Savings/img/xUK.png> <./Core/1.Savings/img/xUS2.png>]
-<Core/1.Savings/img/xSavings.png, id=160, 1578.89874pt x 529.98pt>
+<Core/1.Savings/img/xSavings.png, id=162, 1578.89874pt x 529.98pt>
 File: Core/1.Savings/img/xSavings.png Graphic file (type png)
 <use Core/1.Savings/img/xSavings.png>
-Package pdftex.def Info: Core/1.Savings/img/xSavings.png  used on input line 74.
+Package pdftex.def Info: Core/1.Savings/img/xSavings.png  used on input line 78.
 (pdftex.def)             Requested size: 483.69687pt x 162.35934pt.
  [6] [7 <./Core/1.Savings/img/xSavings.png>]
-<Core/1.Savings/img/xSpainAL.png, id=173, 472.602pt x 258.858pt>
+<Core/1.Savings/img/xSpainAL.png, id=180, 472.602pt x 258.858pt>
 File: Core/1.Savings/img/xSpainAL.png Graphic file (type png)
 <use Core/1.Savings/img/xSpainAL.png>
-Package pdftex.def Info: Core/1.Savings/img/xSpainAL.png  used on input line 100.
+Package pdftex.def Info: Core/1.Savings/img/xSpainAL.png  used on input line 104.
 (pdftex.def)             Requested size: 386.95897pt x 211.94893pt.
  [8 <./Core/1.Savings/img/xSpainAL.png>]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 113.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 117.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )) [9{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}] (./Core/2.Labour/labour_text.tex [10] [11{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}]
-<Core/2.Labour/img/unit_root.png, id=215, 1281.78876pt x 747.79375pt>
+<Core/2.Labour/img/unit_root.png, id=222, 1281.78876pt x 747.79375pt>
 File: Core/2.Labour/img/unit_root.png Graphic file (type png)
 <use Core/2.Labour/img/unit_root.png>
 Package pdftex.def Info: Core/2.Labour/img/unit_root.png  used on input line 63.
@@ -909,167 +869,149 @@ Overfull \hbox (2.57314pt too wide) in paragraph at lines 85--90
  []
 
 [13] [14]
-<Core/2.Labour/img/LRM table.png, id=251, 1419.3025pt x 635.37375pt>
+<Core/2.Labour/img/LRM table.png, id=257, 1419.3025pt x 635.37375pt>
 File: Core/2.Labour/img/LRM table.png Graphic file (type png)
 <use Core/2.Labour/img/LRM table.png>
 Package pdftex.def Info: Core/2.Labour/img/LRM table.png  used on input line 156.
 (pdftex.def)             Requested size: 483.69687pt x 216.52835pt.
  [15]
-<Core/2.Labour/img/lfpart breakdown.png, id=261, 341.1144pt x 171.5208pt>
+<Core/2.Labour/img/lfpart breakdown.png, id=267, 341.1144pt x 171.5208pt>
 File: Core/2.Labour/img/lfpart breakdown.png Graphic file (type png)
 <use Core/2.Labour/img/lfpart breakdown.png>
 Package pdftex.def Info: Core/2.Labour/img/lfpart breakdown.png  used on input line 177.
 (pdftex.def)             Requested size: 338.58632pt x 170.25888pt.
  [16 <./Core/2.Labour/img/LRM table.png>] [17 <./Core/2.Labour/img/lfpart breakdown.png>]
-<Core/2.Labour/img/labour_results.png, id=276, 1332.98pt x 927.465pt>
+<Core/2.Labour/img/labour_results.png, id=282, 1332.98pt x 927.465pt>
 File: Core/2.Labour/img/labour_results.png Graphic file (type png)
 <use Core/2.Labour/img/labour_results.png>
 Package pdftex.def Info: Core/2.Labour/img/labour_results.png  used on input line 219.
 (pdftex.def)             Requested size: 420.8139pt x 292.78986pt.
  [18 <./Core/2.Labour/img/labour_results.png>]
-<Core/2.Labour/img/Franceb1.png, id=287, 455.7025pt x 193.72375pt>
+<Core/2.Labour/img/Franceb1.png, id=293, 455.7025pt x 193.72375pt>
 File: Core/2.Labour/img/Franceb1.png Graphic file (type png)
 <use Core/2.Labour/img/Franceb1.png>
 Package pdftex.def Info: Core/2.Labour/img/Franceb1.png  used on input line 230.
 (pdftex.def)             Requested size: 386.95897pt x 164.50337pt.
-<Core/2.Labour/img/Franceb2.png, id=288, 456.2646pt x 199.4652pt>
+<Core/2.Labour/img/Franceb2.png, id=294, 456.2646pt x 199.4652pt>
 File: Core/2.Labour/img/Franceb2.png Graphic file (type png)
 <use Core/2.Labour/img/Franceb2.png>
 Package pdftex.def Info: Core/2.Labour/img/Franceb2.png  used on input line 231.
 (pdftex.def)             Requested size: 386.95897pt x 169.16881pt.
  [19 <./Core/2.Labour/img/Franceb1.png> <./Core/2.Labour/img/Franceb2.png>]
-<Core/2.Labour/img/germanyb1.png, id=297, 991.705pt x 431.6125pt>
+<Core/2.Labour/img/germanyb1.png, id=303, 991.705pt x 431.6125pt>
 File: Core/2.Labour/img/germanyb1.png Graphic file (type png)
 <use Core/2.Labour/img/germanyb1.png>
 Package pdftex.def Info: Core/2.Labour/img/germanyb1.png  used on input line 257.
 (pdftex.def)             Requested size: 386.95897pt x 168.4138pt.
-<Core/2.Labour/img/germanyb2.png, id=298, 456.2646pt x 199.4652pt>
+<Core/2.Labour/img/germanyb2.png, id=304, 456.2646pt x 199.4652pt>
 File: Core/2.Labour/img/germanyb2.png Graphic file (type png)
 <use Core/2.Labour/img/germanyb2.png>
 Package pdftex.def Info: Core/2.Labour/img/germanyb2.png  used on input line 258.
 (pdftex.def)             Requested size: 386.95897pt x 169.16881pt.
  [20 <./Core/2.Labour/img/germanyb1.png> <./Core/2.Labour/img/germanyb2.png>]
-<Core/2.Labour/img/spainb1.png, id=306, 928.46875pt x 429.605pt>
+<Core/2.Labour/img/spainb1.png, id=312, 928.46875pt x 429.605pt>
 File: Core/2.Labour/img/spainb1.png Graphic file (type png)
 <use Core/2.Labour/img/spainb1.png>
 Package pdftex.def Info: Core/2.Labour/img/spainb1.png  used on input line 276.
 (pdftex.def)             Requested size: 386.95897pt x 179.04971pt.
-<Core/2.Labour/img/spainb2.png, id=307, 456.2646pt x 200.4288pt>
+<Core/2.Labour/img/spainb2.png, id=313, 456.2646pt x 200.4288pt>
 File: Core/2.Labour/img/spainb2.png Graphic file (type png)
 <use Core/2.Labour/img/spainb2.png>
 Package pdftex.def Info: Core/2.Labour/img/spainb2.png  used on input line 277.
 (pdftex.def)             Requested size: 386.95897pt x 169.98604pt.
  [21 <./Core/2.Labour/img/spainb1.png> <./Core/2.Labour/img/spainb2.png>]
-<Core/2.Labour/img/italyb1.png, id=315, 455.7025pt x 199.74625pt>
+<Core/2.Labour/img/italyb1.png, id=321, 455.7025pt x 199.74625pt>
 File: Core/2.Labour/img/italyb1.png Graphic file (type png)
 <use Core/2.Labour/img/italyb1.png>
 Package pdftex.def Info: Core/2.Labour/img/italyb1.png  used on input line 300.
 (pdftex.def)             Requested size: 386.95897pt x 169.61748pt.
-<Core/2.Labour/img/italyb2.png, id=316, 456.2646pt x 195.6108pt>
+<Core/2.Labour/img/italyb2.png, id=322, 456.2646pt x 195.6108pt>
 File: Core/2.Labour/img/italyb2.png Graphic file (type png)
 <use Core/2.Labour/img/italyb2.png>
 Package pdftex.def Info: Core/2.Labour/img/italyb2.png  used on input line 301.
 (pdftex.def)             Requested size: 386.95897pt x 165.89984pt.
  [22 <./Core/2.Labour/img/italyb1.png> <./Core/2.Labour/img/italyb2.png>]
-<Core/2.Labour/img/prodbreakdown1.png, id=325, 303.0522pt x 161.403pt>
+<Core/2.Labour/img/prodbreakdown1.png, id=331, 303.0522pt x 161.403pt>
 File: Core/2.Labour/img/prodbreakdown1.png Graphic file (type png)
 <use Core/2.Labour/img/prodbreakdown1.png>
 Package pdftex.def Info: Core/2.Labour/img/prodbreakdown1.png  used on input line 337.
 (pdftex.def)             Requested size: 290.22107pt x 154.57816pt.
  [23]
-<Core/2.Labour/img/prodbreakdown2.png, id=333, 313.17pt x 167.1846pt>
+<Core/2.Labour/img/prodbreakdown2.png, id=340, 313.17pt x 167.1846pt>
 File: Core/2.Labour/img/prodbreakdown2.png Graphic file (type png)
 <use Core/2.Labour/img/prodbreakdown2.png>
 Package pdftex.def Info: Core/2.Labour/img/prodbreakdown2.png  used on input line 345.
 (pdftex.def)             Requested size: 290.22107pt x 154.93922pt.
  [24 <./Core/2.Labour/img/prodbreakdown1.png> <./Core/2.Labour/img/prodbreakdown2.png>]) [25] (./Core/conclusion.tex) [26]
-Overfull \hbox (142.15182pt too wide) in paragraph at lines 102--102
-\T1/lmr/m/n/10 economies: drivers and im-pli-ca-tions.'' In: |   []
- []
-
-
-Overfull \hbox (127.59776pt too wide) in paragraph at lines 102--102
-[]\T1/lmr/m/n/10 Lawrence H. Sum-mers & Alex Do-mash. ``How tight are US labour mar-kets?'' In: |   []
- []
-
-
-Overfull \hbox (129.73245pt too wide) in paragraph at lines 102--102
-[]\T1/lmr/m/n/10 Emmanuel Saez & Pas-cal Michail-lat. ``Fig-ur-ing out ef-fi-cient un-em-ploy-ment.'' In: |   []
- []
-
-
-Overfull \hbox (145.29115pt too wide) in paragraph at lines 102--102
-[]\T1/lmr/m/n/10 Jason Fur-man & Wil-son Pow-ell III. ``What is the best mea-sure of la-bor mar-ket tight-ness?'' In: |   []
- []
-
-
-Overfull \hbox (200.23663pt too wide) in paragraph at lines 102--102
-[]\T1/lmr/m/n/10 Alex Do-mash & Lawrence H. Sum-mers. ``Can the Phillips curve ex-plain re-cent wage growth?'' In: |   []
- []
-
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 101.
-(/usr/local/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [27] (./Core/annexe.tex
-<Core/1.Savings/img/Ax_savings_table.png, id=365, 688.5725pt x 899.36pt>
+<Core/1.Savings/img/Ax_savings_table.png, id=371, 688.5725pt x 899.36pt>
 File: Core/1.Savings/img/Ax_savings_table.png Graphic file (type png)
 <use Core/1.Savings/img/Ax_savings_table.png>
-Package pdftex.def Info: Core/1.Savings/img/Ax_savings_table.png  used on input line 4.
+Package pdftex.def Info: Core/1.Savings/img/Ax_savings_table.png  used on input line 6.
 (pdftex.def)             Requested size: 241.84843pt x 315.87856pt.
-<Core/1.Savings/img/Ax_fr_compensation.png, id=366, 599.23875pt x 330.23375pt>
+<Core/1.Savings/img/Ax_fr_compensation.png, id=372, 599.23875pt x 330.23375pt>
 File: Core/1.Savings/img/Ax_fr_compensation.png Graphic file (type png)
 <use Core/1.Savings/img/Ax_fr_compensation.png>
-Package pdftex.def Info: Core/1.Savings/img/Ax_fr_compensation.png  used on input line 11.
-(pdftex.def)             Requested size: 290.22107pt x 159.94145pt.
-<Core/1.Savings/img/Ax_ger_compensation.png, id=367, 897.3525pt x 491.8375pt>
+Package pdftex.def Info: Core/1.Savings/img/Ax_fr_compensation.png  used on input line 13.
+(pdftex.def)             Requested size: 386.95897pt x 213.25359pt.
+<Core/1.Savings/img/Ax_ger_compensation.png, id=373, 897.3525pt x 491.8375pt>
 File: Core/1.Savings/img/Ax_ger_compensation.png Graphic file (type png)
 <use Core/1.Savings/img/Ax_ger_compensation.png>
-Package pdftex.def Info: Core/1.Savings/img/Ax_ger_compensation.png  used on input line 18.
-(pdftex.def)             Requested size: 290.22107pt x 159.06479pt.
+Package pdftex.def Info: Core/1.Savings/img/Ax_ger_compensation.png  used on input line 20.
+(pdftex.def)             Requested size: 386.95897pt x 212.08638pt.
  [28 <./Core/1.Savings/img/Ax_savings_table.png> <./Core/1.Savings/img/Ax_fr_compensation.png>]
-<Core/2.Labour/img/France output.png, id=376, 456.2646pt x 208.6194pt>
+<Core/1.Savings/img/savings_distrib.png, id=382, 625.33624pt x 261.97874pt>
+File: Core/1.Savings/img/savings_distrib.png Graphic file (type png)
+<use Core/1.Savings/img/savings_distrib.png>
+Package pdftex.def Info: Core/1.Savings/img/savings_distrib.png  used on input line 27.
+(pdftex.def)             Requested size: 386.95897pt x 162.11732pt.
+ [29 <./Core/1.Savings/img/Ax_ger_compensation.png> <./Core/1.Savings/img/savings_distrib.png>]
+<Core/2.Labour/img/France output.png, id=390, 456.2646pt x 208.6194pt>
 File: Core/2.Labour/img/France output.png Graphic file (type png)
 <use Core/2.Labour/img/France output.png>
-Package pdftex.def Info: Core/2.Labour/img/France output.png  used on input line 25.
+Package pdftex.def Info: Core/2.Labour/img/France output.png  used on input line 37.
 (pdftex.def)             Requested size: 459.51054pt x 210.10864pt.
-<Core/2.Labour/img/Germany output.png, id=377, 456.2646pt x 207.6558pt>
+<Core/2.Labour/img/Germany output.png, id=391, 456.2646pt x 207.6558pt>
 File: Core/2.Labour/img/Germany output.png Graphic file (type png)
 <use Core/2.Labour/img/Germany output.png>
-Package pdftex.def Info: Core/2.Labour/img/Germany output.png  used on input line 32.
+Package pdftex.def Info: Core/2.Labour/img/Germany output.png  used on input line 44.
 (pdftex.def)             Requested size: 459.51054pt x 209.13817pt.
-<Core/2.Labour/img/Spain output.png, id=378, 456.2646pt x 207.6558pt>
+<Core/2.Labour/img/Spain output.png, id=392, 456.2646pt x 207.6558pt>
 File: Core/2.Labour/img/Spain output.png Graphic file (type png)
 <use Core/2.Labour/img/Spain output.png>
-Package pdftex.def Info: Core/2.Labour/img/Spain output.png  used on input line 39.
+Package pdftex.def Info: Core/2.Labour/img/Spain output.png  used on input line 51.
 (pdftex.def)             Requested size: 459.51054pt x 209.13817pt.
- [29 <./Core/1.Savings/img/Ax_ger_compensation.png> <./Core/2.Labour/img/France output.png> <./Core/2.Labour/img/Germany output.png>]
-<Core/2.Labour/img/Italy output.png, id=388, 456.2646pt x 208.6194pt>
+ [30 <./Core/2.Labour/img/France output.png> <./Core/2.Labour/img/Germany output.png>]
+<Core/2.Labour/img/Italy output.png, id=400, 456.2646pt x 208.6194pt>
 File: Core/2.Labour/img/Italy output.png Graphic file (type png)
 <use Core/2.Labour/img/Italy output.png>
-Package pdftex.def Info: Core/2.Labour/img/Italy output.png  used on input line 46.
+Package pdftex.def Info: Core/2.Labour/img/Italy output.png  used on input line 58.
 (pdftex.def)             Requested size: 459.51054pt x 210.10864pt.
-<Core/2.Labour/img/france25.png, id=389, 456.2646pt x 192.72pt>
+<Core/2.Labour/img/france25.png, id=401, 456.2646pt x 192.72pt>
 File: Core/2.Labour/img/france25.png Graphic file (type png)
 <use Core/2.Labour/img/france25.png>
-Package pdftex.def Info: Core/2.Labour/img/france25.png  used on input line 53.
+Package pdftex.def Info: Core/2.Labour/img/france25.png  used on input line 65.
 (pdftex.def)             Requested size: 459.51054pt x 194.09573pt.
- [30 <./Core/2.Labour/img/Spain output.png> <./Core/2.Labour/img/Italy output.png>]
-<Core/2.Labour/img/Germany25.png, id=397, 456.2646pt x 188.3838pt>
+ [31 <./Core/2.Labour/img/Spain output.png> <./Core/2.Labour/img/Italy output.png>]
+<Core/2.Labour/img/Germany25.png, id=409, 456.2646pt x 188.3838pt>
 File: Core/2.Labour/img/Germany25.png Graphic file (type png)
 <use Core/2.Labour/img/Germany25.png>
-Package pdftex.def Info: Core/2.Labour/img/Germany25.png  used on input line 60.
+Package pdftex.def Info: Core/2.Labour/img/Germany25.png  used on input line 72.
 (pdftex.def)             Requested size: 459.51054pt x 189.72859pt.
-<Core/2.Labour/img/Spain25.png, id=398, 456.2646pt x 212.4738pt>
+<Core/2.Labour/img/Spain25.png, id=410, 456.2646pt x 212.4738pt>
 File: Core/2.Labour/img/Spain25.png Graphic file (type png)
 <use Core/2.Labour/img/Spain25.png>
-Package pdftex.def Info: Core/2.Labour/img/Spain25.png  used on input line 67.
+Package pdftex.def Info: Core/2.Labour/img/Spain25.png  used on input line 79.
 (pdftex.def)             Requested size: 459.51054pt x 213.99055pt.
-<Core/2.Labour/img/Italy25.png, id=399, 456.2646pt x 201.3924pt>
+<Core/2.Labour/img/Italy25.png, id=411, 456.2646pt x 201.3924pt>
 File: Core/2.Labour/img/Italy25.png Graphic file (type png)
 <use Core/2.Labour/img/Italy25.png>
-Package pdftex.def Info: Core/2.Labour/img/Italy25.png  used on input line 74.
+Package pdftex.def Info: Core/2.Labour/img/Italy25.png  used on input line 86.
 (pdftex.def)             Requested size: 459.51054pt x 202.83005pt.
- [31 <./Core/2.Labour/img/france25.png> <./Core/2.Labour/img/Germany25.png> <./Core/2.Labour/img/Spain25.png>]) (./Core/synthesepage.tex [32 <./Core/2.Labour/img/Italy25.png>]
+ [32 <./Core/2.Labour/img/france25.png> <./Core/2.Labour/img/Germany25.png> <./Core/2.Labour/img/Spain25.png>]) (./Core/synthesepage.tex [33 <./Core/2.Labour/img/Italy25.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -1078,13 +1020,13 @@ l.35 \end{titlepage}
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.37 
-      [1]
+l.26 O
+      ver the past year, wage growth has exhibited a notable strengthening, ... [1]
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.62 I
-      l est également essentiel de reconnaître les diverses dynamiques à ... [2])
+l.50 
+      [2])
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -1105,18 +1047,18 @@ Package logreq Info: Writing requests to 'Rapport.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 23024 strings out of 476025
- 406937 string characters out of 5790017
+ 22217 strings out of 476025
+ 392557 string characters out of 5790017
  1868388 words of memory out of 5000000
- 42966 multiletter control sequences out of 15000+600000
- 600217 words of font info for 91 fonts, out of 8000000 for 9000
+ 42179 multiletter control sequences out of 15000+600000
+ 610353 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,15n,79p,1098b,1847s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Rapport.pdf (39 pages, 3026718 bytes).
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on Rapport.pdf (40 pages, 3125377 bytes).
 PDF statistics:
- 543 PDF objects out of 1000 (max. 8388607)
- 393 compressed objects within 4 object streams
- 98 named destinations out of 1000 (max. 500000)
- 310 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 574 PDF objects out of 1000 (max. 8388607)
+ 412 compressed objects within 5 object streams
+ 101 named destinations out of 1000 (max. 500000)
+ 315 words of extra memory for PDF output out of 10000 (max. 10000000)
 
