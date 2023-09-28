@@ -1,0 +1,76 @@
+%Censure TOBIT1
+\noindent $\hookrightarrow$ \underline{\textbf{Modèle de censure : \ghl{Tobit 1}}}\par
+$\circlearrowleft$ \href[page=4]{file:///Users/prld/Desktop/git_proj/NoTeX/NoTeX/Econometrics/2A/Cours/chapitre4.pdf}{\textit{link-tobit1}}\\
+\vspace*{-0.5cm}
+\begin{boxH}
+    \textbf{Modèle Tobit.I}\par
+    \quad $ Y^{*} = X'.\beta_{0} + \sigma_{0}.\varepsilon $\par
+    \quad $ \varepsilon \vert X \sim \mathcal{N}(0,1) \; \Longrightarrow \; \varepsilon \indep X \textrm{ et } \varepsilon \sim \mathcal{N}(0,1)$ le modèle suppose donc homoscédasticité.\\
+    On \textit{observe} seulement $ \red{Y = max(0, Y^{*}) = Y^{*}.\mathbb{1}(Y^{*}>0)} \leftrightarrow \textrm{ \textbf{censure}}$\par
+    $\Rightarrow$ Estimation par maximum de vraisemblance pour estimer les paramètres : $(\hat{\beta},\hat{\sigma})_{MLE}$
+\end{boxH}
+\noindent \blue{Un seul mécanisme détermine la valeur de $Y$ et si on observe la variable d'intérêt ou non.}\par
+\ghl{Deux cas à distinguer: censure et solution en coin.}\par
+Régression de Y sur X par la méthode des MCO ne conduit pas à un estimateur convergent de $\beta_{0}$ en général.\par
+La simple régression sur les données non censurées seules (ie $Y^{*}$) ne conduit pas à un estimateur convergent de $\beta_{0}$\par
+Dans les deux cas on a un biais d'atténuation vers 0.\par
+Interprétation causale des différents coefficients estimés si le modèle est bien spécifié et si le terme d'erreur suit bien une normale centrée réduite.
+
+\bigbreak
+%TOBIT2
+\noindent $\hookrightarrow$ \underline{\textbf{Modèle de sélection : \ghl{Tobit 2}}}\par
+$\circlearrowleft$ \href[page=17]{file:///Users/prld/Desktop/git_proj/NoTeX/NoTeX/Econometrics/2A/Cours/chapitre4.pdf}{\textit{link-tobit2}}\\
+On s'intéresse à des situations où on observe $Y$ seulement si $D=1$. Ici on a bien deux processus différents : un qui détermine $Y^{*}$ \textbf{et un autre} qui détermine si on observe cette valeur ou non i.e. modèle sur D. \ghl{\textit{Variable potentielle} $Y^{*}$ existe pour tous les individus.} \\
+\vspace*{-0.5cm}
+\begin{boxH}
+    \textbf{Modèle Tobit.II}\par
+    \quad $ Y^{*} = X'.\beta_{0} + \varepsilon $ \quad \red{distribution de $\varepsilon$ non spécifiée}\par
+    \quad $Y = D.Y^{*}$ est seulement observé.
+\end{boxH}
+
+%sélection exogène
+\bigbreak
+\begin{boxH}
+    \underline{\textbf{\blue{Sélection exogène :}}} \; $\blue{ Y^{*} \indep D\vert X} \; \Leftrightarrow \; \varepsilon \indep D\vert X$\\
+    \textit{Sélection exogène}: conditionnellement aux variables explicatives observées la variable d'intérêt $Y^{*}$ est indépendante de la variable de sélection $D$.\\
+    $\boldsymbol{\Longrightarrow }$ la loi de $Y^{*} \vert X, D=1$ est identique à celle de $Y^{*} \vert X$ $\Rightarrow$ on peut \textbf{ignorer le problème de sélection}. Avec $E[\varepsilon\vert X]=0$ l'estimateur OLS de $Y$ sur $X$ sur le \redline{sous-échantillon \{$i\vert D_{i}=1$\}} converge vers $\beta_{0}$
+\end{boxH}
+
+%Sélection endogène
+\bigbreak
+\begin{boxH}
+    \underline{\textbf{\blue{Sélection endogène}}} - \textbf{Modèle de sélection généralisé Tobit.II} $\; Y^{*} \nindep D\vert X$\\
+    On dispose d'un instrument corrélé à $D$ qui n'affecte pas directement $Y^{*}$ (au moins une composante de $Z$ exclue de $X$ = vrai instrument qui n'a pas d'effet direct sur $Y^{*}$)\par
+    \begin{itemize}
+        \item[] $ 
+        \begin{cases}
+            Y^{*} = X'.\red{\beta_{0}} + \varepsilon \quad : \quad Y = D.Y^{*} \textrm{ observé}\\
+            D = \mathbb{1}(Z'.\red{\gamma_{0}} + \eta \geq 0)
+        \end{cases}
+        $
+    \end{itemize}
+    \underline{Hypothèses:}
+    \begin{itemize}
+        \item[] $ 
+        \begin{cases}
+            (\varepsilon, \eta) \indep (X,Z) \quad \rightarrow \textrm{homoscédasticité des résidus}\\
+            \eta \sim \mathcal{N}(0,1)\\
+            \hookrightarrow \textrm{\textit{\small{Probit de D sur Z bien spécifié!}}}\\
+            E[\varepsilon \vert\eta] = \red{\delta_{0}}.\eta \quad \red{\rightarrow \delta_{0}=Cov(\varepsilon, \eta)}\\
+            \hookrightarrow \redline{\textrm{Sélection endogène}\; \Leftrightarrow \; \varepsilon\textrm{ corrélé à }\eta \; \Leftrightarrow \; \delta_{0}\neq 0} \\
+            \quad \; \textrm{\small{\textit{Sélection significativement endogène?}}} \; \leftrightarrow \; \textrm{\small{\textit{regarder significativité dans 2.}}}
+        \end{cases}
+        $
+    \end{itemize}
+    \bigbreak
+    $\boldsymbol{\implies}$\textbf{\underline{Méthode de Heckit:}} \href[page=23]{file:///Users/prld/Desktop/git_proj/NoTeX/NoTeX/Econometrics/2A/Cours/chapitre4.pdf}{$\circlearrowleft$} \small{\textit{two-steps stata}}\\
+    \vspace*{-0.75cm}
+    \begin{enumerate}
+        \item Estimer le probit de $D_{i}$ sur $Z_{i} \Rightarrow \; \blue{\widehat{\gamma}}$
+        \item Régresser $Y_{i}$ sur \redline{$(X_{i},\lambda(Z_{i}'.\widehat{\gamma}))$} sur l'échantillon sélectionné \{$i\vert D_{i}=1$\} $\Rightarrow \; \blue{\widehat{\beta} \textrm{ et } \widehat{\delta}}$ 
+        \item[$\Rightarrow$] Estimateurs \blue{$(\widehat{\beta},\widehat{\gamma},\widehat{\delta})$} convergents et asymptotiquement normaux
+    \end{enumerate}
+\end{boxH}
+\bigbreak
+\noindent Formellement: \textit{sélection exogène} \quad $Y^{*} \indep D\vert(X,Z) \Leftrightarrow \varepsilon \indep D\vert(\eta,Z)$\\
+$ \lambda = \frac{\varphi}{\phi} = \frac{\textrm{densité}}{\textrm{FdR}}$ inverse du ratio de Mills; si $ Z\sim \mathcal{N}(0,1) \Rightarrow E[Z\vert Z>c]=\frac{\varphi(\text{c})}{1- \phi(\text{c})}$

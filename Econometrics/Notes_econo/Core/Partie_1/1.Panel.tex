@@ -1,0 +1,31 @@
+$\circlearrowleft$ \href[]{file:///Users/prld/Desktop/git_proj/NoTeX/NoTeX/Econometrics/2A/Cours/chapitre2.pdf}{\textit{link-panel}}\\
+\noindent Données de panel, exemple:\\
+$\textrm{\textit{murder}}_{i,t} = \delta_{0} + \textrm{\textit{exécution}}_{i,t}.\beta_{1} + \textrm{\textit{unemp}}_{i,t}.\beta_{2} \;+ $ \ghl{$\alpha_{i} + \varepsilon_{i,t}$} \; $\rightarrow \nu_{i,t} = \alpha_{i} + \varepsilon_{i,t}$\\
+\vspace*{-0.75cm}
+\begin{itemize}
+    \item [\textbf{-}] \redline{$\alpha_{i}$ effet individuel}
+    \vspace*{-0.15cm}
+    \item [] Effet constant dans le temps sur la variable expliquée, \textit{tx de meurtre}, qui peut varier entre états. Par exemple, $\alpha_{i}$ $\leftrightarrow$ loi plus sévère dans l'état du Texas et moins en Virginie donc $\alpha_{\textrm{\textit{Texas}}} \neq \alpha_{\textrm{\textit{Virginie}}}$. 
+    \item [] On peut donc avoir $E[X_{i,t}\alpha_{i}]\neq 0$ : les décisions d'exécutions sont fortement liées à la sévérité des lois entre états donc $\textrm{\textit{exécution}}_{i,t}$ la variable explicative du nb d'exécutions est corrélée à la sévérité de la loi dans l'état considéré : $E[X_{i,t}\alpha_{i}]\neq 0 \rightarrow$ endogénéité à cause d'un biais de variable omise.
+\end{itemize}
+\vspace*{-0.25cm}
+\begin{itemize}
+    \item [\textbf{-}] \redline{$\varepsilon_{i,t}$ choc idiosyncratique}
+    \vspace*{-0.15cm}
+    \item [] Agrège les facteurs inobservés variables dans le temps.
+\end{itemize}
+
+\begin{boxH}
+    \underline{Hypothèses:} on suppose toujours \textit{à minima} l'exogénéité faible.
+    \begin{enumerate}
+        \item \textbf{Exogénéité des résidus }: $E[X_{i,t}\nu_{i,t}] = 0 \Leftrightarrow E[X_{i,t}\alpha_{i}]=0 : \textbf{Random Effect}$
+        \item [] Si $E[X_{i,t}\alpha_{i}]\neq 0$ : \textbf{Fixed Effect}
+        \item \textbf{Exogénéité faible}: $E[X_{i,t}\varepsilon_{i,t'}] = 0 \quad \forall \; t' \geq t$\\
+        \quad $\hookrightarrow$ \textit{Variables explicatives non corrélées aux chocs futurs}
+        \item \textbf{Exogénéité forte/stricte}: $E[X_{i,t}\varepsilon_{i,t'}] = 0 \quad \forall \; t' \neq t$\\
+        \quad $\hookrightarrow$ \textit{Variables explicatives non corrélées aux chocs passés \underline{et} futurs}
+    \end{enumerate}
+\end{boxH}
+
+Exogénéité faible: taux d'exécution présent à priori non corrélé aux chocs futurs - non anticipables - du taux de meurte.\par
+Exogénéité forte: taux de meurtre passé \underline{et} futur n'influencent pas le nombre d'exécutions présent: ce qui peut apparaître comme peu réaliste...
