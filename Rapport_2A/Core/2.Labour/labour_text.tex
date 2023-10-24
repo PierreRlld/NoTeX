@@ -76,11 +76,13 @@ Overall all series are not level-stationary as the  t-statistics for the ADF and
 Running the same test on the differentiated series establishes the series as first-difference-stationary. Using the KPSS test the hypothesis of stationarity cannot be rejected at the 5\% level, thus reinforcing our conclusion of the variables being integrated of order one I(1).
 
 \subsubsection{Methodology and Model selection}
-\quad As we highlighted in the previous section, our variables are I(1) and we thus consider a model ran in first difference. Namely, we run country-specific Autoregressive Distributed Lag (ARDL) models of the following form:
+\quad As we highlighted in the previous section, our variables are I(1) and we thus consider a model ran in first difference. 
+Namely, we run country-specific Autoregressive Distributed Lag (ARDL) models of the following form, for $t=1,\ldots,T$ :
 \begin{equation*}
-    \Delta wage_{t} = \sum_{k=1}^{W}\alpha_k \Delta wage_{t-k} + \sum_{k=0}^{Q}\beta_k^{(CPI)} \Delta CPI_{t-k} + \sum_{k=0}^{S}\beta_k^{(slack)} \Delta slack_{t-k} + \sum_{k=0}^{P}\beta_k^{(prod)} \Delta prod._{t-k} + \theta_{1}\mathbb{1}_{covid} + \theta_{2}\mathbb{1}_{GFC}
+    \Delta wage_{t} = c + \sum_{k=1}^{W}\alpha_k \Delta wage_{t-k} + \sum_{k=0}^{Q}\beta_k^{(CPI)} \Delta CPI_{t-k} + \sum_{k=0}^{S}\beta_k^{(slack)} \Delta slack_{t-k} + \sum_{k=0}^{P}\beta_k^{(prod)} \Delta prod_{t-k} + \theta^{T}\gamma + \epsilon_{t}
 \end{equation*}
-For $t=1,\ldots,T$ and where the maximum lags $\left\{Q,S,P\right\}\in\left[0;6\right]\ and\ \left\{W\right\}\in\left[1;6\right]$ ($prod.$ refers to the Productivity variable).
+With respective maximum lags $\left\{Q,S,P\right\}\in\left[0;6\right]^{3}\ \textrm{and}\ \left\{W\right\}\in\left[1;6\right]$ ($prod$ refers to the Productivity variable).
+$\gamma = (\mathbb{1}_{covid}, \mathbb{1}_{GFC})^{T}$ is a vector of dummy variables for the periods detailed below and $\theta = (\theta_{covid},\theta_{GFC})^{T}$.
 
 The model is estimated via Conditional Maximum Likelihood (\textit{using the ARDL framework from the statsmodel python package}) on a quarterly basis from Q2 1997 to Q4 2022 for Germany, France and Spain. 
 For Italy, the sample only starts in Q1 1998. As our goal is to assess recent wage developments and produce monitoring models for our outlook it is mandatory we include as much data as possible. 

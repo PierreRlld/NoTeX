@@ -16,4 +16,4 @@
 \contentsline {subsection}{\numberline {2.5}Summary of key findings}{25}{subsection.2.5}%
 \contentsline {section}{Conclusion}{26}{subsection.2.5}%
 \contentsline {section}{References}{27}{section*.18}%
-\contentsline {section}{Annexe}{28}{section*.19}%
+\contentsline {section}{Annexe}{27}{section*.19}%

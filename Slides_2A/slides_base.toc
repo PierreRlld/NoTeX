@@ -1,4 +1,4 @@
-\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
-\beamer@sectionintoc {2}{Literature Review}{3}{0}{2}
-\beamer@sectionintoc {3}{Method}{4}{0}{3}
-\beamer@sectionintoc {4}{Results}{5}{0}{4}
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Épargne excédentaire}{4}{0}{2}
+\beamer@sectionintoc {3}{Courbe de Phillips}{6}{0}{3}
+\beamer@sectionintoc {4}{Conclusion}{9}{0}{4}

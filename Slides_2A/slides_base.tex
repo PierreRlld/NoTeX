@@ -99,59 +99,140 @@
 
 \author{Pierre Rouillard}
 \title{Soutenance Stage d'Application}
-\institute{xx/xx/xxxx}
+\institute{xx/xx/xxxx \\ Maître de stage: Françoise Huang}
 \date{\textit{Allianz Trade - ENSAE}} 
 
 \begin{document}
+%###
 \begin{frame}[plain]
 \titlepage
 \centering
 \includegraphics[width=.5\textwidth]{Allianz_Trade.png}
 \end{frame}
 
-\section{Introduction}
-\begin{frame}[label=Background]{Test1}
-\begin{itemize}
-\item Here to input your background\\
-   \begin{itemize}
-    \item This is the sub-content
-    \item Here you can also jump to other slides \hyperlink{Rocky}{\beamergotobutton{}}
-   \end{itemize}
-\item Now we go back to the main content\\
+%###
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
 
+% -----------
+%\hyperlink{Rocky}{\beamergotobutton{}}
+\section{Introduction}
+\begin{frame}[label=intro]{Economic Research department}
+\begin{itemize}
+\item Équipe répartie entre Paris et Munich (24 personnes)\\
+   \begin{itemize}
+    \item Paris: recherche économique et recherche sectorielle
+    \item + 2-4 stagiaires
+   \end{itemize}
+\item Maxime Darmet - Économiste France et US
+  \begin{itemize}
+    \item Projet: épargne excédentaire des ménages EU \& US
+  \end{itemize}
+\item Roberta Fortes \textit{Ph.D} - Économiste LATAM et Espagne
+  \begin{itemize}
+    \item Projet: modélisation de l'évolution des salaires en Europe
+  \end{itemize}
 \end{itemize}
 \end{frame}
 
-\section{Literature Review}
-\begin{frame}{Here is the title of this slides}
-\begin{boxH}
-    $Y = X'.\widetilde{\beta} + \widetilde{\varepsilon}$ , $E[X\widetilde{\varepsilon}]=0$ \blue{toujours} définissable sous conditions de moments.
-\end{boxH}
+% -----------
+\section{Épargne excédentaire}
+\begin{frame}{Définition et calcul de l'épargne excédentaire}
+  Première définition donnée par le Bureau of Economic Analysis
+  \begin{align*}
+    &\textrm{Flow of savings} = \textrm{DPI} - \textrm{PCE} - \textrm{\textit{other outlays}} \\
+    \hookrightarrow \quad &\textrm{Flow of \textbf{excess} savings} = \Delta \textrm{DPI} - \Delta \textrm{PCE} - \Delta \textrm{\textit{other outlays}}
+  \end{align*}
+  Où $\Delta \textrm{\textit{X}}$ est l'écart relativement à la tendance pré-pandémique 2015-19 (log-linéaire)
+  
 \end{frame}
 
-\section{Method}
-\begin{frame}[label=Rocky]{There you can also separate the page}
-\begin{figure}
- \begin{columns}[c]
-  \begin{column}{0.3\textwidth}
-    \centering
-    \includegraphics[width=1\textwidth]{Figure2.jpg}
-  \end{column}
-  \begin{column}{0.3\textwidth}
-    \centering
-    \includegraphics[width=1\textwidth]{Figure3.jpg}
-  \end{column}
-  \end{columns}
-  \caption{Here I just using one caption for these 2 cute pictures but you can also using 2 captions  \parbox{\linewidth}{\small\textit{Data source: Rocky's daily look}}}
-\end{figure}
-Now I am going back to the previous slidesby clicking this: \hyperlink{Background}{go back}
+\begin{frame}{L'essentiel}
+  Principaux résultats :
+  \begin{itemize}
+    \item X
+    \item X
+  \end{itemize}
+  \vspace{.2cm}
+  Retrospectivement :
+  \begin{itemize}
+    \item jsp
+    \item 
+  \end{itemize}
+  \vspace{.2cm}
+  Enseignements :
+  \begin{itemize}
+    \item jsp
+    \item 
+  \end{itemize}
 \end{frame}
 
-\section{Results}
-\begin{frame}{Results}
-\input{table_Results}
+% -----------
+\section{Courbe de Phillips}
+\begin{frame}[label=model]{Version dynamique de la courbe de Phillips}
+  Forme générale de la courbe de Phillips estimée [\textit{ARDL}]:
+  \begin{equation*}
+    \blue{\Delta wage_{t}} = c + \phi_{1}(L).\blue{\Delta wage_{t}} + \phi_{2}(L).\blue{\Delta CPI_{t}} + \phi_{4}(L).\blue{\Delta slack_{t}} + \phi_{3}(L).\blue{prod_{t}} + \theta^{T}.\gamma + \epsilon_{t}
+  \end{equation*}
+  avec:
+  \begin{itemize}
+    \item $L$ l'opérateur retard
+    \item Partie autoregressive: $\phi_{1}(L) = \sum_{k=\mathbf{1}}^{\mathbf{W}}\alpha_k L^{k}$ 
+    \item Variables explicatives:
+    \begin{itemize}
+      \item $\phi_{2}(L) = \sum_{k=0}^{\mathbf{Q}}\beta_k^{(CPI)} L^{k}$
+      \item $\phi_{3}(L) = \sum_{k=0}^{\mathbf{S}}\beta_k^{(slack)} L^{k}$
+      \item $\phi_{4}(L) = \sum_{k=0}^{\mathbf{P}}\beta_k^{(prod)} L^{k}$
+    \end{itemize}
+    \item $\gamma$ un vecteur de variables binaires (Covid,GFC)
+    \item $\epsilon_{t}$ terme d'erreur
+  \end{itemize}
 \end{frame}
 
+\begin{frame}[label=est]{Estimation et sélection}
+  Au maximum : $W\in[1;6]\ \textrm{et} \left\{Q,S,P\right\}\in[0;6]^{3}$
+\end{frame}
+
+\begin{frame}{L'essentiel}
+  Principaux résultats :
+  \begin{itemize}
+    \item X
+    \item X
+  \end{itemize}
+  \vspace{.2cm}
+  Retrospectivement :
+  \begin{itemize}
+    \item jsp
+    \item 
+  \end{itemize}
+  \vspace{.2cm}
+  Enseignements :
+  \begin{itemize}
+    \item jsp
+    \item 
+  \end{itemize}
+\end{frame}
+
+% -----------
+\section{Conclusion}
+\begin{frame}{Bonus}
+  \begin{figure}
+   \begin{columns}[c]
+    \begin{column}{0.3\textwidth}
+      \centering
+      \includegraphics[width=1.3\textwidth]{img/az1.png}
+    \end{column}
+    \begin{column}{0.3\textwidth}
+      \centering
+      \includegraphics[width=1.3\textwidth]{img/az2.png}
+    \end{column}
+    \end{columns}
+    \caption{Extraits des publications présentées (LHS: savings, RHS: wage)}
+  \end{figure}
+  \end{frame}
+
+% -----------
 \begin{frame}
  \begin{center}
 		{\Huge Merci!}\\

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.23)  11 OCT 2023 17:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.23)  23 OCT 2023 22:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -636,7 +636,7 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 
 \@quotelevel=\count430
 \@quotereset=\count431
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 54.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 47.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -647,24 +647,24 @@ LaTeX Warning: Unused global option(s):
 (./Rapport.aux)
 \openout1 = `Rapport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -705,7 +705,7 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 54.
+Package hyperref Info: Link coloring OFF on input line 47.
 (./Rapport.out) (./Rapport.out)
 \@outlinefile=\write4
 \openout4 = `Rapport.out'.
@@ -742,8 +742,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Rapport.bbl' found.
  (./Rapport.bbl)
-Package biblatex Info: Reference section=0 on input line 54.
-Package biblatex Info: Reference segment=0 on input line 54.
+Package biblatex Info: Reference section=0 on input line 47.
+Package biblatex Info: Reference segment=0 on input line 47.
  (./Core/frontpage.tex
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 9.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd
@@ -796,12 +796,12 @@ LaTeX Font Warning: Font shape `T1/lmr/bx/sc' undefined
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.67 \break
+l.60 \break
             [1] (./Core/Remerciements.tex)
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.72 \newpage
+l.65 \newpage
               [1] (./Core/Intro.tex) [2] (./Core/1.Savings/savings_text.tex
 <Core/1.Savings/img/xFrance.png, id=125, 1587.9325pt x 551.05875pt>
 File: Core/1.Savings/img/xFrance.png Graphic file (type png)
@@ -857,14 +857,9 @@ File: Core/2.Labour/img/unit_root.png Graphic file (type png)
 Package pdftex.def Info: Core/2.Labour/img/unit_root.png  used on input line 63.
 (pdftex.def)             Requested size: 483.69687pt x 282.17917pt.
  [12{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc} <./Core/2.Labour/img/unit_root.png>]
-LaTeX Font Info:    Trying to load font information for U+bbold on input line 81.
+LaTeX Font Info:    Trying to load font information for U+bbold on input line 85.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/bbold/Ubbold.fd)
-Overfull \hbox (14.99997pt too wide) detected at line 82
-\OT1/lmr/m/n/10 ^^A\OML/lmm/m/it/10 wage[] \OT1/lmr/m/n/10 = [] \OML/lmm/m/it/10 []\OT1/lmr/m/n/10 ^^A\OML/lmm/m/it/10 wage[] \OT1/lmr/m/n/10 + [] \OML/lmm/m/it/10 ^^L[]\OT1/lmr/m/n/10 ^^A\OML/lmm/m/it/10 CPI[] \OT1/lmr/m/n/10 + [] \OML/lmm/m/it/10 ^^L[]\OT1/lmr/m/n/10 ^^A\OML/lmm/m/it/10 slack[] \OT1/lmr/m/n/10 + [] \OML/lmm/m/it/10 ^^L[]\OT1/lmr/m/n/10 ^^A\OML/lmm/m/it/10 prod:[] \OT1/lmr/m/n/10 + \OML/lmm/m/it/10 ^^R[]\U/bbold/m/n/10 1[] \OT1/lmr/m/n/10 + \OML/lmm/m/it/10 ^^R[]\U/bbold/m/n/10 1[]
- []
-
-
-Overfull \hbox (2.57314pt too wide) in paragraph at lines 85--90
+Overfull \hbox (2.57314pt too wide) in paragraph at lines 87--92
 []\T1/lmr/m/n/10 The model is es-ti-mated via Con-di-tional Max-i-mum Like-li-hood (\T1/lmr/m/it/10 us-ing the ARDL frame-work from the statsmodel
  []
 
@@ -872,86 +867,87 @@ Overfull \hbox (2.57314pt too wide) in paragraph at lines 85--90
 <Core/2.Labour/img/LRM table.png, id=257, 1419.3025pt x 635.37375pt>
 File: Core/2.Labour/img/LRM table.png Graphic file (type png)
 <use Core/2.Labour/img/LRM table.png>
-Package pdftex.def Info: Core/2.Labour/img/LRM table.png  used on input line 156.
+Package pdftex.def Info: Core/2.Labour/img/LRM table.png  used on input line 158.
 (pdftex.def)             Requested size: 483.69687pt x 216.52835pt.
  [15]
 <Core/2.Labour/img/lfpart breakdown.png, id=267, 341.1144pt x 171.5208pt>
 File: Core/2.Labour/img/lfpart breakdown.png Graphic file (type png)
 <use Core/2.Labour/img/lfpart breakdown.png>
-Package pdftex.def Info: Core/2.Labour/img/lfpart breakdown.png  used on input line 177.
+Package pdftex.def Info: Core/2.Labour/img/lfpart breakdown.png  used on input line 179.
 (pdftex.def)             Requested size: 338.58632pt x 170.25888pt.
  [16 <./Core/2.Labour/img/LRM table.png>] [17 <./Core/2.Labour/img/lfpart breakdown.png>]
 <Core/2.Labour/img/labour_results.png, id=282, 1332.98pt x 927.465pt>
 File: Core/2.Labour/img/labour_results.png Graphic file (type png)
 <use Core/2.Labour/img/labour_results.png>
-Package pdftex.def Info: Core/2.Labour/img/labour_results.png  used on input line 219.
+Package pdftex.def Info: Core/2.Labour/img/labour_results.png  used on input line 221.
 (pdftex.def)             Requested size: 420.8139pt x 292.78986pt.
  [18 <./Core/2.Labour/img/labour_results.png>]
 <Core/2.Labour/img/Franceb1.png, id=293, 455.7025pt x 193.72375pt>
 File: Core/2.Labour/img/Franceb1.png Graphic file (type png)
 <use Core/2.Labour/img/Franceb1.png>
-Package pdftex.def Info: Core/2.Labour/img/Franceb1.png  used on input line 230.
+Package pdftex.def Info: Core/2.Labour/img/Franceb1.png  used on input line 232.
 (pdftex.def)             Requested size: 386.95897pt x 164.50337pt.
 <Core/2.Labour/img/Franceb2.png, id=294, 456.2646pt x 199.4652pt>
 File: Core/2.Labour/img/Franceb2.png Graphic file (type png)
 <use Core/2.Labour/img/Franceb2.png>
-Package pdftex.def Info: Core/2.Labour/img/Franceb2.png  used on input line 231.
+Package pdftex.def Info: Core/2.Labour/img/Franceb2.png  used on input line 233.
 (pdftex.def)             Requested size: 386.95897pt x 169.16881pt.
  [19 <./Core/2.Labour/img/Franceb1.png> <./Core/2.Labour/img/Franceb2.png>]
 <Core/2.Labour/img/germanyb1.png, id=303, 991.705pt x 431.6125pt>
 File: Core/2.Labour/img/germanyb1.png Graphic file (type png)
 <use Core/2.Labour/img/germanyb1.png>
-Package pdftex.def Info: Core/2.Labour/img/germanyb1.png  used on input line 257.
+Package pdftex.def Info: Core/2.Labour/img/germanyb1.png  used on input line 259.
 (pdftex.def)             Requested size: 386.95897pt x 168.4138pt.
 <Core/2.Labour/img/germanyb2.png, id=304, 456.2646pt x 199.4652pt>
 File: Core/2.Labour/img/germanyb2.png Graphic file (type png)
 <use Core/2.Labour/img/germanyb2.png>
-Package pdftex.def Info: Core/2.Labour/img/germanyb2.png  used on input line 258.
+Package pdftex.def Info: Core/2.Labour/img/germanyb2.png  used on input line 260.
 (pdftex.def)             Requested size: 386.95897pt x 169.16881pt.
  [20 <./Core/2.Labour/img/germanyb1.png> <./Core/2.Labour/img/germanyb2.png>]
 <Core/2.Labour/img/spainb1.png, id=312, 928.46875pt x 429.605pt>
 File: Core/2.Labour/img/spainb1.png Graphic file (type png)
 <use Core/2.Labour/img/spainb1.png>
-Package pdftex.def Info: Core/2.Labour/img/spainb1.png  used on input line 276.
+Package pdftex.def Info: Core/2.Labour/img/spainb1.png  used on input line 278.
 (pdftex.def)             Requested size: 386.95897pt x 179.04971pt.
 <Core/2.Labour/img/spainb2.png, id=313, 456.2646pt x 200.4288pt>
 File: Core/2.Labour/img/spainb2.png Graphic file (type png)
 <use Core/2.Labour/img/spainb2.png>
-Package pdftex.def Info: Core/2.Labour/img/spainb2.png  used on input line 277.
+Package pdftex.def Info: Core/2.Labour/img/spainb2.png  used on input line 279.
 (pdftex.def)             Requested size: 386.95897pt x 169.98604pt.
  [21 <./Core/2.Labour/img/spainb1.png> <./Core/2.Labour/img/spainb2.png>]
 <Core/2.Labour/img/italyb1.png, id=321, 455.7025pt x 199.74625pt>
 File: Core/2.Labour/img/italyb1.png Graphic file (type png)
 <use Core/2.Labour/img/italyb1.png>
-Package pdftex.def Info: Core/2.Labour/img/italyb1.png  used on input line 300.
+Package pdftex.def Info: Core/2.Labour/img/italyb1.png  used on input line 302.
 (pdftex.def)             Requested size: 386.95897pt x 169.61748pt.
 <Core/2.Labour/img/italyb2.png, id=322, 456.2646pt x 195.6108pt>
 File: Core/2.Labour/img/italyb2.png Graphic file (type png)
 <use Core/2.Labour/img/italyb2.png>
-Package pdftex.def Info: Core/2.Labour/img/italyb2.png  used on input line 301.
+Package pdftex.def Info: Core/2.Labour/img/italyb2.png  used on input line 303.
 (pdftex.def)             Requested size: 386.95897pt x 165.89984pt.
  [22 <./Core/2.Labour/img/italyb1.png> <./Core/2.Labour/img/italyb2.png>]
 <Core/2.Labour/img/prodbreakdown1.png, id=331, 303.0522pt x 161.403pt>
 File: Core/2.Labour/img/prodbreakdown1.png Graphic file (type png)
 <use Core/2.Labour/img/prodbreakdown1.png>
-Package pdftex.def Info: Core/2.Labour/img/prodbreakdown1.png  used on input line 337.
+Package pdftex.def Info: Core/2.Labour/img/prodbreakdown1.png  used on input line 339.
 (pdftex.def)             Requested size: 290.22107pt x 154.57816pt.
  [23]
 <Core/2.Labour/img/prodbreakdown2.png, id=340, 313.17pt x 167.1846pt>
 File: Core/2.Labour/img/prodbreakdown2.png Graphic file (type png)
 <use Core/2.Labour/img/prodbreakdown2.png>
-Package pdftex.def Info: Core/2.Labour/img/prodbreakdown2.png  used on input line 345.
+Package pdftex.def Info: Core/2.Labour/img/prodbreakdown2.png  used on input line 347.
 (pdftex.def)             Requested size: 290.22107pt x 154.93922pt.
  [24 <./Core/2.Labour/img/prodbreakdown1.png> <./Core/2.Labour/img/prodbreakdown2.png>]) [25] (./Core/conclusion.tex) [26]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 101.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 94.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [27] (./Core/annexe.tex
-<Core/1.Savings/img/Ax_savings_table.png, id=371, 688.5725pt x 899.36pt>
+) (./Core/annexe.tex
+<Core/1.Savings/img/Ax_savings_table.png, id=364, 688.5725pt x 899.36pt>
 File: Core/1.Savings/img/Ax_savings_table.png Graphic file (type png)
 <use Core/1.Savings/img/Ax_savings_table.png>
 Package pdftex.def Info: Core/1.Savings/img/Ax_savings_table.png  used on input line 6.
 (pdftex.def)             Requested size: 241.84843pt x 315.87856pt.
+ [27]
 <Core/1.Savings/img/Ax_fr_compensation.png, id=372, 599.23875pt x 330.23375pt>
 File: Core/1.Savings/img/Ax_fr_compensation.png Graphic file (type png)
 <use Core/1.Savings/img/Ax_fr_compensation.png>
@@ -1030,7 +1026,7 @@ l.54
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.111 \newpage
+l.104 \newpage
                [3] (./Core/resumegapyearpage.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
@@ -1047,15 +1043,15 @@ Package logreq Info: Writing requests to 'Rapport.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 22217 strings out of 476025
- 392557 string characters out of 5790017
+ 22211 strings out of 476025
+ 392530 string characters out of 5790017
  1868388 words of memory out of 5000000
- 42179 multiletter control sequences out of 15000+600000
+ 42173 multiletter control sequences out of 15000+600000
  610353 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,15n,79p,1098b,1847s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Rapport.pdf (40 pages, 3125672 bytes).
+Output written on Rapport.pdf (40 pages, 3125670 bytes).
 PDF statistics:
  574 PDF objects out of 1000 (max. 8388607)
  412 compressed objects within 5 object streams
