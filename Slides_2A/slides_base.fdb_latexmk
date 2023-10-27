@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1697789938 "/Users/prld/git/NoTeX/Slides_2A/slides_base.tex" "slides_base.pdf" "slides_base" 1697789940 0
-  "/Users/prld/git/NoTeX/Slides_2A/slides_base.tex" 1697789937 7229 169100325bbd2a981bfa1c7aed0b49ea ""
+["pdflatex"] 1698394946 "/Users/prld/git/NoTeX/Slides_2A/slides_base.tex" "slides_base.pdf" "slides_base" 1698394949 0
+  "/Users/prld/git/NoTeX/Slides_2A/slides_base.tex" 1698394946 8153 e5348a0e1994b1cc3d4360cf4ab7282b ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -34,7 +34,6 @@
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmti7.tfm" 1136768653 1492 86331993fe614793f5e7e755835c31c5 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmti9.tfm" 1136768653 1476 cccc6cc4935c18ec3d5623b77ecb8b74 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb" 1248133631 32378 2b20eba6bb36c716382b6d96240eaa69 ""
-  "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb" 1248133631 32298 c6d25bb16d1eac01ebdc6d7084126a1e ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb" 1248133631 37166 8ab3487cbe3ab49ebce74c29ea2418db ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1248133631 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb" 1248133631 36094 798f80770b3b148ceedd006d487db67c ""
@@ -48,6 +47,7 @@
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb" 1248133631 24373 a91d375736817a75026663adcb2190c1 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb" 1248133631 25168 33771b85f45c82138dd7745db7092d1c ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb" 1248133631 25029 6f2cec9646ca278302ed7d604e506e3e ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb" 1248133631 32442 c975af247b6702f7ca0c299af3616b80 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb" 1248133631 36310 f5ddc6715cc60deb16d9db5ded6a9391 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb" 1248133631 30273 87a352d78b6810ae5cfdc68d2fb827b2 ""
@@ -265,11 +265,12 @@
   "Allianz_Trade.png" 1697562772 23718 b9db5eb78627ece25134b92369e05a14 ""
   "img/az1.png" 1697664545 2114607 44680c2fae2a3706f7d0a766575a4f35 ""
   "img/az2.png" 1697664792 1185057 1c498c3df6febaf56b35aeb9cf8b7f5b ""
-  "slides_base.aux" 1697789940 3863 b95494075f9ef6edd3a4be085d7636f8 "pdflatex"
-  "slides_base.nav" 1697789940 1760 55e25c958ad6ccd71b9afe860d60d931 "pdflatex"
-  "slides_base.out" 1697789940 487 fad00256fad9f6cc37a0f993e97af88a "pdflatex"
-  "slides_base.tex" 1697789937 7229 169100325bbd2a981bfa1c7aed0b49ea ""
-  "slides_base.toc" 1697789940 206 fa3495045f10589dce8712406b86ec9d "pdflatex"
+  "img/excess_chart.png" 1698243858 160108 82b7c7f4b8499252308bbc9f607430e4 ""
+  "slides_base.aux" 1698394949 3995 d11aaca297d33a924108d39eeffb9612 "pdflatex"
+  "slides_base.nav" 1698394949 1855 e4b311238ce8327f3235374d0948a69e "pdflatex"
+  "slides_base.out" 1698394949 487 fad00256fad9f6cc37a0f993e97af88a "pdflatex"
+  "slides_base.tex" 1698394946 8153 e5348a0e1994b1cc3d4360cf4ab7282b ""
+  "slides_base.toc" 1698394949 207 0d7a695867659bcfae309c2755a956ed "pdflatex"
   (generated)
   "slides_base.aux"
   "slides_base.log"
