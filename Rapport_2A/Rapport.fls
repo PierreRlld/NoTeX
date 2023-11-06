@@ -1010,14 +1010,15 @@ INPUT ./Core/2.Labour/labour_text.tex
 INPUT ./Core/2.Labour/labour_text.tex
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/lm/ec-lmr5.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/lm/ec-lmri8.tfm
 INPUT ./Core/2.Labour/img/unit_root.png
 INPUT ./Core/2.Labour/img/unit_root.png
 INPUT Core/2.Labour/img/unit_root.png
 INPUT ./Core/2.Labour/img/unit_root.png
 INPUT ./Core/2.Labour/img/unit_root.png
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmbx10.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmbx7.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmbx5.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/bbold/Ubbold.fd
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/bbold/Ubbold.fd
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/bbold/Ubbold.fd
@@ -1025,6 +1026,13 @@ INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/bbold/Ubbold.fd
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/bbold/bbold10.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/bbold/bbold7.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/bbold/bbold5.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmbx8.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmbx6.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/bbold/bbold8.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/bbold/bbold6.tfm
 INPUT ./Core/2.Labour/img/LRM table.png
 INPUT ./Core/2.Labour/img/LRM table.png
 INPUT Core/2.Labour/img/LRM table.png
@@ -1170,9 +1178,8 @@ INPUT ./Core/synthesepage.tex
 INPUT ./Core/synthesepage.tex
 INPUT ./Core/synthesepage.tex
 INPUT ./Core/synthesepage.tex
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/bbold/bbold12.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/bbold/bbold8.tfm
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/bbold/bbold6.tfm
 INPUT ./Core/synthesecesure.tex
 INPUT ./Core/synthesecesure.tex
 INPUT ./Core/synthesecesure.tex
@@ -1190,6 +1197,7 @@ OUTPUT Rapport.run.xml
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx10.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx7.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx8.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb
@@ -1205,6 +1213,7 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr8.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr9.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri10.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri12.pfb
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri8.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy7.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb

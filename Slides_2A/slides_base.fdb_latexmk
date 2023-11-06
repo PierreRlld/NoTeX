@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1698394946 "/Users/prld/git/NoTeX/Slides_2A/slides_base.tex" "slides_base.pdf" "slides_base" 1698394949 0
-  "/Users/prld/git/NoTeX/Slides_2A/slides_base.tex" 1698394946 8153 e5348a0e1994b1cc3d4360cf4ab7282b ""
+["pdflatex"] 1699283682 "/Users/prld/git/NoTeX/Slides_2A/slides_base.tex" "slides_base.pdf" "slides_base" 1699283685 0
+  "/Users/prld/git/NoTeX/Slides_2A/slides_base.tex" 1699283681 9316 9a63e96c33a51d557e8f260264757b84 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -266,11 +266,12 @@
   "img/az1.png" 1697664545 2114607 44680c2fae2a3706f7d0a766575a4f35 ""
   "img/az2.png" 1697664792 1185057 1c498c3df6febaf56b35aeb9cf8b7f5b ""
   "img/excess_chart.png" 1698243858 160108 82b7c7f4b8499252308bbc9f607430e4 ""
-  "slides_base.aux" 1698394949 3995 d11aaca297d33a924108d39eeffb9612 "pdflatex"
-  "slides_base.nav" 1698394949 1855 e4b311238ce8327f3235374d0948a69e "pdflatex"
-  "slides_base.out" 1698394949 487 fad00256fad9f6cc37a0f993e97af88a "pdflatex"
-  "slides_base.tex" 1698394946 8153 e5348a0e1994b1cc3d4360cf4ab7282b ""
-  "slides_base.toc" 1698394949 207 0d7a695867659bcfae309c2755a956ed "pdflatex"
+  "img/team.JPG" 1699282879 285655 09dbcd7be8f8a36dcef4f034b8b4e189 ""
+  "slides_base.aux" 1699283684 4125 4d7658f10040bb2777649f4f49ecd056 "pdflatex"
+  "slides_base.nav" 1699283684 1949 f15d3add7b0c71935ef1130ec3231511 "pdflatex"
+  "slides_base.out" 1699283684 487 fad00256fad9f6cc37a0f993e97af88a "pdflatex"
+  "slides_base.tex" 1699283681 9316 9a63e96c33a51d557e8f260264757b84 ""
+  "slides_base.toc" 1699283684 207 6dfd652658bd97e310d1ac8a9c6210aa "pdflatex"
   (generated)
   "slides_base.aux"
   "slides_base.log"
