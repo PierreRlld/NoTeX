@@ -96,11 +96,10 @@
 % >>> Section-page ============================
 \setbeamertemplate{section page}
 {
-    \begin{centering}
-    \begin{beamercolorbox}[sep=12pt,center]{part title}
-    \usebeamerfont{section title}\insertsection\par
-    \end{beamercolorbox}
-    \end{centering}
+  \usebeamerfont{section title}
+  \begin{centering}
+  \insertsection
+  \end{centering}
 }
 
 % ==================================================================
@@ -153,7 +152,7 @@
 
 % ==================================================================
 \section{Épargne excédentaire}
-
+\sectionpage
 %###
 \begin{frame}{Principaux objectifs}
   Intérêt du projet :
@@ -192,6 +191,10 @@
     \includegraphics[width=1\textwidth]{img/excess_chart.png}
     \caption{Exemple - flux pour les compensation of employees: écart relatif à la tendance pré-pandémique (En rouge $\Delta Comp \leq 0$, en vert $\Delta Comp \geq  0$)}
   \end{figure}
+\end{frame}
+
+%###
+\begin{frame}{Décomposition de l'épargne excédentaire par composante}
 \end{frame}
 
 %###
