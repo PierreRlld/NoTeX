@@ -1605,6 +1605,11 @@ INPUT ./img/excess_chart.png
 INPUT img/excess_chart.png
 INPUT ./img/excess_chart.png
 INPUT ./img/excess_chart.png
+INPUT ./img/xFrance.png
+INPUT ./img/xFrance.png
+INPUT img/xFrance.png
+INPUT ./img/xFrance.png
+INPUT ./img/xFrance.png
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
