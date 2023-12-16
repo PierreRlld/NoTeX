@@ -1,0 +1,146 @@
+---
+title: "Ridge_Forecast"
+author: "Anna Simoni"
+date: "2023-12-08"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r eval=FALSE}
+# Set the parameters for Ridge
+INfit = .5;       # Proportion of in-sample fit to be explained by ridge
+
+# Performs the out-of-sample forecasting exercise
+true <- matrix(NA, nrow = TT - tail(HH, 1) - start_sample, ncol = 2)
+RW <- matrix(NA, nrow = TT - tail(HH, 1) - start_sample, ncol = 2)
+PC <- matrix(NA, nrow = TT - tail(HH, 1) - start_sample, ncol = 2)
+Ridge <- matrix(NA, nrow = TT - tail(HH, 1) - start_sample, ncol = 2)
+
+
+      ## [4] Computes the Ridge-based forecasts
+      #nu_ridge = SET_ridge(x,INfit)
+      nu_ridge <- INfit
+      result_Ridge <- Ridge_regression(x$INDPRO, x[,-6], nu_ridge, DEMEAN)
+      Ridge[j - Jwind + 1, k] <- const * result_Ridge$pred
+```
+
+```{r eval=FALSE}
+Ridge_regression <- function(yy,x, nu,DEMEAN) {
+  #x <- XX[,-6]                # Matrix containing the predictors
+  # Apply moving average filter: Y = (y_{+1}+...+y_{+h})/h
+  #Y <- stats::filter(XX$INDPRO, filter = rep(1/h, h), sides = 1)   # Dependent variable
+  Y <- stats::filter(yy, filter = rep(1/h, h), sides = 1)   # Dependent variable
+  
+  
+    # PART 1: CHECKS
+  # Check that x is not missing values for an entire row
+  if (any(rowSums(is.na(x)) == ncol(x))) {
+    stop("Input x contains entire row of missing values.")
+  }
+  
+  # Check that x is not missing values for an entire column
+  if (any(colSums(is.na(x)) == nrow(x)) || any(colSums(is.na(x)) == (nrow(x)-1))) {
+    #stop("Input x contains entire column of missing values.")
+    cat("Input x contains entire column of missing values.")
+    Index_missing_1 <- which(colSums(is.na(x)) == nrow(x))    # It counts how many 'NA' are in a column. If the
+    # number of NA in a colum is equal to the number of rows
+    # then, the condition is met.
+    Index_missing_2 <- which(colSums(is.na(x)) == (nrow(x)-1))
+    Index_missing <- c(Index_missing_1,Index_missing_2)
+    if ((length(Index_missing))==0){
+      x_new <- x
+    } else {
+      x_new <- subset(x,select = -Index_missing)
+    }
+  } else {x_new <- x}
+  
+  # Check that DEMEAN is one of 0, 1, 2, 3
+  if (!(DEMEAN %in% 0:3)) {
+    stop("Input DEMEAN is specified incorrectly.")
+  }
+  
+  # PART 2: SETUP
+  
+  # Number of observations per series in x_new (i.e. number of rows)
+  T <- nrow(x_new)
+  
+  # Locate missing values in x_new
+  x1 <- is.na(x_new)
+  
+  # Fill in missing values for each series with the unconditional mean of that series.
+  # Demean and standardize the updated dataset. Estimate factors using the demeaned and standardized dataset,
+  # and use these factors to predict the original dataset.
+  
+  # Get unconditional mean of the non-missing values of each series
+  mut <- matrix(rep(colMeans(x_new, na.rm = TRUE), T), nrow = nrow(x_new), ncol = ncol(x_new), byrow = TRUE)
+  
+  # Replace missing values with unconditional mean
+  x2 <- x_new
+  x2[is.na(x2)] <- mut[is.na(x2)]         # we replace the NA values in the vector x2 with the corresponding non-NA
+  # values from the vector mut.
+  # Check whether there are entire columns of zeros
+  Index_zeros <- which(colSums(x2==0) == nrow(x2))
+  if ((length(Index_zeros))==0){
+    x2_new <- x2
+    x1_new <- x1
+  } else {
+    x2_new <- subset(x2,select = -Index_zeros)
+    x1_new <- subset(x1,select = - Index_zeros)
+    x_new <- subset(x_new,select = -Index_zeros)
+  }
+  
+  # Number of series in x2_new (i.e. number of columns)
+  N <- ncol(x2_new)
+  
+  # Demean and standardize data
+  x3 <- transform_data(x2_new, DEMEAN)
+  # Check whether there are entire columns of zeros
+  Index_zeros <- which(colSums(x3$x22==0) == nrow(x3$x22))
+  if ((length(Index_zeros))==0){
+    x22 <- x3$x22
+  } else {
+    x22 <- subset(x3$x22,select = -Index_zeros)
+  }
+  
+  Z <- as.matrix(x22[1:(nrow(x22)-h),])            # Regressors used for computing the regression coefficients
+
+  
+  # Standardize the dependent variable to have mean zero and unitary variance.
+  # (Mean and variance will be reattributed to the forecsats, see below)
+  Y<-as.matrix(Y[(h+1):length(Y)])
+  my = colMeans(Y)
+  sy = sd(Y)/sqrt(length(Y))
+  Y_std = (Y-my)/sy
+  
+  b <- solve(t(Z)%*%Z + nu*diag(N)) %*% t(Z) %*% Y_std
+  pred <- (tail(Z, 1) %*% b)*sy+my; 
+  return(list(pred = pred, beta = b))
+}
+```
+
+```{r eval=FALSE}
+# Compute MSFE_RW and MSFE_PC
+dates_OOS <- dates[(start_sample + 1):(length(dates)-h)]
+
+true_NA <- na.omit(true[,1])
+Index_NA <- which(is.na(true[,1]))
+#dates_sub <- dates[j0:end]
+#dates_NA <- dates_sub[,-Index_NA]
+RW_NA <- na.omit(RW[,1])
+PC_NA <- na.omit(PC[,1])
+Ridge_NA <- na.omit(Ridge[,1])
+MSFE_RW <- mean((true_NA - RW_NA)^2)
+MSFE_PC <- mean((true_NA - PC_NA)^2)
+MSFE_Ridge <- mean((true_NA - Ridge_NA)^2)
+
+plot(dates_OOS, true_NA,
+     type = 'l', col = "black")
+
+points(dates_OOS, RW_NA, col="red", pch="*")
+lines(dates_OOS, PC_NA, col="blue",lty=2)
+lines(dates_OOS, Ridge_NA, col="green",lty=1)
+
+```

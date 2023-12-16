@@ -1,0 +1,121 @@
+---
+title: 'DFM1'
+output:
+  html_document:
+    df_print: paged
+  html_notebook: default
+  pdf_document: default
+---
+
+```{r}
+library(BVAR)
+library(fbi)
+source("/Users/prld/git/NoTeX/#TS/MacroE_ML/td1/functions.R")
+
+## File name of desired FRED-MD vintage ##
+filepath <- "https://files.stlouisfed.org/files/htdocs/fred-md/monthly/2015-04.csv"  ##
+data <- fredmd(filepath, date_start = NULL, date_end = NULL, transform = TRUE)       ##
+```
+
+```{r}
+# Type of transformation performed on each series before factors are
+# estimated
+#   0 --> no transformation
+#   1 --> demean only
+#   2 --> demean and standardize
+#   3 --> recursively demean and then standardize
+DEMEAN <- 2
+
+# Information criterion used to select the number of factors; for more details,
+# see auxiliary function factors_em()
+#   1 --> information criterion PC_p1
+#   2 --> information criterion PC_p2
+#   3 --> information criterion PC_p3
+jj <- 2
+
+# Maximum number of factors to be estimated; if set to 99, the number of
+# factors selected is forced to equal 8
+kmax <- 8
+```
+
+```{r}
+# =========================================================================
+# PART 1: LOAD AND LABEL DATA
+
+# Variable names
+series <- colnames(data[,2:length(data)])
+
+# Transformation numbers (we do not need it because data are already transformed)
+#tcode <- data[1,]
+
+# Raw data
+rawdata <- data[2:nrow(data),2:length(data)]
+
+# Month/year of the final observation
+final_date <- tail(data$date, 1)
+dates <- data$date
+
+# T = number of months in the sample
+T <- length(dates)
+```
+
+```{r}
+# =========================================================================
+# PART 2: PROCESS DATA
+
+# 1. Prepare Missing Data
+yt <- rawdata
+
+# 2. Reduce Sample  to usable dates: remove first two months because some
+# series have been first differenced
+yt <- yt[2:nrow(yt), ]
+dates <- dates[3:length(dates)]
+
+# 3. Remove Outliers
+result <- remove_outliers(yt)
+```
+
+```{r}
+# =========================================================================
+# PART 3: ESTIMATE FACTORS AND COMPUTE R-SQUARED
+
+# 1. Estimate Factors using function "factors_em()"
+#   ehat    = difference between data and values of data predicted by the factors
+#   Fhat    = set of factors
+#   lamhat  = factor loadings
+#   ve2     = eigenvalues of X'X
+#   x2      = data with missing values replaced from the EM algorithm (but untrasformed)
+result_factors <- factors_em(result, kmax, jj, DEMEAN)
+```
+
+```{r}
+ehat <- result_factors$ehat
+Fhat <- result_factors$Fhat
+lamhat <- result_factors$lamhat
+ve2 <- result_factors$ve2
+x2 <- result_factors$x2
+
+# 2. Compute R-Squared and marginal R-squared from estimated factors and factor loadings using function "mrsq()"
+#   R2      = R-squared for each series for each factor
+#   mR2     = marginal R-squared for each series for each factor
+#   mR2_F   = marginal R-squared for each factor
+#   R2_T    = total variation explained by all factors
+#   t10_s   = top 10 series that load most heavily on each factor
+#   t10_mR2 = marginal R-squared corresponding to top 10 series
+#             that load most heavily on each factor
+result_mrsq <- mrsq(Fhat, lamhat, ve2, series)
+R2 <- result_mrsq$R2
+mR2 <- result_mrsq$mR2
+mR2_F <- result_mrsq$mR2_F
+R2_T <- result_mrsq$R2_T
+t10_s <- result_mrsq$t10_s
+t10_mR2 <- result_mrsq$t10_mR2
+```
+
+```{r}
+# Create a bar plot
+# Set the length of the vertical axis
+custom_ylim <- c(0, 1)
+barplot(R2[,8], names.arg = 1:length(R2[,8]), main = "Importance of Factors: R2", xlab = "Series",
+        ylab = "R2", ylim = custom_ylim, col = "blue")
+```

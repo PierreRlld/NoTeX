@@ -1,0 +1,635 @@
+---
+title: "Diffusion_Indices"
+author: "Anna Simoni"
+date: "2023-12-08"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+options(tinytex.verbose = TRUE)
+```
+
+
+```{r }
+library(BVAR)
+library(fbi)
+library(glmnet)
+
+source("/Users/prld/git/NoTeX/#TS/MacroE_ML/td1/functions.R")
+source("/Users/prld/git/NoTeX/#TS/MacroE_ML/td1/functions2.R")
+
+## File name of desired FRED-MD vintage ##
+filepath <- "https://files.stlouisfed.org/files/htdocs/fred-md/monthly/2015-04.csv"  ##
+data <- fredmd(filepath, date_start = as.Date("1960-01-01"), date_end = NULL, transform = TRUE)       ##
+# The data are already transformed
+```
+
+```{r }
+# =========================================================================
+
+# Type of transformation performed on each series before factors are
+# estimated
+#   0 --> no transformation
+#   1 --> demean only
+#   2 --> demean and standardize
+#   3 --> recursively demean and then standardize
+DEMEAN <- 2
+
+# Information criterion used to select the number of factors; for more details,
+# see auxiliary function factors_em()
+#   1 --> information criterion PC_p1
+#   2 --> information criterion PC_p2
+#   3 --> information criterion PC_p3
+jj <- 2
+
+# Maximum number of factors to be estimated; if set to 99, the number of
+# factors selected is forced to equal 3
+kmax <- 99
+
+# Select the variables to predict
+# 6   : Industrial production (IP)
+nn <- 6
+HH = 12; # number of step ahead to forecast
+```
+
+```{r}
+# =========================================================================
+# PART 1: LOAD AND LABEL DATA
+
+# Variable names
+series <- colnames(data[,2:length(data)])
+
+# Raw data
+rawdata <- data[2:nrow(data),2:length(data)]
+
+# Month/year of the final observation
+final_date <- tail(data$date, 1)
+dates <- data$date
+
+# T = number of months in the sample
+T <- length(dates)
+
+# Starting dates for the out-of-sample evaluation
+start_date = "1974-01-01";
+```
+
+```{r}
+# =========================================================================
+# PART 2: PROCESS DATA
+
+# 1. Prepare Missing Data
+yt <- rawdata
+
+# 2. Reduce Sample  to usable dates: remove first two months because some
+# series have been first differenced
+dates <- dates[2:length(dates)]
+dim_yt <- dim(yt)
+TT <- dim_yt[1]
+NN <- dim_yt[2]
+
+# 3. Remove Outliers
+result <- remove_outliers(yt)
+```
+
+```{r}
+# =========================================================================
+start_sample <- which(dates == start_date)
+
+# Number of time points to use in the estimation of the parameter: Rolling scheme
+Jwind = start_sample
+
+if (Jwind > start_sample) {
+  stop("the rolling window cannot be larger than the first evaluation sample")
+}
+
+j0 <- start_sample - Jwind + 1
+
+x_temp <- yt[j0:start_sample, ]   # The available data at the beginning of the out-of-sample evaluation exercise
+x<- remove_outliers(x_temp)       # Remove outliers specific to this particular sample
+
+# Set the parameters for Ridge
+INfit = .5;       # Proportion of in-sample fit to be explained by ridge
+
+# Prepare empty matrices that contain the results
+true <- matrix(NA, nrow = TT - tail(HH, 1) - start_sample, ncol = 2)
+RW <- matrix(NA, nrow = TT - tail(HH, 1) - start_sample, ncol = 2)
+PC <- matrix(NA, nrow = TT - tail(HH, 1) - start_sample, ncol = 2)
+Ridge <- matrix(NA, nrow = TT - tail(HH, 1) - start_sample, ncol = 2)
+Lasso <- matrix(NA, nrow = TT - tail(HH, 1) - start_sample, ncol = 2)
+```
+
+```{r eval=FALSE}
+Ridge_regression <- function(yy,x, nu,DEMEAN) {
+  #x <- XX[,-6]                # Matrix containing the predictors
+  # Apply moving average filter: Y = (y_{+1}+...+y_{+h})/h
+  #Y <- stats::filter(XX$INDPRO, filter = rep(1/h, h), sides = 1)   # Dependent variable
+  Y <- stats::filter(yy, filter = rep(1/h, h), sides = 1)   # Dependent variable
+  
+  
+    # PART 1: CHECKS
+  # Check that x is not missing values for an entire row
+  if (any(rowSums(is.na(x)) == ncol(x))) {
+    stop("Input x contains entire row of missing values.")
+  }
+  
+  # Check that x is not missing values for an entire column
+  if (any(colSums(is.na(x)) == nrow(x)) || any(colSums(is.na(x)) == (nrow(x)-1))) {
+    #stop("Input x contains entire column of missing values.")
+    cat("Input x contains entire column of missing values.")
+    Index_missing_1 <- which(colSums(is.na(x)) == nrow(x))    # It counts how many 'NA' are in a column. If the
+    # number of NA in a colum is equal to the number of rows
+    # then, the condition is met.
+    Index_missing_2 <- which(colSums(is.na(x)) == (nrow(x)-1))
+    Index_missing <- c(Index_missing_1,Index_missing_2)
+    if ((length(Index_missing))==0){
+      x_new <- x
+    } else {
+      x_new <- subset(x,select = -Index_missing)
+    }
+  } else {x_new <- x}
+  
+  # Check that DEMEAN is one of 0, 1, 2, 3
+  if (!(DEMEAN %in% 0:3)) {
+    stop("Input DEMEAN is specified incorrectly.")
+  }
+  
+  # PART 2: SETUP
+  
+  # Number of observations per series in x_new (i.e. number of rows)
+  T <- nrow(x_new)
+  
+  # Locate missing values in x_new
+  x1 <- is.na(x_new)
+  
+  # Fill in missing values for each series with the unconditional mean of that series.
+  # Demean and standardize the updated dataset. Estimate factors using the demeaned and standardized dataset,
+  # and use these factors to predict the original dataset.
+  
+  # Get unconditional mean of the non-missing values of each series
+  mut <- matrix(rep(colMeans(x_new, na.rm = TRUE), T), nrow = nrow(x_new), ncol = ncol(x_new), byrow = TRUE)
+  
+  # Replace missing values with unconditional mean
+  x2 <- x_new
+  x2[is.na(x2)] <- mut[is.na(x2)]         # we replace the NA values in the vector x2 with the corresponding non-NA
+  # values from the vector mut.
+  # Check whether there are entire columns of zeros
+  Index_zeros <- which(colSums(x2==0) == nrow(x2))
+  if ((length(Index_zeros))==0){
+    x2_new <- x2
+    x1_new <- x1
+  } else {
+    x2_new <- subset(x2,select = -Index_zeros)
+    x1_new <- subset(x1,select = - Index_zeros)
+    x_new <- subset(x_new,select = -Index_zeros)
+  }
+  
+  # Number of series in x2_new (i.e. number of columns)
+  N <- ncol(x2_new)
+  
+  # Demean and standardize data
+  x3 <- transform_data(x2_new, DEMEAN)
+  # Check whether there are entire columns of zeros
+  Index_zeros <- which(colSums(x3$x22==0) == nrow(x3$x22))
+  if ((length(Index_zeros))==0){
+    x22 <- x3$x22
+  } else {
+    x22 <- subset(x3$x22,select = -Index_zeros)
+  }
+  
+  Z <- as.matrix(x22[1:(nrow(x22)-h),])            # Regressors used for computing the regression coefficients
+
+  
+  # Standardize the dependent variable to have mean zero and unitary variance.
+  # (Mean and variance will be reattributed to the forecsats, see below)
+  Y<-as.matrix(Y[(h+1):length(Y)])
+  my = colMeans(Y)
+  sy = sd(Y)/sqrt(length(Y))
+  Y_std = (Y-my)/sy
+  
+  b <- solve(t(Z)%*%Z + nu*diag(N)) %*% t(Z) %*% Y_std
+  pred <- (tail(Z, 1) %*% b)*sy+my; 
+  return(list(pred = pred, beta = b))
+}
+```
+
+```{r eval=FALSE}
+Lasso_regression<-function(yy,x,DEMEAN){ 
+  #Applymovingaveragefilter:Y= (y_{+1}+...+y_{+h})/h 
+  Y<-stats::filter(yy,filter= rep(1/h,h),sides=1) 
+  #Dependentvariable 
+  #PART1:CHECKS 
+  #Checkthatxisnotmissingvaluesforanentirerow 
+  if(any(rowSums(is.na(x))==ncol(x))){
+    stop("Inputxcontainsentirerowofmissingvalues.") 
+    } 
+  #Checkthatxisnotmissingvaluesforanentirecolumn 
+  if(any(colSums(is.na(x))==nrow(x)) ||any(colSums(is.na(x)) ==(nrow(x)-1))){
+    #stop("Inputxcontainsentirecolumnofmissingvalues.") 
+    cat("Inputxcontainsentirecolumnofmissingvalues.") 
+    Index_missing_1<-which(colSums(is.na(x))==nrow(x)) 
+    #Itcountshowmany 'NA' areinacolumn.Ifthe 
+    #numberofNAinacolumisequaltothenumberofrows 
+    #then,theconditionismet. 
+    Index_missing_2<-which(colSums(is.na(x)) ==(nrow(x)-1)) 
+    Index_missing<-c(Index_missing_1,Index_missing_2) 
+    if((length(Index_missing))==0){ 
+      x_new<-x 
+      }
+    else {
+      x_new<-subset(x,select=-Index_missing) 
+      } 
+    } 
+  else{x_new<-x} 
+  #CheckthatDEMEANisoneof0,1,2,3 
+  if(!(DEMEAN %in% 0:3)){ 
+    stop("InputDEMEANisspecifiedincorrectly.") 
+    } 
+  
+  #PART2:SETUP 
+  #Numberofobservationsperseriesinx_new(i.e.numberofrows) 
+  T<-nrow(x_new) 
+  #Locatemissingvaluesinx_new 
+  x1<-is.na(x_new) 
+  #Fillinmissingvaluesforeachserieswiththeunconditionalmeanofthatseries. 
+  #Demeanandstandardizetheupdateddataset.Estimatefactorsusingthedemeanedandstandardizeddataset, 1
+  #andusethesefactorstopredict theoriginaldataset.
+  
+  #Getunconditionalmeanofthenon-missingvaluesofeachseries 
+  mut<-matrix(rep(colMeans(x_new,na.rm=TRUE),T),nrow= nrow(x_new),ncol=ncol(x_new),byrow=TRUE) 
+  #Replacemissingvalueswithunconditionalmean 
+  x2<-x_new 
+  x2[is.na(x2)]<-mut[is.na(x2)] 
+  #wereplacetheNAvaluesinthevectorx2withthecorrespondingnon-NA 
+  #valuesfromthevectormut. 
+  #Checkwhetherthereareentirecolumnsofzeros 
+  Index_zeros<-which(colSums(x2==0)==nrow(x2)) 
+  if((length(Index_zeros))==0){
+    x2_new<-x2 
+    x1_new<-x1 
+  } 
+  else{
+    x2_new<-subset(x2,select=-Index_zeros)
+    x1_new<-subset(x1,select=-Index_zeros)
+    x_new<-subset(x_new,select=-Index_zeros) 
+  } 
+  #Numberofseriesinx2_new(i.e. numberofcolumns) 
+  N<-ncol(x2_new) 
+  #Demeanandstandardizedata 
+  x3<-transform_data(x2_new,DEMEAN) 
+  #Checkwhetherthereareentirecolumnsofzeros 
+  Index_zeros<-which(colSums(x3$x22==0)==nrow(x3$x22)) 
+  if((length(Index_zeros))==0){
+    x22<-x3$x22 
+  } 
+  else {
+    x22<-subset(x3$x22,select=-Index_zeros) 
+  }
+  Z<-as.matrix(x22[1:(nrow(x22)-h),]) 
+  #Regressorsusedforcomputingtheregressioncoefficients
+  #Standardizethedependentvariabletohavemeanzeroandunitaryvariance.
+  #(Meanandvariancewillbereattributedtotheforecsats,seebelow)
+  Y<-as.matrix(Y[(h+1):length(Y)]) 
+  my= colMeans(Y) 
+  sy= sd(Y)/sqrt(length(Y)) 
+  Y_std=(Y-my)/sy 
+  cv.m<-cv.glmnet(Z,Y_std,alpha=1) 
+  pred<-predict(cv.m,newx=tail(Z,1))
+  prediction<-pred*sy+my;
+  return(list(pred=prediction,beta=cv.m)) 
+  }
+```
+
+```{r eval=FALSE}
+for (j in start_sample:(TT - tail(HH, 1) - 1)) {
+                      # Remark that TT - tail(HH, 1) is '2014-04-01'. This is the last period ofthe out-of-sample
+                      # start_sample + 1
+
+  ## Displays the dates at the beginning of each month
+  cat('--------------\n')
+  cat('now running\n')
+  cat(paste(dates[j], collapse = ' '), '\n')
+
+
+  ## Define the beginning of the estimation sample
+  j0 <- j - Jwind + 1  # Starting period for the in-sample
+
+  x_temp <- yt[j0:j, ]  # The available data at each time point of the evaluation exercise
+  x<- remove_outliers(x_temp)
+
+  for (k in seq_along(nn)) {  # Loop across series to forecast
+
+    for (h in HH) {  # Loop across the number of steps ahead
+
+      ## Normalization constants
+      if (nn[k] %in% c(1, 6, 25)) {
+        const <- 12
+      } else {
+        const <- h
+      }
+
+      ## Compute the true value to be predicted
+      temp <- mean(yt[(j + 1):(j + h), nn[k]])
+      true[j - Jwind + 1, k] <- temp * const
+
+      ## Compute the Constant growth forecast
+      # Apply moving average filter
+      Y <- stats::filter(x$INDPRO, filter = rep(1/h, h), sides = 1)
+      # Discard the initial h elements
+      Y2 <- Y[(h + 1):length(Y)]
+      temp <- mean(Y2)
+      RW[j - Jwind + 1, k] <- temp * const
+
+      ## Computes the Factor-based forecasts
+      x_pred <- x[,-6]
+      result_factors <- factors_em_2(x_pred, kmax, jj, DEMEAN)
+      # Regressors
+      Z <- cbind(1, result_factors$Fhat)
+      # Compute the dependent variable to be predicted
+      # Apply moving average filter: Y = (y_{+1}+...+y_{+h})/h
+      Y <- stats::filter(x$INDPRO, filter = rep(1/h, h), sides = 1)
+      # Compute the forecasts
+      Z_trimmed <- Z[1:(nrow(Z)-h), ]
+      gamma <- solve(t(Z_trimmed) %*% Z_trimmed) %*% t(Z_trimmed) %*% Y[(h+1):length(Y)]
+      pred <- tail(Z, 1) %*% gamma
+
+      PC[j - Jwind + 1, k] <- const * pred
+      
+      ## [4] Computes the Ridge-based forecasts
+      #nu_ridge = SET_ridge(x,INfit)
+      nu_ridge <- INfit
+      result_Ridge <- Ridge_regression(x$INDPRO, x[,-6], nu_ridge, DEMEAN)
+      Ridge[j - Jwind + 1, k] <- const * result_Ridge$pred
+      
+      ##[5] Computes the Lasso-based forecasts
+      result_Lasso<-Lasso_regression(x$INDPRO,x[,-6],DEMEAN)
+      Lasso[j-Jwind+ 1,k]<-const* result_Lasso$pred
+    }
+  }
+}
+```
+
+```{r eval=FALSE}
+# Compute MSFE_RW and MSFE_PC
+dates_OOS <- dates[(start_sample + 1):(length(dates)-h)]
+
+true_NA <- na.omit(true[,1])
+Index_NA <- which(is.na(true[,1]))
+#dates_sub <- dates[j0:end]
+#dates_NA <- dates_sub[,-Index_NA]
+RW_NA <- na.omit(RW[,1])
+PC_NA <- na.omit(PC[,1])
+Ridge_NA <- na.omit(Ridge[,1])
+Lasso_NA <- na.omit(Lasso[,1])
+MSFE_RW <- mean((true_NA - RW_NA)^2)
+MSFE_PC <- mean((true_NA - PC_NA)^2)
+MSFE_Ridge <- mean((true_NA - Ridge_NA)^2)
+MSFE_Lasso <- mean((true_NA - Lasso_NA)^2)
+
+plot(dates_OOS, true_NA,
+     type = 'l', col = "black")
+
+points(dates_OOS, RW_NA, col="red", pch="*")
+lines(dates_OOS, PC_NA, col="blue",lty=2)
+lines(dates_OOS, Ridge_NA, col="green",lty=1)
+lines(dates_OOS, Lasso_NA, col="purple",lty=1)
+
+```
+
+
+
+
+
+## Functions used
+```{r eval=FALSE}
+factors_em_2 <- function(x, kmax, jj, DEMEAN) {
+  # PART 1: CHECKS
+
+  # Check that x is not missing values for an entire row
+  if (any(rowSums(is.na(x)) == ncol(x))) {
+    stop("Input x contains entire row of missing values.")
+  }
+
+  # Check that x is not missing values for an entire column
+  if (any(colSums(is.na(x)) == nrow(x)) || any(colSums(is.na(x)) == (nrow(x)-1))) {
+    #stop("Input x contains entire column of missing values.")
+    cat("Input x contains entire column of missing values.")
+    Index_missing_1 <- which(colSums(is.na(x)) == nrow(x))    # It counts how many 'NA' are in a column. If the
+                                                              # number of NA in a colum is equal to the number of rows
+                                                              # then, the condition is met.
+    Index_missing_2 <- which(colSums(is.na(x)) == (nrow(x)-1))
+    Index_missing <- c(Index_missing_1,Index_missing_2)
+    if ((length(Index_missing))==0){
+      x_new <- x
+    } else {
+      x_new <- subset(x,select = -Index_missing)
+    }
+  } else {x_new <- x}
+
+  # Check that kmax is an integer between 1 and the number of columns of x, or 99
+  if (!((kmax <= ncol(x_new) && kmax >= 1 && floor(kmax) == kmax) || kmax == 99)) {
+    stop("Input kmax is specified incorrectly.")
+  }
+
+  # Check that jj is one of 1, 2, 3
+  if (!(jj %in% c(1, 2, 3))) {
+    stop("Input jj is specified incorrectly.")
+  }
+
+  # Check that DEMEAN is one of 0, 1, 2, 3
+  if (!(DEMEAN %in% 0:3)) {
+    stop("Input DEMEAN is specified incorrectly.")
+  }
+
+  # PART 2: SETUP
+
+  # Maximum number of iterations for the EM algorithm
+  maxit <- 50
+
+  # Number of observations per series in x_new (i.e. number of rows)
+  T <- nrow(x_new)
+
+
+  # Set error to arbitrarily high number
+  err <- 999
+
+  # Set iteration counter to 0
+  it <- 0
+
+  # Locate missing values in x_new
+  x1 <- is.na(x_new)
+
+  # PART 3: INITIALIZE EM ALGORITHM
+  # Fill in missing values for each series with the unconditional mean of that series.
+  # Demean and standardize the updated dataset. Estimate factors using the demeaned and standardized dataset,
+  # and use these factors to predict the original dataset.
+
+  # Get unconditional mean of the non-missing values of each series
+  mut <- matrix(rep(colMeans(x_new, na.rm = TRUE), T), nrow = nrow(x_new), ncol = ncol(x_new), byrow = TRUE)
+
+  # Replace missing values with unconditional mean
+  x2 <- x_new
+  x2[is.na(x2)] <- mut[is.na(x2)]         # we replace the NA values in the vector x2 with the corresponding non-NA
+                                        # values from the vector mut.
+  # Check whether there are entire columns of zeros
+  Index_zeros <- which(colSums(x2==0) == nrow(x2))
+  if ((length(Index_zeros))==0){
+    x2_new <- x2
+    x1_new <- x1
+  } else {
+    x2_new <- subset(x2,select = -Index_zeros)
+    x1_new <- subset(x1,select = - Index_zeros)
+    x_new <- subset(x_new,select = -Index_zeros)
+  }
+
+  # Number of series in x2_new (i.e. number of columns)
+  N <- ncol(x2_new)
+
+  # Demean and standardize data
+  x3 <- transform_data(x2_new, DEMEAN)
+
+  # If input 'kmax' is not set to 99, use subfunction baing() to determine
+  # the number of factors to estimate. Otherwise, set number of factors equal
+  # to 8
+  if (kmax != 99) {
+    icstar <- baing(x3$x22, kmax, jj)$ic1
+  } else {
+    icstar <- 8
+  }
+
+  # Run principal components on updated dataset
+  pc_result <- pc2(x3$x22, icstar)
+  chat0 <- pc_result$chat
+  Fhat <- pc_result$fhat
+  lamhat <- pc_result$lambda
+  ve2 <- pc_result$ss
+
+  # PART 4: PERFORM EM ALGORITHM
+  # Update missing values using values predicted by the latest set of factors.
+  # Demean and standardize the updated dataset. Estimate a new set of factors using the updated dataset.
+  # Repeat the process until the factor estimates do not change.
+
+  # Run while error is large and have yet to exceed maximum number of iterations
+  while (err > 0.001 && it < maxit) {
+    # INCREASE ITERATION COUNTER
+    it <- it + 1
+
+    # Display iteration counter, error, and number of factors
+    cat(sprintf('Iteration %d: obj %10f IC %d \n', it, err, icstar))
+
+    # UPDATE MISSING VALUES
+    for (t in 1:T) {
+      for (j in 1:N) {
+        if (x1_new[t, j] == 1) {
+          x2_new[t, j] <- chat0[t, j] * x3$sdt[t, j] + x3$mut[t, j]
+        } else {
+          x2_new[t, j] <- x_new[t, j]
+        }
+      }
+    }
+
+    # ESTIMATE FACTORS
+    # Demean and standardize the new data and recalculate mut and sdt using subfunction "transform_data()"
+    x3 <- transform_data(x2_new, DEMEAN)
+    X3_x22 <- as.matrix(x3$x22)
+    if (any(colSums(is.na(x3$x22)) == nrow(x3$x22))) {
+      cat("Input x3$x22 contains entire column of missing values.")
+      Index_missing <- which(colSums(is.na(x3$x22)) == nrow(x3$x22))      # It counts how many 'NA' are in a column. If the
+                                                                          # number of NA in a colum is equal to the number of rows
+                                                                          # then, the condition is met.
+      x3_x22_new <- subset(x3$x22,select = -Index_missing)
+    } else {x3_x22_new <- x3$x22}
+
+    # Determine number of factors to estimate for the new dataset using subfunction "baing()"
+    # (or set to 8 if kmax equals 99)
+    if (kmax != 99) {
+      icstar <- baing(x3_x22_new, kmax, jj)$ic1
+    } else {
+      icstar <- 8
+    }
+
+    # Run principal components on the new dataset using subfunction "pc2()"
+    #   chat   = values of x22 predicted by the factors
+    #   Fhat   = factors scaled by (1/sqrt(N)) where N is the number of
+    #            series
+    #   lamhat = factor loadings scaled by number of series
+    #   ve2    = eigenvalues of x3'*x3
+    pc_result <- pc2(x3_x22_new, icstar)
+    chat <- pc_result$chat
+
+    # CALCULATE NEW ERROR VALUE
+    # Caclulate difference between the predicted values of the new dataset and the predicted values of the previous
+    # dataset
+    diff <- chat - chat0
+
+    # The error value is equal to the sum of the squared differences between "chat" and "chat0" divided by the sum
+    # of the squared values of "chat0"
+    v1 <- as.vector(diff)
+    v2 <- as.vector(chat0)
+    err <- sum(v1^2) / sum(v2^2) + 
+
+    # Set chat0 equal to the current chat
+    chat0 <- chat
+  }
+
+  # Produce warning if maximum number of iterations is reached
+  if (it == maxit) {
+    warning('Maximum number of iterations reached in EM algorithm')
+  }
+  # Final Output:
+  Fhat <- pc_result$fhat
+  lamhat <- pc_result$lambda
+  ve2 <- pc_result$ss
+
+  # FINAL DIFFERENCE
+  # Calculate the difference between the initial dataset and the values predicted by the final set of factors
+  ehat <- x_new - chat * x3$sdt - x3$mut
+
+
+  return(list(ehat = ehat, Fhat = Fhat, lamhat = lamhat, ve2 = ve2, x2 = x2))
+}
+
+#----------------------------------------------------------------------------------------------------------------
+################################################
+################# SUBFUNCTIONS #################
+################################################
+
+#########################
+#### SUBFUNCTION pc2 ####
+#########################
+pc2 <- function(X, nfac) {
+
+  # Number of series in X (i.e. number of columns)
+  N <- ncol(X)
+
+  # Singular value decomposition: X'*X = U*S*V'
+  XX <- as.matrix(X)
+  svd_result <- svd(t(XX) %*% XX)
+
+  # Factor loadings scaled by sqrt(N)
+  lambda <- svd_result$u[, 1:nfac] * sqrt(N)
+
+  # Factors scaled by 1/sqrt(N) (note that lambda is scaled by sqrt(N))
+  fhat <- XX %*% lambda / N
+
+  # Estimate initial dataset X using the factors (note that U'=inv(U))
+  chat <- fhat %*% t(lambda)
+
+  # Identify eigenvalues of X'*X
+  ss <- diag(svd_result$d)
+
+  # Return the results
+  return(list(chat = chat, fhat = fhat, lambda = lambda, ss = ss))
+}
+
+#########################
+## SUBFUNCTION minindc ##
+#########################
+minindc <- function(x) {
+  apply(x, 2, which.min)
+}
+```
+

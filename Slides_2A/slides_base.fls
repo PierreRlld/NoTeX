@@ -1597,6 +1597,9 @@ INPUT ./img/team.JPG
 INPUT img/team.JPG
 INPUT ./img/team.JPG
 INPUT ./img/team.JPG
+INPUT ./slides_base.toc
+INPUT slides_base.toc
+INPUT slides_base.toc
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmti9.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
@@ -1610,6 +1613,14 @@ INPUT ./img/xFrance.png
 INPUT img/xFrance.png
 INPUT ./img/xFrance.png
 INPUT ./img/xFrance.png
+INPUT ./img/xSavings.png
+INPUT ./img/xSavings.png
+INPUT img/xSavings.png
+INPUT ./img/xSavings.png
+INPUT ./img/xSavings.png
+INPUT ./slides_base.toc
+INPUT slides_base.toc
+INPUT slides_base.toc
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm

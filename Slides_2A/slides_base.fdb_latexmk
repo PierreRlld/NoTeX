@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1700058496 "/Users/prld/git/NoTeX/Slides_2A/slides_base.tex" "slides_base.pdf" "slides_base" 1700058499 0
-  "/Users/prld/git/NoTeX/Slides_2A/slides_base.tex" 1700058496 9544 2c07cc900e6162e42636284c36a08172 ""
+["pdflatex"] 1702477454 "/Users/prld/git/NoTeX/Slides_2A/slides_base.tex" "slides_base.pdf" "slides_base" 1702477457 0
+  "/Users/prld/git/NoTeX/Slides_2A/slides_base.tex" 1702477454 11375 f5df5c0ad20485e0ea65b2f59b3dc3ce ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -268,11 +268,12 @@
   "img/excess_chart.png" 1698243858 160108 82b7c7f4b8499252308bbc9f607430e4 ""
   "img/team.JPG" 1699282879 285655 09dbcd7be8f8a36dcef4f034b8b4e189 ""
   "img/xFrance.png" 1692039525 73014 c1e485eb57598587c49313261dfdee5c ""
-  "slides_base.aux" 1700058499 4271 fa296b523257a97703b328baab51c240 "pdflatex"
-  "slides_base.nav" 1700058499 2048 f18947f685837c5579f7c2c0e2c7043f "pdflatex"
-  "slides_base.out" 1700058499 487 fad00256fad9f6cc37a0f993e97af88a "pdflatex"
-  "slides_base.tex" 1700058496 9544 2c07cc900e6162e42636284c36a08172 ""
-  "slides_base.toc" 1700058499 208 4fd34bd18f305a02f3615186c2adbdc7 "pdflatex"
+  "img/xSavings.png" 1702399575 70183 2a9c90f18b3ae850c94990a5433eaad2 ""
+  "slides_base.aux" 1702477457 5475 957bc0cb5d0358235ff3206816b54d2e "pdflatex"
+  "slides_base.nav" 1702477457 2598 22f7bda8607b322d70f2b6c3537d2765 "pdflatex"
+  "slides_base.out" 1702477457 487 fad00256fad9f6cc37a0f993e97af88a "pdflatex"
+  "slides_base.tex" 1702477454 11375 f5df5c0ad20485e0ea65b2f59b3dc3ce ""
+  "slides_base.toc" 1702477457 208 c6ee4c5980586fc9b038647d364a8c9a "pdflatex"
   (generated)
   "slides_base.aux"
   "slides_base.log"

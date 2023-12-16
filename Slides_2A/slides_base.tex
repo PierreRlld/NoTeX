@@ -93,21 +93,13 @@
 \makeatother 
 \useoutertheme[footline=empty, subsection=false]{miniframes}
 
-% >>> Section-page ============================
-\setbeamertemplate{section page}
-{
-  \usebeamerfont{section title}
-  \begin{centering}
-  \insertsection
-  \end{centering}
-}
 
 % ==================================================================
 % ==================================================================
 
 \author{Pierre Rouillard}
 \title{Soutenance Stage d'Application}
-\institute{xx/xx/xxxx \\ Maître de stage: Françoise Huang}
+\institute{Maître de stage: Françoise Huang \\ 30/01/2024}
 \date{\textit{Allianz Trade - ENSAE}} 
 
 \begin{document}
@@ -136,7 +128,7 @@
    \end{itemize}
 \item Maxime Darmet - Économiste France et US
   \begin{itemize}
-    \item Projet: épargne excédentaire des ménages EU \& US
+    \item Projet: épargne excédentaire des ménages (EU \& US)
   \end{itemize}
 \item Roberta Fortes - Économiste LATAM \& Espagne
   \begin{itemize}
@@ -152,14 +144,17 @@
 
 % ==================================================================
 \section{Épargne excédentaire}
-\sectionpage
+\begin{frame}
+  \frametitle{Table of Contents}
+  \tableofcontents[currentsection]
+\end{frame}
 %###
 \begin{frame}{Principaux objectifs}
   Intérêt du projet :
   \begin{itemize}
     \item Impact de la pandémie sur l'épargne des ménages en Europe et US ? 
-    \item Accumulation d'une épargne dite excédentaire ? 
-    \item Suivi et principaux drivers de cette épargne ? 
+    \item Accumulation d'une épargne "excédentaire" ? 
+    \item Suivi et principaux moteurs de cette épargne ? 
     \item Quelles différences entre pays ? Europe vs US ?
   \end{itemize}
 \end{frame}
@@ -168,8 +163,8 @@
 \begin{frame}{Définition et calcul de l'épargne excédentaire}
   Première définition donnée par le Bureau of Economic Analysis
   \begin{align*}
-    &\textrm{Flow of savings} = \textrm{DPI} - \textrm{PCE} - \textrm{\textit{other outlays}} \\
-    \hookrightarrow \quad &\textrm{Flow of \blue{\textit{excess}} savings} = \blue{\Delta} \textrm{DPI} - \blue{\Delta} \textrm{PCE} - \blue{\Delta} \textrm{\textit{other outlays}}
+    &\textrm{Flow of savings} = \textrm{DPI} - \textrm{PCE} \; (- \textrm{\textit{other outlays}}) \\
+    \hookrightarrow \quad &\textrm{Flow of \blue{\textit{excess}} savings} = \blue{\Delta} \textrm{DPI} - \blue{\Delta} \textrm{PCE} \; (- \blue{\Delta} \textrm{\textit{other outlays}})
   \end{align*}
   Où: $\Delta \textrm{\textit{X}}$ est l'écart relativement à la tendance pré-pandémique 2015-19 (log-linéaire) \\ 
   \vspace{.3cm}
@@ -177,19 +172,18 @@
   \begin{align*}
     \textrm{DPI} \cong  \textrm{Compensation of E} + \textrm{Net property income} + \textrm{transfers} - \textrm{taxes}
   \end{align*}
-  (Pour les US on a exactement les mêmes données que Aladangaly \& al.)
-  \vspace{.3cm}
+  %(Pour les US on a exactement les mêmes données que Aladangaly \& al.)
   \begin{itemize}
     \item Intérêt: flux par composante du revenu disponible
   \end{itemize}
 \end{frame}
 
 %###
-\begin{frame}{Calcul de l'épargne excédentaire}
+\begin{frame}{Calcul de l'épargne excédentaire - exemple d'une composante}
   \begin{figure}
     \centering
     \includegraphics[width=1\textwidth]{img/excess_chart.png}
-    \caption{Exemple - flux pour les compensation of employees: écart relatif à la tendance pré-pandémique (En rouge $\Delta Comp \leq 0$, en vert $\Delta Comp \geq  0$)}
+    \caption{Exemple - flux pour la variable 'compensation of employees': écart relatif à la tendance pré-pandémique (En rouge contribution $\Delta Comp \leq 0$, en vert $\Delta Comp \geq  0$)}
   \end{figure}
 \end{frame}
 
@@ -199,6 +193,15 @@
     \centering
     \includegraphics[width=1\textwidth]{img/xFrance.png}
     \caption{LHS: Flux d'épargne par composante - RHS: accumulation (stock)}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Répartition de l'épargne excédentaire par quintile}
+  En date du T3 2022
+  \begin{figure}
+    \centering
+    \includegraphics[width=1\textwidth]{img/xSavings.png}
+    \caption{LHS: Stock par ménage - RHS: Aggrégat national}
   \end{figure}
 \end{frame}
 
@@ -213,7 +216,7 @@
   Retrospectivement :
   \begin{itemize}
     \item Décomposer PCE en bien et services
-    \item 
+    \item Ajouter d'autres économies 
   \end{itemize}
   \vspace{.2cm}
   Enseignements :
@@ -226,16 +229,31 @@
 
 % ==================================================================
 \section{Courbe de Phillips}
+\begin{frame}
+  \frametitle{Table of Contents}
+  \tableofcontents[currentsection]
+\end{frame}
+
+%###
+\begin{frame}{Principaux objectifs}
+  Intérêt du projet :
+  \begin{itemize}
+    \item Variables altenatives de "sous-emploi" dans la courbe de Phillips ?
+    \item Quelle situation en Europe ? (France/Allemagne/Espagne/Italie)
+    \item Intérêt fort porté sur inflation - croissance des salaires : quelles évolutions ?
+  \end{itemize}
+\end{frame}
+
 \begin{frame}[label=model]{Version dynamique de la courbe de Phillips}
   Forme générale de la courbe de Phillips estimée [\textit{ARDL}]:
   \begin{equation*}
-    \blue{\Delta wage_{t}} = c + \phi_{1}(L).\blue{\Delta wage_{t}} + \phi_{2}(L).\blue{\Delta CPI_{t}} + \phi_{4}(L).\blue{\Delta slack_{t}} + \phi_{3}(L).\blue{prod_{t}} + \theta^{T}.\gamma + \epsilon_{t}
+    \blue{\Delta wage_{t}} = c + \phi_{1}(L).\blue{\Delta wage_{t}} + \phi_{2}(L).\blue{\Delta CPI_{t}} + \phi_{4}(L).\blue{\Delta slack_{t}} + \phi_{3}(L).\blue{\Delta prod_{t}} + \theta^{T}.\gamma + \epsilon_{t}
   \end{equation*}
   avec:
   \begin{itemize}
     \item $L$ l'opérateur retard
     \item Partie autoregressive: $\phi_{1}(L) = \sum_{k=\mathbf{1}}^{\mathbf{W}}\alpha_k L^{k}$ 
-    \item Variables explicatives:
+    \item Variables explicatives - polynômes autorégressifs
     \begin{itemize}
       \item $\phi_{2}(L) = \sum_{k=0}^{\mathbf{Q}}\beta_k^{(CPI)} L^{k}$
       \item $\phi_{3}(L) = \sum_{k=0}^{\mathbf{S}}\beta_k^{(slack)} L^{k}$
@@ -246,8 +264,32 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}[label=est]{Model selection : slack}
-  Au maximum : $W\in[1;6]\ \textrm{et} \left\{Q,S,P\right\}\in[0;6]^{3}$
+\begin{frame}[label=est]{Méthode de sélection}
+  On définit au maximum : $W\in[1,6]\ \textrm{et} \left\{Q,S,P\right\}\in[0,6]^{3}$ dans [\textit{ARDL}]
+  \begin{itemize}
+    \item Méthode de sélection implémentée :
+    \item[1.] Régressions avec l'ensemble des combinaisons $\{W,Q,S,P\}$ possibles
+    \item[2.] Garde les modèles où l'ordre maximum pour chaque variable vérifie $p<10\%$ 
+    \item[3.] Choix du modèle qui minimise le critère AIC
+  \end{itemize}
+  $\rightarrow$ Meilleur modèle "statistique"
+  \vspace{.25cm}
+  \begin{itemize}
+    \item On ajoute une étape entre 2. et 3. :
+    \item[2*] Restriction de signe sur le LRM pour les variables inflation et productivité :
+  \end{itemize}
+  \vspace{.25cm}
+  \begin{align*}
+    \textrm{LRM(CPI)} = \frac{\mathrm{d}E(\Delta wage)}{\mathrm{d}E(\Delta CPI)} \geq 0 \quad\textrm{\&}\quad \textrm{LRM(CPI)} = \frac{\mathrm{d}E(\Delta wage)}{\mathrm{d}E(\Delta prod)} \geq 0
+  \end{align*}
+  $\rightarrow$ Trade-off performance et interprétabilité
+\end{frame}
+
+\begin{frame}[label=slack]{Performance des différentes mesures de slack}
+  Heatmap des différentes mesures
+\end{frame}
+
+\begin{frame}[label=results]{Pays core vs périphériques}
 \end{frame}
 
 \begin{frame}{L'essentiel}
