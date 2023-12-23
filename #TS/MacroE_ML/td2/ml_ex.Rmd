@@ -1,0 +1,79 @@
+---
+title: "ML"
+output: html_notebook
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+options(tinytex.verbose = TRUE)
+```
+
+
+```{r }
+library(BVAR)
+library(fbi)
+library(glmnet)
+library(tree)
+
+source("/Users/prld/git/NoTeX/#TS/MacroE_ML/td1/functions.R")
+source("/Users/prld/git/NoTeX/#TS/MacroE_ML/td1/functions2.R")
+
+## File name of desired FRED-MD vintage ##
+filepath <- "https://files.stlouisfed.org/files/htdocs/fred-md/monthly/2019-04.csv" ##
+data <- fredmd(filepath, date_start = as.Date("1960-01-01"), date_end = NULL, transform = TRUE) #
+# The data are already transformed
+```
+
+```{r}
+# Variable names
+series <- colnames(data[,2:length(data)])
+# Raw data
+rawdata <- data[14:(nrow(data)-1),2:length(data)]
+x <- subset(rawdata,select = -c(58,60,95,104,123,128)) # Remove series with missing values
+# Month/year of the final observation
+final_date <- tail(data$date, 1)
+dates <- data$date
+# T = number of months in the sample
+T <- length(dates)
+# =========================================================================
+# PART 2: PROCESS DATA
+# 1. Prepare Data
+yt <- x
+# 2. Reduce Sample to usable dates: remove first two months because some series have been first diff
+dates <- dates[14:(length(dates)-1)]
+dim_yt <- dim(yt)
+TT <- dim_yt[1]
+NN <- dim_yt[2]
+# 3. Remove Outliers
+result <- remove_outliers(yt)
+```
+
+```{r}
+which(is.na(x),arr.ind = TRUE)
+mut <- matrix(rep(colMeans(x, na.rm = TRUE), T), nrow = nrow(x), ncol = ncol(x), byrow = TRUE)
+```
+
+```{r}
+# Replace missing values with unconditional mean
+x2 <- x
+x2[is.na(x2)] <- mut[is.na(x2)] # we replace the NA values in the vector x2 with the correspond# values from the vector mut.
+y <- as.data.frame(scale(x2,scale=TRUE)) # standardize the data for plotting
+
+# Regression tree
+Y<-y[7:nrow(y),6]
+XX<-cbind(y[6:(nrow(y)-1),],y[5:(nrow(y)-2),],y[4:(nrow(y)-3),],y[3:(nrow(y)-4),],y[2:(nrow(y)-5),],y[1:(nrow(y)-6),])
+X1<-scale(XX,center=TRUE,scale=TRUE)
+tree.fit<-tree(Y~.,data=data.frame(X1),split="deviance")
+tree.fit
+```
+
+```{r}
+summary(tree.fit)
+```
+
+```{r}
+plot(tree.fit)
+text(tree.fit,cex=0.5)
+```
+
