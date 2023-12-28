@@ -143,7 +143,7 @@
 \end{frame}
 
 % ==================================================================
-\section{Épargne excédentaire}
+\section{1/ Épargne excédentaire}
 \begin{frame}
   \frametitle{Table of Contents}
   \tableofcontents[currentsection]
@@ -196,6 +196,15 @@
   \end{figure}
 \end{frame}
 
+\begin{frame}{Résultat hors stage\footnotemark: Décomposition inflation France}
+  \begin{figure}
+    \centering
+    \includegraphics[width=1\textwidth]{img/inflation_france.png}
+    \caption{Décomposition de l'inflation en composantes offre-demande}
+    \footnotetext[1]{Projet de 3A pour le cours Advanced time series de Mr. RICCO Giovanni}
+  \end{figure}
+\end{frame}
+
 \begin{frame}{Répartition de l'épargne excédentaire par quintile}
   En date du T3 2022
   \begin{figure}
@@ -207,10 +216,10 @@
 
 %###
 \begin{frame}{L'essentiel}
-  Principaux résultats :
+  Principaux résultats (au T3 2022) :
   \begin{itemize}
-    \item X
-    \item X
+    \item Stock d'épargne excédentaire relativement important : pas de baisse observée
+    \item Vital de prendre en compte la répartion de ce stock entre les ménages
   \end{itemize}
   \vspace{.2cm}
   Retrospectivement :
@@ -228,7 +237,7 @@
 \end{frame}
 
 % ==================================================================
-\section{Courbe de Phillips}
+\section{2/ Courbe de Phillips}
 \begin{frame}
   \frametitle{Table of Contents}
   \tableofcontents[currentsection]
@@ -238,7 +247,7 @@
 \begin{frame}{Principaux objectifs}
   Intérêt du projet :
   \begin{itemize}
-    \item Variables altenatives de "sous-emploi" dans la courbe de Phillips ?
+    \item Variables altenatives de "sous-emploi" (slack) dans la courbe de Phillips ?
     \item Quelle situation en Europe ? (France/Allemagne/Espagne/Italie)
     \item Intérêt fort porté sur inflation - croissance des salaires : quelles évolutions ?
   \end{itemize}
@@ -286,8 +295,20 @@
 \end{frame}
 
 \begin{frame}[label=slack]{Performance des différentes mesures de slack}
-  Heatmap des différentes mesures
-\end{frame}
+  \begin{figure}
+   \begin{columns}[c]
+    \begin{column}{0.5\textwidth}
+      \centering
+      \includegraphics[width=1\textwidth]{img/franceHM.png}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \centering
+      \includegraphics[width=1\textwidth]{img/germanyHM.png}
+    \end{column}
+    \end{columns}
+    \caption{Cross-correlations (LHS: France, RHS: Allemagne)}
+  \end{figure}
+  \end{frame}
 
 \begin{frame}[label=results]{Pays core vs périphériques}
 \end{frame}
