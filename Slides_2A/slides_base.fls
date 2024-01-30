@@ -1603,6 +1603,7 @@ INPUT slides_base.toc
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmti9.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
 INPUT ./img/excess_chart.png
 INPUT ./img/excess_chart.png
 INPUT img/excess_chart.png
@@ -1650,6 +1651,11 @@ INPUT ./img/germanyHM.png
 INPUT img/germanyHM.png
 INPUT ./img/germanyHM.png
 INPUT ./img/germanyHM.png
+INPUT ./img/LRM table.png
+INPUT ./img/LRM table.png
+INPUT img/LRM table.png
+INPUT ./img/LRM table.png
+INPUT ./img/LRM table.png
 INPUT ./img/az1.png
 INPUT ./img/az1.png
 INPUT img/az1.png
@@ -1682,6 +1688,7 @@ INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.p
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb
+INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb
 INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb

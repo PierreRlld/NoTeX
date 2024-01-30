@@ -149,7 +149,7 @@
   \tableofcontents[currentsection]
 \end{frame}
 %###
-\begin{frame}{Principaux objectifs}
+\begin{frame}{Principaux objectifs de la publication}
   Intérêt du projet :
   \begin{itemize}
     \item Impact de la pandémie sur l'épargne des ménages en Europe et US ? 
@@ -166,9 +166,9 @@
     &\textrm{Flow of savings} = \textrm{DPI} - \textrm{PCE} \; (- \textrm{\textit{other outlays}}) \\
     \hookrightarrow \quad &\textrm{Flow of \blue{\textit{excess}} savings} = \blue{\Delta} \textrm{DPI} - \blue{\Delta} \textrm{PCE} \; (- \blue{\Delta} \textrm{\textit{other outlays}})
   \end{align*}
-  Où: $\Delta \textrm{\textit{X}}$ est l'écart relativement à la tendance pré-pandémique 2015-19 (log-linéaire) \\ 
+  Où: $\Delta \textrm{\textit{X}}$ est \textbf{l'écart relativement à la tendance pré-pandémique} 2015-19 (log-linéaire) \\ 
   \vspace{.3cm}
-  Pour les pays européens, on approche la définition de l'OCDE du revenu disponible (DPI) par la définition de la Fed:
+  On obtient une approximation du revenu disponible brut (DPI) à partir de:
   \begin{align*}
     \textrm{DPI} \cong  \textrm{Compensation of E} + \textrm{Net property income} + \textrm{transfers} - \textrm{taxes}
   \end{align*}
@@ -206,11 +206,11 @@
 \end{frame}
 
 \begin{frame}{Répartition de l'épargne excédentaire par quintile}
-  En date du T3 2022
+  \textit{Hypothèse: l'épargne excédentaire a la même distribution que les actifs}
   \begin{figure}
     \centering
     \includegraphics[width=1\textwidth]{img/xSavings.png}
-    \caption{LHS: Stock par ménage - RHS: Aggrégat national}
+    \caption{Au T3 2022 - LHS: Stock par ménage - RHS: Aggrégat national}
   \end{figure}
 \end{frame}
 
@@ -226,6 +226,7 @@
   \begin{itemize}
     \item Décomposer PCE en bien et services
     \item Ajouter d'autres économies 
+    \item Améliorer le calcul du revenu disponible brut ?
   \end{itemize}
   \vspace{.2cm}
   Enseignements :
@@ -247,7 +248,7 @@
 \begin{frame}{Principaux objectifs}
   Intérêt du projet :
   \begin{itemize}
-    \item Variables altenatives de "sous-emploi" (slack) dans la courbe de Phillips ?
+    \item Variables altenatives de "sous-emploi" (\textit{slack}) dans la courbe de Phillips ?
     \item Quelle situation en Europe ? (France/Allemagne/Espagne/Italie)
     \item Intérêt fort porté sur inflation - croissance des salaires : quelles évolutions ?
   \end{itemize}
@@ -256,7 +257,7 @@
 \begin{frame}[label=model]{Version dynamique de la courbe de Phillips}
   Forme générale de la courbe de Phillips estimée [\textit{ARDL}]:
   \begin{equation*}
-    \blue{\Delta wage_{t}} = c + \phi_{1}(L).\blue{\Delta wage_{t}} + \phi_{2}(L).\blue{\Delta CPI_{t}} + \phi_{4}(L).\blue{\Delta slack_{t}} + \phi_{3}(L).\blue{\Delta prod_{t}} + \theta^{T}.\gamma + \epsilon_{t}
+    \blue{\Delta wage_{t}} = c + \phi_{1}(L).\blue{\Delta wage_{t}} + \phi_{2}(L).\blue{\Delta CPI_{t}} + \phi_{3}(L).\blue{\Delta slack_{t}} + \phi_{4}(L).\blue{\Delta prod_{t}} + \theta^{T}.\gamma + \epsilon_{t}
   \end{equation*}
   avec:
   \begin{itemize}
@@ -289,7 +290,7 @@
   \end{itemize}
   \vspace{.25cm}
   \begin{align*}
-    \textrm{LRM(CPI)} = \frac{\mathrm{d}E(\Delta wage)}{\mathrm{d}E(\Delta CPI)} \geq 0 \quad\textrm{\&}\quad \textrm{LRM(CPI)} = \frac{\mathrm{d}E(\Delta wage)}{\mathrm{d}E(\Delta prod)} \geq 0
+    \textrm{LRM(CPI)} = \frac{\mathrm{d}E(\Delta wage)}{\mathrm{d}E(\Delta CPI)} \geq 0 \quad\textrm{\&}\quad \textrm{LRM(prod)} = \frac{\mathrm{d}E(\Delta wage)}{\mathrm{d}E(\Delta prod)} \geq 0
   \end{align*}
   $\rightarrow$ Trade-off performance et interprétabilité
 \end{frame}
@@ -310,28 +311,30 @@
   \end{figure}
   \end{frame}
 
-\begin{frame}[label=results]{Pays core vs périphériques}
+\begin{frame}{Performance des différentes mesures de slack}
+  \begin{figure}
+    \centering
+    \includegraphics[width=1\textwidth]{img/LRM table.png}
+    \caption{Estimated models}
+  \end{figure}
 \end{frame}
 
+%###
 \begin{frame}{L'essentiel}
   Principaux résultats :
   \begin{itemize}
-    \item X
-    \item X
+    \item Méthodologie de sélection
+    \item Autres mesures de \textit{slack} sont aussi performantes
+    \item Pressions inflationnistes plus importantes pour les pays périphériques
   \end{itemize}
   \vspace{.2cm}
   Retrospectivement :
   \begin{itemize}
-    \item jsp
-    \item 
+    \item Améliorer critère de sélection sur les coefficients de long-terme 
   \end{itemize}
   \vspace{.2cm}
-  Enseignements :
-  \begin{itemize}
-    \item jsp
-    \item 
-  \end{itemize}
 \end{frame}
+
 
 % ==================================================================
 \section{Conclusion}
