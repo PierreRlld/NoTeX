@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{lipsum}
+\usepackage{z_paper, z_math}
+
+
+\begin{document}
+
+% =========================
+% ===== Page de garde =====
+\input{./Core/frontpage.tex}
+
+
+% =========================
+% ========= TOC ===========
+\pagestyle{fancy}
+\fancyhead[L]{}
+\fancyhead[R]{}
+\thispagestyle{empty}
+\tableofcontents
+\break
+\setcounter{page}{1}
+
+% =========================
+% ========= MISC ==========
+
+\addcontentsline{toc}{section}{Acknowledgement}
+\section*{Acknowledgement}
+\lipsum[1]
+\newpage
+\section*{Introduction}
+\lipsum[1]
+\newpage
+
+
+% =========================
+% ======== START ==========
+% > Change page style
+\pagestyle{fancy}
+\fancyhead[L]{\small{\leftmark}}
+\fancyhead[R]{}
+
+\section{xxx}
+
+\lipsum[1]
+
+\subsection{xxx}
+
+\quad A \blue{largé} part of the Structural VAR framework analysis has to do with (orthogonal)
+structural shocks identification. \redl{Several approachs} have been developed and discussed
+throughout the years, such as recursive identification (Sims (1980) [1] i.e imposing zero
+restrictions so that variables do not depend contemporaneously on the shocks ordered
+after), short and long-run restrictions (respectively zero restrictions: on a subset of
+shocks for specific variable(s) and on some coefficients of the long-run matrix). These
+identification \ghl{schemes yield exact identification} in the sense that a shock is uniquely
+identified through precise estimation of the matrix $B0$ (see R1). However sign restrictions
+have also been discussed and in this case, we have a pool of plausible models and thus
+only partial identification. All these identification procedures usually rely on economic
+theory to justify restriction choices.
+\bigbreak
+\begin{boxH}
+    \textbf{Modèle Tobit II}\par
+    \quad $ Y^{*} = X'.\beta_{0} + \varepsilon $ \quad \red{distribution de $\varepsilon$ non spécifiée}\par
+    \quad $Y = D.Y^{*}$ est seulement observé.
+\end{boxH}
+
+\begin{enumerate}
+    \item test
+        \begin{enumerate}
+            \item test2
+
+        \end{enumerate}
+    \item test
+    \item test
+        \begin{enumerate}
+            \item test2
+            \item test2
+        \end{enumerate}
+    \item test
+\end{enumerate}
+
+\end{document}
+

@@ -1,0 +1,74 @@
+% ===== FONTS =====
+
+% > Text font
+% https://tex.stackexchange.com/questions/569666/changing-font-for-one-page
+\usepackage{sourceserifpro}
+
+
+% > Page size
+\usepackage[letterpaper,left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}    %a4paper
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm,eucal,bbold,bm}
+\usepackage[italic,eulergreek,symbolmisc]{mathastext}
+
+
+% > Color
+\usepackage[x11names,dvipsnames]{xcolor}
+\usepackage{ulem}
+\usepackage[many]{tcolorbox}
+
+% > Boxes
+\tcbset{
+    sharp corners,
+    colback = white,
+    before skip = 0.2cm,    % add extra space before the box
+    after skip = 0.5cm      % add extra space after the box
+}    
+\definecolor{main}{HTML}{e7e7e7}    
+\definecolor{sub}{HTML}{F4F4F4}
+\definecolor{sub2}{HTML}{f3f3f3}     
+\newtcolorbox{boxH}{
+    colback = sub, 
+    colframe = main, 
+    boxrule = 0pt, 
+    leftrule = 6pt % left rule weight
+}
+
+% > Custom color functions
+\newcommand{\redl}[1]{\color{red}\uline{\textcolor{black}{#1}}\color{black}\:}
+\newcommand{\ghl}[1]{\colorbox{sub2}{#1}\:}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\red}[1]{\textcolor{BrickRed}{#1}}
+\newcommand{\green}[1]{\textcolor{ForestGreen}{#1}}
+
+% > Copiable text in PDF
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+
+% ===== SPACING =====
+\usepackage[onehalfspacing]{setspace}
+\AtBeginDocument{\frenchspacing}
+\usepackage{microtype}
+
+
+% ===== LISTS =====
+\usepackage{enumitem}
+\setlist[itemize,1]{itemsep=1ex,parsep=0ex,leftmargin=\parindent,label=\color{gray}{\upshape\textbullet}}
+\setlist[itemize,2]{itemsep=1ex,parsep=0ex,leftmargin=2\parindent,label=\color{gray}{\upshape\textendash}}
+\setlist[enumerate,1]{itemsep=1ex,parsep=0ex,leftmargin=\parindent,label=\upshape \arabic*)}
+\setlist[enumerate,2]{itemsep=1ex,parsep=0ex,leftmargin=2\parindent,label=\upshape(\arabic{enumi}.\alph*)}
+
+% URL font
+\usepackage[hyphens]{url}
+\urlstyle{same}
+
+% ===== Hyperlinks (last package) =====
+\usepackage{fancyhdr} % Before hyperref
+\usepackage[pdftex,hypertexnames=false,hyperfootnotes=false,pdfpagemode=UseNone,pdfdisplaydoctitle=true,urlbordercolor=gray,urlcolor=Fuschia]{hyperref}
+
+
+\newcommand{\available}[1]{\color{gray}{\footnotesize \textit{Available at }\url{#1}}} 
+
